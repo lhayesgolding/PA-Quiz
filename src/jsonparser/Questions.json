@@ -1,0 +1,1243 @@
+[
+    {
+        "categories": null,
+        "questionText": "Which of the following is a common physical examination finding in early intestinal obstruction?",
+        "possibleAnswers": [
+            "high fever. ",
+            "profuse flatulence. ",
+            "rebound tenderness ",
+            "hyperactive, high-pitched bowel sounds"
+        ],
+        "explanations": [
+            "Fever and rebound tenderness occur only if a perforation has occurred ",
+            "Profuse flatulence is not noted in early intestinal obstruction ",
+            "See A for explanation, ",
+            "Abdominal distention and high-pitched, hyperactive bowel sounds are common in early intestinal obstruction"
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 26 year-old man complains of itching, redness, tearing of both eyes, sneezing, and a clear nasal discharge for over a week. Both eyes are injected and a watery discharge is noted. There is no foreign body with lid eversion and there is no uptake of fluorescein. Which of the following is the most appropriate topical treatment at this time?",
+        "possibleAnswers": [
+            "Bacitracin (AK-Tracin) ",
+            "Prednisolone (Pred Forte)",
+            "Naphazoline (Naphcon). ",
+            "Flurbiprofen (Ocufen)"
+        ],
+        "explanations": [
+            "Antibiotics, steroids, and nonsteroidal anti-inflammatory medications are not indicated for allergic conjunctivitis. ",
+            "See A for explanation. ",
+            "Allergic conjunctivitis responds to cool compresses, topical vasoconstrictors, topical antihistamines, and topical cromolyn sodium. ",
+            "See A for explanation."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the first line agent in the outpatient management of Legionella pneumonia?",
+        "possibleAnswers": [
+            "Penicillin ",
+            "Cefaclor (Ceclor) ",
+            "Amoxicillin/Clavulanate (Augmentin) ",
+            "Azithromycin (Zithromax)"
+        ],
+        "explanations": [
+            "Penicillin is ineffective against atypical causes of pneumonia including Mycoplasma, Chlamydia and Legionella ",
+            "Cephalosporins are ineffective against atypical causes of pneumonia including Mycoplasma, Chlamydia and Legionella. ",
+            "Amoxicillin/clavulanate is ineffective against atypical causes of pneumonia induding Mycoplasma, Chlamydia and Legionella ",
+            "Macrolides are the preferred treatment in a patient with atypical pneumonia. Ref. (7)"
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 67 year-old male with COPD is most likely to have which of the following physical exam findings?",
+        "possibleAnswers": [
+            "Barrel chest ",
+            "Egophony ",
+            "Tracheal shift ",
+            "Pectus excavatum"
+        ],
+        "explanations": [
+            "An increase in anteroposterior diameter (barrel chest) often accompanies COPD. ",
+            "Egophony is associated with consolidation but not COPD. ",
+            "Tracheal shift is associated with pleural effusion and pneumothorax, ",
+            "Pectus excavatum is not associated with COPD."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A 24 year-old near drowning victim has been hospitalized for 24 hours. The patient has now had a rapid decline in her respiratory status and has labored breathing, tachypnea and intercostal retractions. Arterial blood gases reveal a pH 7.28, PO2 60 mm Hg, PCO2 52 mm Hg, and bicarbonate 26 mEq/L. CXR reveals diffuse bilateral infiltrates, normal heart size and no pleural effusions. Which of the following is the most appropriate intervention in this patient?",
+        "possibleAnswers": [
+            "Tracheal intubation with positive-pressure",
+            "Systemic corticosteroid therapy. ",
+            "Oxygen via nasal canula ",
+            "Chest tube placement"
+        ],
+        "explanations": [
+            "Treatment of hypoxemia in ARDS requires tracheal intubation and positive-pressure mechanical ventilation ",
+            "Systemic corticosteroids have variable and inconsistent results in their effectiveness in treating ARDS, ",
+            "See A for explanation ",
+            "Chest tube placement is therapeutic for pneumothorax, but has no role in the treatment of ARDS."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A 65 year-old male presents with a transudative pleural effusion. This patient most likely has a history of which of the following?",
+        "possibleAnswers": [
+            "Uremia ",
+            "Pneumonia ",
+            "Connective tissue disorder ",
+            "Congestive heart failure"
+        ],
+        "explanations": [
+            "Uremia causes an exudative pleural effusion. ",
+            "Pneumonia causes an exudative pleural effusion ",
+            "Connective tissue disorders are associated with an exudative pleural effusion. ",
+            "CHF accounts for up to 90% of all transudative pleural effusions."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 36 year-old female with history of HIV presents with complaint of increasing dyspnea for three weeks. She admits to fever and nonproductive cough. She denies chest pain, congestion or edema. Physical exam reveals no wheezes or rales. Chest x-ray shows bilateral diffuse infiltrates. What is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Pulmonary tuberculosis ",
+            "Bronchogenic carcinoma. ",
+            "Pneumocystis pneumonia, ",
+            "Pneumoconiosis"
+        ],
+        "explanations": [
+            "TB usually has productive cough and apical cavitation on CXR. ",
+            "Bronchogenic carcinoma is not associated with fever and would be seen as a solitary nodule on chest x-ray. not a diffuse process. ",
+            "Pneumocystis is a common cause of pneumonia in HIV positive patients. There are often nonspecific lung findings on exam with diffuse infiltrates on X-ray. ",
+            "Pneumoconiosis is typically asymptomatic with no associated fever."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 5 year-old with a severe penicillin allergy is diagnosed with acute otitis media. Which of the following is the treatment of choice?",
+        "possibleAnswers": [
+            "Trimethoprim-sulfamethoxazole (Bactrim). ",
+            "Ciprofloxacin (Cipro). ",
+            "Azithromycin (Zithromax) ",
+            "Cephalexin (Keflex)"
+        ],
+        "explanations": [
+            "Trimethoprim-sulfamethoxazole is not the preferred agent in penicillin allergic patients but it can be used. ",
+            "Topical ciprofloxacin is used in the treatment of otitis externa, ",
+            "A macrolide, such as azithromycin, is the preferred agent in the penicillin allergic patient with acute otitis media. ",
+            "A cephalosporin, such as cephalexin, is contraindicated in severe penicillin allergic patients."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A patient with streptococcal pharyngitis is treated to prevent which of the following conditions?",
+        "possibleAnswers": [
+            "Glomerulonephritis ",
+            "Anemia ",
+            "Rheumatoid arthritis ",
+            "Rheumatic fever"
+        ],
+        "explanations": [
+            "Glomerulonephritis cannot be prevented with antibiotic treatment of streptococcal pharyngitis it is an immune complex disease. ",
+            "See D for explanation. ",
+            "See D for explanation, ",
+            "Inadequately treated streptococcal pharyngitis may lead to rheumatic fever, but not anemia, or rheumatoid arthritis."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 16 year-old female G1POABO is 30 weeks pregnant. Her last two monthly prenatal exams have shown a trace to 1 plus proteinuria. The patient denies any previous history of hypertension, seizures, headache, visual disturbances or spotting. On examination, blood pressure is 150/98. The fundal height is 32 cm, the uterus is soft and nontender and fetal heart tones are 160 bpm. DTRs are 4 plus out of 4 plus in the upper and lower extremities, and there is moderate pedal edema bilaterally. The skin examination is unremarkable. Based upon these findings what is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Eclampsia ",
+            "Pre-eclampsia ",
+            "Gestational hypertension ",
+            "HELLP Syndrome"
+        ],
+        "explanations": [
+            "Eclampsia is the occurrence of seizures in a pre-eclamptic patient. ",
+            "Pre-eclampsia is the hypertension associated with proteinuria. This occurs in greater frequency in nulliparous, adolescent and black women ",
+            "Gestational hypertension is hypertension that continues after pre-eclampsia for 12 weeks post-partum then returns to normal. If hypertension continues after 12 weeks then the patient is said to have chronic hypertension and is often predicove of later development of essential hypertension. ",
+            "HELLP syndrome is a subcategory of pre-eclampsia in which the patient develops hemolytic anemia, elevated liver enzymes and low platelets,"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 34 year-old female G2P1Abo at 36 weeks gestation presents to the clinic with a complaint of a sudden gush of fluid from the vagina 18 hours ago. The patient denies any blood in the discharge but describes the fluid as watery. Examination reveals that there is a collection of fluid in the posterior fornix, the Nitrazine test is blue as well as the fluid giving a fern-like crystallization pattern on a slide. Given these findings what is the appropriate clinical intervention?",
+        "possibleAnswers": [
+            "Observation ",
+            "Induce labor ",
+            "Antibiotics ",
+            "Corticosteroids"
+        ],
+        "explanations": [
+            "With premature rupture of the membranes, the patient is at risk for the development of amnionitis. ",
+            "Since the patient is 36 weeks gestation and it has been greater than 12 hours since the leakage of fluid, labor should be induced to minimize infection, ",
+            "If the patient was less than 33 weeks pregnant and amnionitis had been ruled out, then antibiotics along with corticosteroids would be advisable. Favorable outcomes utilizing both of these drugs have been demonstrated. ",
+            "?ee C for explanation."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "In the treatment of endometriosis, which of the following medications has a side effect profile that includes loss of bone mineral density, vasomotor symptoms, vaginal dryness and mood changes?",
+        "possibleAnswers": [
+            "Oral contraceptives ",
+            "Dantrolene (Danazol) ",
+            "Leuprolide (Lupron) ",
+            "Progestational agents"
+        ],
+        "explanations": [
+            "Oral contraceptives, dantrolene, and progestational agents do not have this side effect profile ",
+            "See A for explanation ",
+            "Leuprolide is a gonadotropin releasing hormone analogue that results in suppression of gonadotropic secretion. This suppression leads to a hypoestrogenic state which contributes to these side effects ",
+            "See A for explanation"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following lesions is often associated with the nodular type of basal cell carcinoma?",
+        "possibleAnswers": [
+            "Spider vein ",
+            "Cherry angioma ",
+            "Spider angioma ",
+            "Telangiectatic vessels"
+        ],
+        "explanations": [
+            "A spider vein often accompanies increased pressure in the superficial veins as seen with varicose veins, ",
+            "A cherry angioma is often found on the trunk or extremities and has no clinical significance. ",
+            "Spider angiomas are associated with liver disease, pregnancy and vitamin B deficiency. They may also occur in some healthy people. ",
+            "Telangiectatic vessels are often visible in the lesions seen with basal cell carcinoma."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the most important factor in determining this patient's risk of sun reactivity and therefore higher risk of developing skin cancer?",
+        "possibleAnswers": [
+            "Ethnicity. ",
+            "Geography ",
+            "How old they are. ",
+            "How easily they tan"
+        ],
+        "explanations": [
+            "The skin phototypes of various ethnic groups has not yet been established and skin phototypes are not solely based on ethnicity. ",
+            "Sunburn can occur at any latitude and therefore geography does not play a large role in a patient's risk ",
+            "While very young children and the elderly are thought to have an increased risk of sunburn, this has not been studied and thoroughly documented. ",
+            "Sun reactivity is greatest in individuals who are classified with a \"white\" skin color and who have a limited ability to tan after exposure to ultraviolet radiation."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A patient's carotid pulse has a quick upstroke associated with wide pulse pressure. These findings are suggestive of",
+        "possibleAnswers": [
+            "mitral stenosis ",
+            "pericardial tamponade. ",
+            "aortic regurgitation. ",
+            "congestive heart failure"
+        ],
+        "explanations": [
+            "The arterial pulse is not affected by mitral stenosis. ",
+            "Pericardial tamponade is associated with a paradoxical pulse, where pulse amplitude decreases with inspiration. ",
+            "Aortic regurgitation causes a bounding pulse and this is characteristic of conditions caused by increased stroke volume and decreased peripheral resistance. ",
+            "Congestive heart failure is associated with small, weak pulses"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following in examination of urinary sediment indicates contamination?",
+        "possibleAnswers": [
+            "Granular casts ",
+            "Leukocyte casts ",
+            "Squamous epithelial cells ",
+            "Transitional epithelial cells"
+        ],
+        "explanations": [
+            "The presence of granular casts may be seen with intrinsic renal disease, ",
+            "Leukocyte casts may be seen in a patient with pyelonephritis. ",
+            "The urinalysis should be repeated if squamous epithelial cells are found in the specimen as this indicates contamination ",
+            "Some transitional epithelial cells may occasionally by found in normal urine, however their presence in large numbers or in clumps suggests cancer."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 62 year-old male presents with hematuria associated with flank pain. Review of a recent abdominal CT scan revealed the presence of 5 cm solid mass in the right kidney. Chest x-ray and bone scan are unremarkable. Which of the following is the most appropriate intervention?",
+        "possibleAnswers": [
+            "Chemotherapy ",
+            "Radiation therapy ",
+            "Radical nephrectomy ",
+            "Cell-based tumor vaccine"
+        ],
+        "explanations": [
+            "Chemotherapy may be indicated as adjunctive therapy in a patient with metastatic disease; however it has no better than a 10-15% response rate. ",
+            "Radiation therapy is not effective in the treatment of renal cell cancer and may lead to damage of the surrounding vital organs. ",
+            "Presence of a solid renal mass is renal cell cancer until proven otherwise which is also supported by the symptoms of hematuria and flank pain, Since there is no evidence of metastasis, localized renal cell cancer is treated by radical nephrectomy. ",
+            "Tumor immunology, such as cell-based tumor vaccines, is among the therapies that are presently being investigated."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 52 year-old female presents with complaints of incontinence which has become progressively worse over the past two months. Upon further questioning she relates that she will have an extreme urge to urinate, but is unable to make it to the bathroom prior to leakage of urine, She denies incontinence with coughing or sneezing, muscle weakness or suprapubic discomfort. Examination is essentially unremarkable including presence of good rectal sphincter tone. Which of the following is the most appropriate intervention?",
+        "possibleAnswers": [
+            "Topical estrogen cream ",
+            "Oxybutynin (Ditropan) ",
+            "Intermittent urinary catheterization ",
+            "Instruction in pelvic muscle exercises"
+        ],
+        "explanations": [
+            "Topical estrogen cream is indicated in cases of stress incontinence when there is physical examination evidence of vaginal or urethral atrophy. ",
+            "This patient most likely has urge incontinence due to detrusor overactivity causing leakage from bladder contractions. This is the most common cause of incontinence in older patients and is supported by the history  given Treatment involves use of anticholinergic medications, such as oxybutynin, to relax the bladder. ",
+            "Intermittent urinary catheterization is indicated in the treatment of overflow incontinence ",
+            "Pelvic muscle exercises are most helpful in the treatment of stress incontinence which is due to relaxation of pelvic musculature. Ref: (28)"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following studies is most appropriate to diagnose celiac disease?",
+        "possibleAnswers": [
+            "Urinary D-xylose test ",
+            "Small bowel biopsy ",
+            "Barium contrast x-ray ",
+            "Schilling test"
+        ],
+        "explanations": [
+            "Urinary D-xylose test assesses the proximal small intestinal mucosa's absorption of carbohydrates but is not specific to celiac disease. ",
+            "Definitive diagnosis of celiac disease is made by small bowel biopsy. ",
+            "Barium contrast examination would reveal anatomic abnormalities or blind loop syndrome that may lead to malabsorption but it would not help in the diagnosis of celiac disease. ",
+            "The Schilling test is used to determine the cause of cobalamine malabsorption from pernicious anemia, chronic pancreatitis, achforhydria and bacterial overgrowth syndrome but has no role in the diagnosis of celiac disease Ref: (7)"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following tumor markers is useful in monitoring a patient for recurrence of colorectal cancer after surgical resection?",
+        "possibleAnswers": [
+            "CA-125 ",
+            "Carcinoembryonic antigen ",
+            "5-hydroxindoleacetic acid ",
+            "Alpha-1-fetoprotein"
+        ],
+        "explanations": [
+            "CA-125 tumor marker is useful as a tumor marker in ovarian cancer. 15. ",
+            "Carcinoembryonic antigen can be used to monitor a patient for the return of colorectal cancer after treatment ",
+            "5-hydroxindoleacetic acid is used as a tumor marker in carcinoid syndrome. ",
+            "Hepatocellular and testicular cancer can be followed by the use of alpha-1-fetoprotein as a tumor marker."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 14 month-old male who attends day care presents with a two-day history of frequent watery stools. His mother states that he had a fever and vomiting the day before but these have resolved. His mother denies pain in the child. The child is mildly dehydrated but otherwise appears well. Stool samples are free of blood and white blood cells. The lab reports no ova or parasites noted in the stool samples. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Intussusception.. ",
+            "Viral gastroenteritis ",
+            "Shigella ",
+            "Lactase insufficiency"
+        ],
+        "explanations": [
+            "Intussusception may cause diarrhea, however, after two days the stool would have blood present. The absence of pain or discomfort would also argue against this diagnosis ",
+            "Rotavirus is the most common cause of gastroenteritis in children and this is frequently passed in the daycare setting ",
+            "Patients with Shigella have dysentery with the passage of bloody stools in a toxic-appearing child. ",
+            "Lactase insufficiency would not have caused fever and vomiting. Ref. (5)"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "Diseases Which of the following is the most common viral sexually transmitted disease in the US?",
+        "possibleAnswers": [
+            "Hepatitis B virus ",
+            "Herpes simplex virus ",
+            "Human papilloma virus ",
+            "Human immunodeficiency virus"
+        ],
+        "explanations": [
+            "See C for explanation ",
+            "See C for explanation ",
+            "Condyloma acuminatum, caused by the human papilloma virus, is the most common viral cause of STDs in the US, and the incidence continues to rise rapidly. ",
+            "See C for explanation."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the ideal method for the prevention of venous thromboembolism in a 38 year-old male undergoing an inguinal hernia repair?",
+        "possibleAnswers": [
+            "early ambulation ",
+            "elastic stockings ",
+            "intermittent pneumatic compression ",
+            "low-molecular weight heparin"
+        ],
+        "explanations": [
+            "Early ambulation is the most effective preventive strategy for the prophylaxis of venous thromboembolism in low-risk, minor procedures when the patient is under 40 years of age and there are no clinical risk factors ",
+            "Elastic stockings are indicated for patients at moderate risk of venous thromboembolism in ages 40-60 with minor procedures with additional thrombosis risk factor, or major operations for patients under age 40 without additional clinical risk factors. ",
+            "Intermittent pneumatic compression is indicated in patients undergoing a major operation plus an increased risk of bleeding ",
+            "Low molecular weight heparin is indicated in patients undergoing orthopedic surgery, neurosurgery, or trauma 18  with an identifiable risk factor for thromboembolism."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is considered to be the first EKG evidence of acute myocardial infarction?",
+        "possibleAnswers": [
+            "ST segment depression ",
+            "ST segment inversion ",
+            "Peaking of T waves ",
+            "Q wave formation"
+        ],
+        "explanations": [
+            "ST segments may become elevated following peaking of T waves, ",
+            "ST segment depression may be seen on the EKG at some point in the infarction but this is most commonly a part of the non-Q wave infarction pattern or with angina rather than true infarction. ",
+            "The initial EKG of a patient experiencing an acute MI may not reveal any significant changes at all. When an infarction pattern does occur, the first change that is seen is the peaking of the T waves. ",
+            "Q waves occur in the recovery period following ST-segment infarction- they are not formed in the initial period of infarction."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A patient has an EKG performed revealing peaked P waves in lead II, tall Rwaves in V1 with strain and right axis deviation. Which of the following is the most likely explanation for these EKG findings?",
+        "possibleAnswers": [
+            "Anterior wall MI ",
+            "Acute pericarditis ",
+            "Cor pulmonale ",
+            "Systemic hypertension"
+        ],
+        "explanations": [
+            "Anterior wall Ml will show poor progression of the R wave across the precordium or acutely, ST segment elevation in the chest leads. ",
+            "Acute pericarditis causes diffuse ST segment elevation along with depression of the PR interval. ",
+            "In the presence of severe pulmonary hypertension associated with cor pulmonale the EKG will show P pulmonale (peaked T waves), right axis deviation, and RV hypertrophy. ",
+            "Systemic hypertension will cause a left ventricular strain pattern which will show evidence of left ventricular hypertrophy with large R waves in the lateral chest leads and deep S waves in the right-sided chest leads."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "What is the most common hypercoagulable state?",
+        "possibleAnswers": [
+            "Factor V Leiden ",
+            "Protein C deficiency ",
+            "Protein S deficiency ",
+            "Antithrombin Ill Deficiency"
+        ],
+        "explanations": [
+            "Factor V Leiden is the most common inherited hypercoagulable states with about 2-5% of the population affected. ",
+            "See explanation A ",
+            "See explanation A ",
+            "See explanation A"
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the most sensitive screening test for systemic lupus erythematosus?",
+        "possibleAnswers": [
+            "Anti-Ribonuclear protein (U1-RNP) ",
+            "Antinuclear antibody (ANA) ",
+            "Anti-double-stranded DNA (anti-ds-DNA) ",
+            "Anti-Smith anti-body (anti-Sm)"
+        ],
+        "explanations": [
+            "Anti-Ribonuclear protein (U1-RNP) is seen in SLE but is only 50% sensitive and 87-94% specific ",
+            "Antinuclear antibody (ANA) is sensitive in 99% of patients with SLE, ",
+            "Anti-double-stranded DNA (anti-ds-DNA) is sensitive in 70% and specific in 95% of patients with SLE. ",
+            "Anti-Smith anti-body (anti-Sm) is sensitive in 25% but highly specific in 95% of patients with SLE."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 35 year-old female who was a back seat passenger in a vehicle which was involved in a head-on collision is brought to the ED. She is able to tell you that she is having difficulty moving both of her legs and is experiencing bilateral leg pain as well. She is embarrassed because she has *wet myself.\" Physical examination reveals markedly diminished sensory and motor function of both legs and decreased rectal sphincter tone. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Herniated disc at L5-S1 and L4-L5 ",
+            "An anterior cord lesion ",
+            "Cauda equina syndrome ",
+            "An 12 lesion"
+        ],
+        "explanations": [
+            "Herniated disc at L5-S1 and L4-L5 will cause a dermatomal sensory change in the legs. ",
+            "An anterior cord lesion would cause complete paralysis below the lesion with loss of pain and temperature sensation ",
+            "Cauda equina syndrome is a massive central disc protrusion that causes variable degrees of paralysis. Bowel and bladder function may be impaired with saddle anesthesia. This condition is a surgical emergency ",
+            "An L2 lesion weakens leg extension, diminishes the patellar reflex and can paralyze flexion and adduction of the thigh."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "During EOM testing, the patient is noted to have delayed adduction of the left eye. The rest of the examination is normal. Which of the following is the most likely underlying cause for this abnormality?",
+        "possibleAnswers": [
+            "Muscular dystrophy ",
+            "Multiple sclerosis ",
+            "Myasthenia gravis ",
+            "Polymyalgia rheumatica"
+        ],
+        "explanations": [
+            "Muscular dystrophy is a disease primarily affecting the motor system of the lower extremity and not the eyes. ",
+            "Internuclear ophthalmoplegia results from damage to the medial longitudinal fasciculus ascending from the abducens nucleus in the pons to the oculomotor nucleus in the midbrain and results in slow or absent adduction of the eye. It is most commonly seen with multiple sclerosis. ",
+            "Myasthenia gravis is a disorder affecting the post synaptic receptors and presents with muscle weakness ",
+            "Polymyalagia rheumatica patients primarily complain of muscle pain and tenderpoints without eye involvement Ref: (1)"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 28 year-old female, 3 months post-partum, complains of gradually increasing dyspnea on exertion. She also complains of near syncope last week She denies chronic medical conditions and hospitalizations other than for the delivery of her child. She denies tobacco, alcohol or illicit drug abuse. Cardiovascular examination is noteworthy for a laterally displaced apical impulse, an $3 and a systolic murmur best heard in the left axilla. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Pulmonary embolism. ",
+            "Pericardial effusion ",
+            "Tricuspid insufficiency ",
+            "Dilated cardiomyopathy."
+        ],
+        "explanations": [
+            "Pulmonary embolism might account for the dyspnea on exertion but would not cause a displaced apical impulse, an S3 or the murmur. ",
+            "A pericardial effusion would cause a pericardial friction rub but not a murmur. ",
+            "The murmur in this case is typical of mitral insufficiency, which results from the dilated cardiomyopathy, not tricuspid insufficiency. ",
+            "Dilated cardiomyopathy complicates 1 in 3000 to 1 in 15,000 pregnancies and can present from the last month of pregnancy to five months post-partum, Signs and symptoms of congestive heart failure are typical on presentation. The mitral insufficiency is the result of the dilation of the annulus."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following anti-hypertensive medications should be used with caution in a patient with preexisting heart block?",
+        "possibleAnswers": [
+            "Alpha blockers ",
+            "Beta blockers ",
+            "Central alpha agonists ",
+            "Diuretics"
+        ],
+        "explanations": [
+            "Alpha blockers do not affect the conduction system of the heart. ",
+            "Patients with pre-existing heart block already have slowed conduction through the AV node. Beta blockers will further block sympathetic impulses from reaching the heart causing the HR to decrease and AV conduction to decrease. Beta blockers will enhance any heart block already present and can cause progression to complete heart block. ",
+            "Central alpha agonists have their main effect in the brain rather than having any effect on the conduction system of the heart. 24 ",
+            "Diuretics primarily work on the kidney rather that having much activity in the heart"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "The acute onset of congestive heart failure associated with a loud systolic murmur along the left sternal border in a patient with myocardial infarction suggests which of the following?",
+        "possibleAnswers": [
+            "Pericarditis ",
+            "Cardiac rupture ",
+            "Ventricular aneurysm ",
+            "Papillary muscle rupture"
+        ],
+        "explanations": [
+            "Pericarditis after myocardial infarction presents with a pericardial friction rub, fever, and chest pain. ",
+            "Cardiac rupture post infarction presents with sudden loss of pulse, blood pressure, and consciousness. ",
+            "Ventricular aneurysm presents weeks to months after an infarction, and on examination it has a double, diffuse, or displaced apical impulse. ",
+            "Papillary muscle rupture occurs in 1% of patients with a myocardial infarction. It presents 2 to 7 days after the infarction with sudden appearance of pulmonary edema and a loud systolic murmur,"
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 45 year-old woman presents with sharp, burning pain that radiates from her mouth toward her right ear. The pain is intermittent, excruciating, lasting for a few seconds, and is worse with eating or touching her face. Which of the following is the drug of choice for long term treatment?",
+        "possibleAnswers": [
+            "Carbamazepine ",
+            "Propranolol ",
+            "Valium ",
+            "Phenobarbital"
+        ],
+        "explanations": [
+            "Carbamazepine may be helpful in the treatment of trigeminal neuralgia. ",
+            "Propranolol, valium, and phenobarbital are not indicated for treatment of trigeminal neuralgia, ",
+            "See B for explanation. ",
+            "See B for explanation. 26 "
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A patient presents with increasing shortness of breath. On examination there are decreased breath sounds on the right with hyperresonance to percussion. There is tracheal deviation to the left. Of the following which intervention is indicated?",
+        "possibleAnswers": [
+            "Open thoracotomy ",
+            "Needle decompression ",
+            "Thoracostomy tube ",
+            "Mechanical ventilation"
+        ],
+        "explanations": [
+            "See B for explanation. ",
+            "A tension pneumothorax is a medical emergency. If the tension in the pleural space is not relieved the patient is likely to die. Initial treatment of choice is insertion of a large bore needle into the pleural space. ",
+            "Thoracostomy tube is inserted after needle decompression; the needle should be left in place until the tube can be inserted. ",
+            "Mechanical ventilation and resuscitation efforts are often the etiology of a tension pneumothorax."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 26 year-old male presents with gradual onset of nonproductive cough. The patient admits to associated symptoms of headache, malaise and myalgias. The patient denies shortness of breath, chest pain, fever or nasal congestion. Lung exam reveals scattered rales. Chest x-ray shows patchy Infiltrates. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Pulmonary tuberculosis ",
+            "Pneumococcal pneumonia ",
+            "Mycoplasma pneumonia ",
+            "Histoplasmosis"
+        ],
+        "explanations": [
+            "TB is associated with fever, productive cough and apical cavitation ",
+            "Pneumococcal pneumonia has a sudden onset of symptoms and focal infiltrate on chest x-ray, ",
+            "Mycoplasma is a common cause of pneumonia in young patients, associated with gradual onset of symptoms which include constitutional symptoms and nonproductive cough. The chest x-ray often appears worse than the patient with patchy infiltrates. ",
+            "Histoplasmosis patients are typically asymptomatic and on chest x-ray a chronic fibrocavitary pneumonia is noted."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 32 year-old female G5P4Abo at 35 weeks gestation presents to the clinic with sudden painless, profuse vaginal bleeding. The patient states that during the first and second trimesters she had spotting but nothing like this episode. On examination the fetus appears in transverse lie and the uterus is soft, relaxed and nontender. The fetus does not appear in distress. Maternal vital signs are normal. What is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Placenta previa ",
+            "Placenta abruptio ",
+            "Active labor ",
+            "Uterine rupture"
+        ],
+        "explanations": [
+            "Patients who present with placenta previa will have spotting during the first and second trimesters along with a presentation of sudden, painless, profuse bleeding in the third trimester. The uterus usually remains soft and relaxed and nontender as opposed to placenta abruptio, active labor and uterine rupture. ",
+            "See A for explanation. ",
+            "See A for explanation. ",
+            "See A for explanation, Ref. (8)"
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A 12 month-old presents with possible viral meningitis. Which of the following laboratory results is most consistent with this diagnosis?",
+        "possibleAnswers": [
+            "Decreased CSF glucose level ",
+            "Decreased CSF total protein level ",
+            "Increased CSF mononuclear cells ",
+            "Increased CSF C-reactive protein"
+        ],
+        "explanations": [
+            "A decreased CSF glucose level is noted in bacterial meningitis. ",
+            "In virat meningitis an elevated CSF total protein would be noted. ",
+            "Increased CSF mononuclear cells are noted in viral meningitis. ",
+            "An increased C-reactive protein is noted in bacterial meningitis. Ref: (11) 29 "
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following immunoglobulins crosses the placenta?",
+        "possibleAnswers": [
+            "IgM ",
+            "IgG ",
+            "Iga ",
+            "IgD"
+        ],
+        "explanations": [
+            "IgM molecular structure is too large to pass the placenta. ",
+            "IgG, the smallest immunoglobulin, is the only immunoglobulin able to freely pass the placenta, therefore fetal and maternal levels are equal. ",
+            "See B for explanation. ",
+            "See B for explanation."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 35 year-old female presents with complaints of severe itching. On examination, runs of vesicles and pustules with some excoriation are seen in the web spaces of the fingers. Which of the following will confirm the suspected diagnosis?",
+        "possibleAnswers": [
+            "Patch testing ",
+            "Gram stain and culture ",
+            "Skin scraping and microscopy ",
+            "Wood's lamp and KOH prep"
+        ],
+        "explanations": [
+            "Patch testing is utilized to identify a causative agent and confirm a diagnosis of allergic contact dermatitis, ",
+            "Gram stain and culture should be performed on lesions suspected to have a bacterial origin. ",
+            "This patient most likely has scabies, Skin scraping and demonstration of the organism, ova or feces under microscopy will confirm the diagnosis. ",
+            "Wood's lamp and KOH preps are utilized to diagnose lesions caused by fungal infections of the skin."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 45 year-old female patient with history of type 2 diabetes mellitus presents with complaints of a red painful lump in her right groin. She relates that she first noticed a fairly deep, firm red lump that was tender approximately 4 days ago, which suddenly became much larger and more painful. A large fluctuant erythematous mass in the right groin area is noted on examination. Which of the following is the most appropriate initial intervention?",
+        "possibleAnswers": [
+            "Cool compresses ",
+            "Systemic antibiotics ",
+            "Incision and drainage ",
+            "Intralesional steroid injections"
+        ],
+        "explanations": [
+            "Warm, not cool, compresses are sometimes indicated for treatment of a furuncle prior to development of an abscess. ",
+            "Once an abscess becomes fluctuant, antibiotics by themselves have little effect. ",
+            "Once an abscess forms, an incision and drainage is the initial treatment of choice. ",
+            "Intralesional steroid injections can be utilized to treat inflamed epidermal cysts in their initial stages, however are not indicated for an abscess,"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 70 year-old male presents with complaints of urinary frequency and urgency associated with gross painless hematuria for the past 3 weeks. He denies any fever or chills. Urinalysis reveals hematuria, but is otherwise unremarkable. IVP and ultrasound reveal the presence of a filling defect in the bladder. Which of the following is the most appropriate next step?",
+        "possibleAnswers": [
+            "Oral antibiotics ",
+            "Partial cystectomy ",
+            "Cystoscopy and biopsy ",
+            "Voiding cystourethrogram"
+        ],
+        "explanations": [
+            "While urinary frequency and urgency may be associated with a urinary tract infection, the urinalysis fails to show any findings consistent with such a diagnosis, so oral antibiotics are not warranted. ",
+            "While partial cystectomy may be indicated in certain cases of bladder cancer, it is not considered until a diagnosis and the extent of cancer is known. ",
+            "In a patient over 50 years old, the most common cause of painless gross hematuria is transitional cell cancer, most frequently involving the bladder. The filling defect noted on the IVP and ultrasound suggests this diagnosis, but it is confirmed by a biopsy performed via cystoscopy. ",
+            "A voiding cystourethrogram is primarily indicated in the diagnostic evaluation of vesicoureteral reflux disease in children"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 23 year-old male complains of urethral discharge. He states that initially he noticed burning when he urinated 2 days ago. Since yesterday has had increasing pain and a purulent discharge. A Gram stain of the discharge reveals gram-negative intracellular diplococci. In addition to appropriate antibiotic therapy, which of the following is also indicated?",
+        "possibleAnswers": [
+            "Order an HLA-B27 ",
+            "Order a transrectal ultrasound ",
+            "Treatment of all sexual partners ",
+            "Treatment with desmopressin (DDAVP)"
+        ],
+        "explanations": [
+            "An HLA-B27 is often positive in patients with reactive arthritis (Reiter's syndrome). While urethritis is one of the findings present with reactive arthritis, it is non-gonococcal in nature. ",
+            "Transrectal ultrasound is utilized primarily in the evaluation of the prostate, especially for prostate cancer. This patient has no indication for such a diagnostic study. ",
+            "This patient has gonococcal urethritis as evidence by the positive Gram stain results. In addition to treating the patient, all sexual partners need to be identified and treated. ",
+            "Desmopressin is indicated for the treatment of primary nocturnal enuresis."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Nutritional A patient develops abdominal cramps and watery diarrhea 10 to 12 hours after eating a plate of unrefrigerated meat and vegetables. The patient denies vomiting. The causative agent is most likely",
+        "possibleAnswers": [
+            "Staphylococcus aureus. ",
+            "Clostridium perfringens. ",
+            "Escherichia coli. ",
+            "Salmonella"
+        ],
+        "explanations": [
+            "Staphylococcus aureus has an incubation period of 1 to 6 hours and also characteristically has vomiting associated with it. ",
+            "Food poisoning caused by Clostridium perfringens has an incubation period of 8 to 14 hours and results from poorly refrigerated cooked meat. ",
+            "The incubation period for Escherichia coli and Salmonella is greater than 16 hours ",
+            "See C for explanation,"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A jaundice B. palmar erythema C. pruritis. D. xanthomas, Explanations (u) A. Jaundice, palmar erythema and xanthomas appear late in the disease (u) B. See A for explanation. (c) C. Pruritus is the most common initial symptom in primary biliary cirrhosis due to the accumulation of bile salts. (u) D. See A for explanation. Ref: (28) 73. Clinical Therapeutics/Gastrointestinal/Nutritional Which of the following medications used in the treatment of peptic ulcer disease is classified as a proton pump inhibitor?",
+        "possibleAnswers": [
+            "Cimetidine (Tagamet) ",
+            "Sucralfate (Carafate) ",
+            "Omeprazole (Prilosec) ",
+            "Misoprostol (Cytotec)"
+        ],
+        "explanations": [
+            "Cimetidine is an H2 receptor antagonist ",
+            "Sucralfate (Carafate) is a cytoprotective agent. ",
+            "Omeprazole is a proton pump inhibitor. ",
+            "Misoprostol is a prostaglandin analog."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A patient presents with recurrence of severe depressive symptoms. Previous episodes have occurred on at least five occasions, with one episode responding to ECT. The current episode has lasted for over six months. After a two-month trial of fluoxetine (Prozac), followed by six weeks of amitriptyline (Elavil), the patient still has significant symptoms, including suicidal ideation. The patient is not eating, not sleeping, and is so nonfunctional that she has been fired for missing work. She has not kept appointments for psychotherapy. Which of the following is the most appropriate Intervention?",
+        "possibleAnswers": [
+            "Phototherapy ",
+            "Admission for psychotherapy ",
+            "Add a monoamine oxidase inhibitor ",
+            "Hospitalize for electroconvulsive therapy"
+        ],
+        "explanations": [
+            "Phototherapy is indicated for depression associated with low-light seasons. It is not appropriate for severe, unresponsive depression. ",
+            "Psychotherapy is useful to improve the psychosocial and interpersonal adaptations of the patient, but does not improve the neurovegetative symptoms and is not effective for the treatment of severe depressive symptoms. ",
+            "Although changing medications or adding additional antidepressant agents to a patient's treatment may help in some cases, this patient's symptoms are so severe that she needs treatment urgently. ",
+            "Indications for ECT include failure to respond to several antidepressant medication trials, previous response to ECT, severe symptoms with need for rapid therapeutic response."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "An asymptomatic 43 year-old patient with Type 2 diabetes mellitus presents for a routine appointment to review fasting blood work. His hemoglobin Atc is 6.2%, fasting blood glucose is 98 mg/dL, total cholesterol is 226 mg/dL, LDL cholesterol is 162 mg/dL, HDL cholesterol is 46 mg/dL and triglycerides of 90 mg/dL. What is the most appropriate action for preventing coronary heart disease in this patient?",
+        "possibleAnswers": [
+            "Initiate lifestyle changes and drug therapy ",
+            "Initiate lifestyle changes alone ",
+            "Order an exercise stress test ",
+            "Order an echocardiogram and begin drug"
+        ],
+        "explanations": [
+            "The patients PMH of DM establishes him as a patient with coronary heart disease equivalent with an LDL goal of ",
+            "See explanation A ",
+            "An exercise stress test is useful in evaluating currently existing coronary artery disease, but is not useful in 34  primary prevention of coronary artery disease. ",
+            "An echocardiogram is indicated to check valvular function of the heart or to assess the left ventricular function. Drug therapy is indicated but there is no compelling reason to perform the echocardiogram in this asymptomatic patient."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the therapy of choice for long-term management of esophageal varices in a patient who cannot tolerate beta blocker therapy?",
+        "possibleAnswers": [
+            "?ctreotide (Sandostatin) ",
+            "Sclerotherapy ",
+            "Transjugular intrahepatic portosystemic shunt D. Sengstaken-Blakemore tube ",
+            "Sengstaken-Blakemore tube"
+        ],
+        "explanations": [
+            "?ctreotide is used to control acute variceal bleeding but does not have a role in long-term management. ",
+            "Sclerotherapy is effective in decreasing the risk for rebleeding in a patient with esophageal varices. ",
+            "Transjugular intrahepatic partosystemic shunt (TIPS) decreases rebleeding more than sclerotherapy or ligation but is associated with a higher incidence of encephalopathy and has shown no decrease in mortality. TIPS is used in patients who fail endoscopic or pharmacologic therapy. ",
+            "The Sengstaken-Blakemore tube is rarely used today in the treatment of acute variceal bleeding. These are not indicated for long-term use."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "Diseases A 3 year-old presents with profuse watery diarrhea for the past three days. The child vomited twice yesterday, but not today. On exam, the child is febrile, with pulse of 142, respiratory rate of 18, and blood pressure of 60/40 mmHg. On exam, the child is alert and responsive, with no focal findings. Which of the following is the most appropriate intervention?",
+        "possibleAnswers": [
+            "Antibiotic therapy ",
+            "Begin soft diet",
+            "IV fluids ",
+            "Oral rehydration"
+        ],
+        "explanations": [
+            "In the US, infectious gastroenteritis is most frequently due to a virus. Antibiotic therapy may be second-line in cases where the causative organism is bacterial, is identfied, and symptoms continue. ",
+            "See D for explanation. ",
+            "See D for explanation. ",
+            "The goal of therapy for a child with severe gastroenteritis and dehydration is to restore fluid loss. Oral rehydration with an appropriate electrolyte solution is the best option if the child is not actively vomiting and is alert enough to take oral fluids. IV fluids should be reserved for those who are unable to take fluids orally."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is indicated for use in patients with rheumatic fever that is complicated by carditis?",
+        "possibleAnswers": [
+            "Daily oral cephalosporins ",
+            "Daily vasodilators such as ACE inhibitors ",
+            "Monthly benzathine penicillin injections ",
+            "Immediate heart valve replacement"
+        ],
+        "explanations": [
+            "Cephalosporins are not considered first line therapy for strep infection, including rheumatic fever and its carditis. ",
+            "Vasodilator therapy will not affect the infectious carditis which is the treatment priority for these patients. ",
+            "Patients will rheumatic heart disease should receive prophylaxis indefinitely because of the high rate of recurrence in these individuals. The recommended therapy for prophylaxis is an IM injection of 1.2 million units of benzathine penicillin monthly. Alternatively, oral penicillin or erythromycin may be used. ",
+            "Treatment of infection is the mainstay of therapy and heart valve replacement is done only after long-term progression of the disorder."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the mechanism of action for the medication adenosine (Adenocard)?",
+        "possibleAnswers": [
+            "It raises the threshold for ventricular",
+            "It enhances conductivity through the AV node. ",
+            "It blocks the AV node completely. ",
+            "It serves to replace magnesium."
+        ],
+        "explanations": [
+            "Lidocaine is used to prevent ventricular tachycardia by raising the threshold for this condition ",
+            "Atropine enhances conduction through the AV node. ",
+            "Adenosine is an endogenous nucleoside that, when given IV, results in profound, transient, slowing or even termination of AV conduction and sinus discharge rate. Its main use is in the treatment of PSVT. ",
+            "Amiodarone (Cordarone) contains magnesium in high concentration which may abort Torsades de Pointes."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A patient presents complaining of new onset of repeated mottled and numb fingers when exposed to previously tolerated cold weather. The patient denies color changes or itching. ANA is negative. CBC reveals a mild anemia and rouleaux. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Cold agglutinin disease ",
+            "Raynaud's phenomena ",
+            "Chilblains ",
+            "Frostbite"
+        ],
+        "explanations": [
+            "Cold agglutinin disease presents with mottled and numb fingers after repeated cold exposure. CBC reveals a mild anemia and rouleaux. ",
+            "Raynaud's phenomena typically presents with associated skin color changes ",
+            "Chilblains are red, itching skin lesions precipated by cold temperatures. ",
+            "Frostbite presents with recurrent pattern of symptoms with only mild cold exposure and the presence of mild anemia."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A patient who has chronic Crohn's disease now complains of a nondeforming asymmetric oligoarthritis of his large joints. The patient also notes that he has been having a flare of his Crohn's disease. Which of the following is the best treatment to alleviate both the inflammatory bowel disease and arthritic symptoms?",
+        "possibleAnswers": [
+            "Indomethacin ",
+            "Methotrexate ",
+            "Infliximab (Remicade) ",
+            "Cyclophosamide (Cytoxan)"
+        ],
+        "explanations": [
+            "NSAIDs, such as indomethacin, are generally helpful and well tolerated, but they can precipitate flares of IBD ",
+            "Methotrexate is better indicated for rheumatoid arthritis ",
+            "Spondyloarthritides respond to both infliximab and etanercept where infliximab has greater efficacy in Crohn's disease ",
+            "Cyclophosamide is a potent immunosuppressive agent used to treat SLE"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the most significant complication of a dislocation of the knee?",
+        "possibleAnswers": [
+            "Ligament damage ",
+            "Inability to bear weight ",
+            "Instability of the joint ",
+            "Arterial injury"
+        ],
+        "explanations": [
+            "Ligament damage should be repaired after any vascular compromise is addressed. ",
+            "Patients will present with an inability to bear weight and instability of the joint with knee dislocations but this is not limb threatening ",
+            "See B for explanation ",
+            "Arterial injury is the most important complication and needs surgical repair immediately"
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 60 year-old patient who has a 20 year history of diabetes mellitus arrives at the clinic with a complaint of mild to moderate ankle pain. There is no history of trauma. You note on exam that the joint is unstable but not erythematous or warm. On X-ray you would expect to see",
+        "possibleAnswers": [
+            "osteopenia ",
+            "loss of articular cartilage. ",
+            "disintegration of the joint with osteophytes. ",
+            "subchondral cysts"
+        ],
+        "explanations": [
+            "Osteopenia is noted in osteoporosis. ",
+            "Loss of articular cartilage is affected with most arthritic conditions ",
+            "Various degrees of joint destruction and disintegration with osteophyte formation are usually present with Charcot's joint ",
+            "Subchondral cysts are usually noted with osteoarthritis"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following patients has a contraindication for the use of live attenuated intranasal influenza vaccination?",
+        "possibleAnswers": [
+            "Asthma ",
+            "Diabetes mellitus ",
+            "Chronic liver failure ",
+            "Chronic renal failure"
+        ],
+        "explanations": [
+            "Asthma patients are at risk for acute bronchospasm when they are subjected to the live intranasal influenza vaccine. This risk is not present with the inactivated vaccine given parenterally. ",
+            "Patients with diabetes mellitus, chronic liver failure, and chronic renal failure should be given the influenza vaccine, regardless of route of administration. ",
+            "See B for explanation. ",
+            "See B for explanation."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A patient presents to the office for routine examination. Initial labs reveal a Hgb of 8.5 mg/dL and Hct of 26%, MCV 66 fL, and RDW 12.1. Peripheral blood smear shows numerous target cells. Based upon these findings what would be the next laboratory test to order?",
+        "possibleAnswers": [
+            "Hemoglobin electrophoresis ",
+            "Serum ferritin ",
+            "Serum vitamin B12 ",
+            "Serum lead level"
+        ],
+        "explanations": [
+            "The findings of target cells on the peripheral blood smear indicate that a hemoglobinopathy exists. To confirm what type of hemoglobinopathy exists an electrophoresis should be done. ",
+            "Iron deficiency anemia does not present with target cells. ",
+            "Vitamin B12 deficiency anemia presents with an elevated MCV. ",
+            "Anemia secondary to lead poisoning presents with basophilic stippling"
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A patient is noted to have microaneurysms, cotton-wool spots and neovascularization on funduscopic exam. What is the most likely diagnosis?",
+        "possibleAnswers": [
+            "HIVIAIDS ",
+            "Diabetic retinopathy ",
+            "Macular degeneration ",
+            "Toxoplasmosis"
+        ],
+        "explanations": [
+            "Although a variety of eye changes are possible with HIV and Toxoplasmosis, neovascularization is not one of them. ",
+            "Retinopathy with neovascularization is most commonly caused by diabetes mellitus, ",
+            "Macular degeneration is associated with the formation of Drusen and is associated with the loss of central vision. ",
+            "See A for explanation, Ret: (26)"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the first complication seen with mitral stenosis?",
+        "possibleAnswers": [
+            "Aortic regurgitation ",
+            "Aortic stenosis ",
+            "Left ventricular failure ",
+            "Right ventricular failure"
+        ],
+        "explanations": [
+            "Aortic regurgitation results in a volume overload rather than a pressure overload in the left ventricle along with a rapid rise and rapid fall in the peripheral pulse. ",
+            "Aortic stenosis causes left ventricular pressure overload due to the narrowed aortic valve interfering with blood getting into the peripheral circulation. The left ventricle and cardiac output and not the mitral valve are primarily affected by aortic stenosis. ",
+            "Blood backing up into the atrium results in problems with the right atrium, the pulmonary vasculature, and the right ventricle - it does not result in damage to the left ventricle. ",
+            "In long standing, severe MS, patients may develop elevated right-sided pressures and right ventricular dysfunction due to blood backing up from the left atrium. These patients can present with signs and symptoms of right-sided heart failure such as peripheral edema."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following agents is the first line ong term therapy of choice in a patient with persistent asthma?",
+        "possibleAnswers": [
+            "Theophylline ",
+            "Short acting inhaled beta agonist ",
+            "Inhaled corticosteroid ",
+            "Leukotriene modifier"
+        ],
+        "explanations": [
+            "Theophylline provides mild bronchodilation but has increased side effects and serum concentrations need to be checked regularly. It is not considered first line therapy ",
+            "Short acting beta agonists are for acute exacerbations, but not for long acting control. ",
+            "Inhaled corticosteroids are proven to be effective in the long term control of asthma. ",
+            "Leukotriene modifiers are a less desirable alternative to inhaled corticosteroids, not uniformly effective in all patients with asthma. 43 "
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A postmenopausal patient is diagnosed with rade I breast cancer. The tumor is 0.7 cm in size, estrogenreceptor positive, and axillary nodes are negative. After undergoing a lumpectomy, which of the following adjuvant therapy is indicated for this patient?",
+        "possibleAnswers": [
+            "Chemotherapy ",
+            "Tamoxifen (Nolvadex) ",
+            "Ovarian ablation ",
+            "Bisphosphonate therapy"
+        ],
+        "explanations": [
+            "Chemotherapy is indicated in breast cancer with tumors larger than 1 cm in site ",
+            "Tamoxifen is the adjuvant therapy of choice in post menopausal estrogen receptor positive axillary node negative breast cancer. ",
+            "While ovarian ablation is a form of hormonal therapy, it is not the initial treatment of choice. ",
+            "Bisphosphonate therapy is used in breast cancer patients with metastasis disease for the bone."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 55 year-old female with history of ulmonary embolus and hypertension presents with a recurrent deep vein thrombosis. The patient's medications include warfarin 3mg daily and hydrochlorothiazide 25 mg daily. The patient's INRs have been averaging 2.6 over the past 3 months. The patient denies complaint of shortness of breath or chest pain. What is the most appropriate next step in the treatment of this patient?",
+        "possibleAnswers": [
+            "IV heparin therapy ",
+            "Increase warfarin dose ",
+            "Perform embolectomy ",
+            "Insert an inferior vena cava filter"
+        ],
+        "explanations": [
+            "IV Heparin therapy is indicated as a bridge when initiating warfarin therapy. ",
+            "The patient has a recurrent DVT despite the fact that her INRs have been therapeutic and increasing warfarin dose will not help ",
+            "Embolectomy is indicated as a last resort in critically ill patients. ",
+            "Interruption of the inferior vena cava is indicated in patients with recurrent thromboembolism despite adequate anticoagulation to reduce the short term incidence of pulmonary embolism in patients with proximal lower extremity DVT."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 43 year-old male presents with complaint f fever, fatigue and increasing dyspnea. The patient denies cough, chills, night sweats or smoking history. Physical exam reveals a tired appearing male in no acute distress. Lungs are clear to auscultation bilaterally. Hepatosplenomegaly is noted on abdominal exam. Chest X-ray findings include bilateral hilar adenopathy and diffuse reticular infiltrates, Labs reveal leukocytopenia, elevated sedimentation rate and hypercalcemia. What is the most likely diagnosis in this patient?",
+        "possibleAnswers": [
+            "Pulmonary tuberculosis ",
+            "Sarcoidosis ",
+            "Chlamydial pneumonia ",
+            "Pneumoconiosis"
+        ],
+        "explanations": [
+            "TB is commonly associated with cough, chills and night sweats. Chest x-ray typically shows apical cavitation, ",
+            "Sarcoidosis is common in the third and fourth decades of life. There are often no lung findings noted on exam and hepatosplenomegaly is a common finding. Hypercalcemia is found in about 5% of patients with sarcoidosis and indicates need for therapy. ",
+            "Chlamydial pneumonia is commonly associated with cough. It is not usually associated with hilar adenopathy and reticular infiltrates. ",
+            "Pneumoconiosis is typically asymptomatic with no associated fever."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 65 year-old male with a history of 50 pack year smoking presents with weight loss, cough and two episodes of hemoptysis. Chest x-ray reveals a hilar nodule with hilar adenopathy and mediastinal widening. What is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Large cell lung cancer ",
+            "Adenocarcinoma ",
+            "Bronchiectasis ",
+            "Squamous cell lung cancer"
+        ],
+        "explanations": [
+            "Large cell lung cancer typically presents with peripheral masses ",
+            "Adenocarcinoma typically presents with peripheral masses, 45 ",
+            "Bronchiectasis presents on chest x-ray with no findings or prominent cystic spaces with or without air-liquid levels ",
+            "Squamous cell cancer is common in patients with a smoking history and presents with a central mass, hilar adenopathy and mediastinal widening."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "A 10 year-old male has abrupt, brief episodes of impaired consciousness and rhythmic blinking. Which of the following is the most likely type of seizure?",
+        "possibleAnswers": [
+            "Focal ",
+            "Absence ",
+            "Tonic-clonic ",
+            "Complex partial"
+        ],
+        "explanations": [
+            "Focal seizures affect only part of the brain and usually produce focal motor symptoms of a limb. ",
+            "Absence seizures are generalized seizures characterized by abrupt, brief episodes of impaired consciousness, staring, and rhythmic blinking. ",
+            "Tonic-clonic seizures present with sudden loss of consciousness with generalized jerking of muscles, ",
+            "Complex partial seizures involve impaired consciousness and automatisms."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 32 year-old female presents with complaints of gradual color change in a mole that has been present since birth. The patient also notes the recent onset of tenderness when her clothes rub up against it and itchiness for the past three weeks. An asymmetrical flat plaque with irregular and sharply defined margins with color variegation is noted on examination. Which of the following is the most appropriate diagnostic evaluation?",
+        "possibleAnswers": [
+            "Diascopy ",
+            "Patch testing ",
+            "Acetowhitening ",
+            "Excisional biopsy"
+        ],
+        "explanations": [
+            "Diascopy is indicated for evaluation of vascular lesions to determine whether the lesion is caused by capillary dilatation or extravasation of blood. ",
+            "Patch testing is used to identify the causative agent and confirm a diagnosis of allergic contact dermatitis. ",
+            "Acetowhitening helps in the detection of subclinical penile or vulvar warts. ",
+            "Excisional biopsy is indicated for this pigmented lesion that exhibits several of the warning signs of melanoma including asymmetry, irregular border, color variegation and the presence of itching and tenderness for more than 2 weeks."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "An adolescent with mild acne is currently on a treatment regimen utilizing topical keratolytics, but is only having some mild improvement. Which of the following is most appropriate to add to the treatment regimen next?",
+        "possibleAnswers": [
+            "Oral antibiotics ",
+            "Topical antibiotics. ",
+            "Oral contraceptives. ",
+            "Intralesional steroids"
+        ],
+        "explanations": [
+            "Oral antibiotics are added to the treatment regimen if the patient does not respond to topical keratolytics and topical antibiotics. ",
+            "Topical antibiotics are the most appropriate agents to be added to topical keratolytics in treatment of mild acne ",
+            "Oral contraceptives are an option in treating moderate acne in a female patient that does not respond to other therapy. ",
+            "Intralesional steroids are an option in treatment of larger lesions of moderate acne or for severe acne."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 53 year-old male presents with complaints of frequency, urgency and dysuria associated with fever and chills. He also notes some discomfort in his back. Physical examination reveals a febrile patient with minimal suprapubic tenderness and moderate costovertebral angle tenderness. The remainder of the exam is unremarkable. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Acute cystitis ",
+            "Acute prostatitis ",
+            "Acute epididymitis ",
+            "Acute pyelonephritis"
+        ],
+        "explanations": [
+            "Acute cystitis presents with irritative voiding symptoms, however lacks the systemic symptoms and CVA tenderness ",
+            "Acute prostatitis presents with irritative voiding symptoms and fever, however it is accompanied by perineal, sacral or suprapubic pain, not back pain, ",
+            "Acute epididymitis may present with irritative voiding symptoms, however pain starts in the scrotum and radiates along the spermatic cord or into the flank ",
+            "Acute pyelonephritis is supported by the irritative voiding symptoms associated with fever, flank pain and CVA tenderness"
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "categories": null,
+        "questionText": "Which of the following is the most common mechanism of post-renal azotemia?",
+        "possibleAnswers": [
+            "Ischemia ",
+            "Obstruction ",
+            "Hypotension ",
+            "Drug reactions"
+        ],
+        "explanations": [
+            "Ischemia leads to acute tubular necrosis, which is an intrinsic renal disease ",
+            "Obstruction of the urinary tract is the cause of post-renal azotemia. ",
+            "Hypotension causing poor renal perfusion is the cause of pre-renal azotemia, ",
+            "Drug reactions cause acute interstitial nephritis, which is an intrinsic renal disease."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "Initial pharmacologic treatment of acute hepatic encephalopathy consists of",
+        "possibleAnswers": [
+            "lactulose. ",
+            "omega-3-fatty acids. ",
+            "neomycin, ",
+            "mannitol."
+        ],
+        "explanations": [
+            "Lactulose acts as an osmotic laxative decreasing ammonia absorption and decreases ammonia production by directly affecting bacterial metabolism. ",
+            "Omega-3-fatty acids have no role in the treatment of hepatic encephalopathy. ",
+            "Neomycin, like lactulose, will decrease ammonia production by intestinal bacteria and may have a role in chronic but not acute management of hepatic encephalopathy ",
+            "Mannitol is used as an osmotic diuretic"
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "categories": null,
+        "questionText": "A 72 year-old male presents to the ED complaining of acute onset of severe diffuse abdominal pain of four hours duration. He states that he has vomited twice since the onset of pain. He also complains of three days of constipation. He is afebrile and the physical examination is noteworthy for a distended, diffusely tender abdomen with normoactive bowel sounds. His rectal exam reveals hemoccult positive brown stool. Medications include omeprazole (Prilosec) for GERD, digoxin and warfarin (Coumadin) for atrial fibrillation, OTC multivitamins and stool softeners. The abdominal and chest x-rays show no abnormalities. Which of the following is the most likely diagnosis?",
+        "possibleAnswers": [
+            "Acute cholecystitis ",
+            "Mesenteric infarction ",
+            "Perforated duodenal ulcer ",
+            "Small bowel obstruction"
+        ],
+        "explanations": [
+            "Acute cholecystitis causes right upper quadrant pain with radiation into the shoulder and does not cause hemoccult positive stools. ",
+            "Acute onset of severe diffuse abdominal pain in a person with atrial fibrillation warrants the suspicion of mesenteric infarction. Vomiting and constipation may be seen, along with occult blood in the stool. Bowel sounds may be normal. ",
+            "Abdominal and chest x-rays would reveal free air under the diaphragm in a ruptured duodenal ulcer and a small bowel obstruction would reveal air-fluid levels with distended bowel loops. ",
+            "See C for explanation."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "An asymptomatic 50 year-old person has no risk factors for colorectal cancer. In addition to yearly hemoccult screening of the stool, how often should flexible sigmoidoscopy be performed?",
+        "possibleAnswers": [
+            "Every year ",
+            "Every other year ",
+            "Every 5 years ",
+            "Every 10 years"
+        ],
+        "explanations": [
+            "See C for explanation. ",
+            "See C for explanation ",
+            "In a person with no risk factors for colorectal cancer, screening should include annual Hemoccult testing and flexible sigmoidoscopy every 5 years. ",
+            "See C for explanation. be not what Quielone e says"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "categories": null,
+        "questionText": "A 65 year-old presents with mental status changes, including lack of attention to personal hygiene increasing social isolation, and is no longer engaging in previously enjoyed actvities, such as the daily crossword puzzle. Of the following tests, which would be most helpful in determining the nature of these changes?",
+        "possibleAnswers": [
+            "Beck Depression Inventory ",
+            "Halstead-Reitan neuropsychological test ",
+            "Myers-Briggs inventory ",
+            "Rorschach test of emotional functioning"
+        ],
+        "explanations": [
+            "The Beck Depression Inventory is a self-report questionnaire that is most used to monitor changes in severity 51  of symptoms of depression over time, such as during treatment, but does not help in initial diagnosis of dementia ",
+            "The Halstead-Reitan neuropsychological test is used to evaluate cognitive functioning, and is helpful in assessing brain damage, dysfunction, and dementia, ",
+            "The Myers-Briggs is a personality inventory, but is not a good diagnostic test for psychiatric problems ",
+            "The Rorschach is a projective test that is used to evaluate emotional functioning"
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "categories": null,
+        "questionText": "A 32 year-old mother of three presents with complaints of headache, abdominal pain, and general anxiety. Upon questioning, she admits that her husband has pressured her into sexual activity and has humiliated her in front of friends and family by implying that she is stupid and worthless. He gives her a weekly allowance, but does not allow her use of credit cards. She feels trapped and hopeless, and does not see any way out of this relationship. She finds herself crying often when the children are at school. You should",
+        "possibleAnswers": [
+            "encourage her to leave the home immediately. ",
+            "refer to a marriage counselor. ",
+            "ask if she has considered killing her husband ",
+            "prescribe fluoxetine (Prozac)."
+        ],
+        "explanations": [
+            "Victims of domestic abuse may be at increased risk for injury upon leaving the abusive relationship; women need to develop safety and escape plans. ",
+            "Domestic violence needs more aggressive intervention than a referral to a marriage counselor. ",
+            "Victims of domestic abuse may see no way out of a relationship besides homicide to protect themselves and/or their children. Risk of injury or homicide requires further psychiatric evaluation immediately. ",
+            "Prescribing psychiatric medications may give the abuser an opportunity to accuse the woman of being an unfit mother and of having such severe psychiatric illness that her story is not to be believed."
+        ],
+        "correctAnswerIdx": 2
+    }
+]
