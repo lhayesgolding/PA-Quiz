@@ -33,7 +33,7 @@ public class FXMLStartPageController implements Initializable {
     @FXML private Label lbNumQuestions, lbTestType;
     
     public void handleStartButton(ActionEvent event) throws IOException {  
-        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLTestPage.fxml"));
+        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene testPageScene = new Scene(testPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(testPageScene);
