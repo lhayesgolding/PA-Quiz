@@ -32,6 +32,17 @@ public class Project extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+        
+//        Sample initialization of the JSON Reader        
+//        JSONReader jsonReader = new JSONReader();
+//        ArrayList<JSONQuestionObject> questionList = new ArrayList();        
+//        questionList = jsonReader.readJSONFile();
+//
+//        Example of extracting the parsed data from the ArrayList
+//        System.out.println(questionList.get(0).getQuestionText());
+//        for(int i = 0; i < 4; i++){
+//            System.out.println("- " + questionList.get(0).getPossibleAnswers().get(i));
+//        }
     }
     
 }
