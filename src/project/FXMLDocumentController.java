@@ -92,5 +92,5 @@ public class FXMLDocumentController implements Initializable {
         getInfoToShow();
   
     }    
-    
+   
 }
