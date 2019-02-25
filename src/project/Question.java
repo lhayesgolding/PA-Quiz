@@ -6,10 +6,15 @@ public class Question {
     
     private String quest;
     private ArrayList<String> choices = new ArrayList<>(); // made this an ArrayList for convenience
-    private char answer;
+    private Integer answer;
     private ArrayList<String> hints = new ArrayList<>(); // same with this one
     
-    Question() {
+    Question(String quest0, ArrayList<String> choices0, Integer answer0, 
+            ArrayList<String> hints0 ) {
+        quest = quest0;
+        choices = choices0;
+        answer = answer0;
+        hints = hints0;
         
     }
     
@@ -21,7 +26,7 @@ public class Question {
         return choices;
     }
     
-    public char getAnswer() {
+    public Integer getAnswer() {
         return answer;
     }
     
