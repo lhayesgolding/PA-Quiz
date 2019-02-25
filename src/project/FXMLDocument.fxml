@@ -16,13 +16,13 @@
       <Label fx:id="lbChoiceB" layoutX="86.0" layoutY="215.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceB" wrapText="true" />
       <Label fx:id="lbChoiceC" layoutX="86.0" layoutY="258.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceC" wrapText="true" />
       <Label fx:id="lbChoiceD" layoutX="86.0" layoutY="303.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceD" wrapText="true" />
-      <Button fx:id="btOptionA" layoutX="580.0" layoutY="167.0" mnemonicParsing="false" text="A" />
-      <Button fx:id="btOptionB" layoutX="580.0" layoutY="210.0" mnemonicParsing="false" text="B" />
-      <Button fx:id="btOptionC" layoutX="580.0" layoutY="253.0" mnemonicParsing="false" text="C" />
-      <Button fx:id="btOptionD" layoutX="580.0" layoutY="298.0" mnemonicParsing="false" text="D" />
-      <Button fx:id="btFinishTest" layoutX="19.0" layoutY="491.0" mnemonicParsing="false" text="Finish Test" />
-      <Button fx:id="btNextQuestion" layoutX="548.0" layoutY="420.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
-      <Button fx:id="btPreviousQuestion" layoutX="447.0" layoutY="420.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
+      <Button fx:id="btOptionA" layoutX="580.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleA" text="A" />
+      <Button fx:id="btOptionB" layoutX="580.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleB" text="B" />
+      <Button fx:id="btOptionC" layoutX="580.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleC" text="C" />
+      <Button fx:id="btOptionD" layoutX="580.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleD" text="D" />
+      <Button fx:id="btFinishTest" layoutX="19.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleFinishTest" text="Finish Test" />
+      <Button fx:id="btNext" layoutX="548.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
+      <Button fx:id="btPrevious" layoutX="447.0" layoutY="420.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
       <Label fx:id="lbTimeRemaining" layoutX="55.0" layoutY="395.0" text="Time Remaining" textFill="#2d13f0" />
       <Label fx:id="lbTimer" layoutX="48.0" layoutY="425.0" text="(Countdown timer here)" />
       <Label fx:id="lbQuestionNum" layoutX="456.0" layoutY="395.0" text="Question # / #" textFill="#2d13f0" />
@@ -32,6 +32,6 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btPause" layoutX="203.0" layoutY="420.0" mnemonicParsing="false" text="Pause" />
+      <Button fx:id="btPause" layoutX="203.0" layoutY="420.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
    </children>
 </AnchorPane>

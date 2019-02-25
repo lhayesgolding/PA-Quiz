@@ -34,8 +34,9 @@ public class Project extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-      //  launch(args);
+       launch(args);
         
+       /*
       //  Sample initialization of the JSON Reader        
         JSONReader jsonReader = new JSONReader();
         ArrayList<JSONQuestionObject> questionList = new ArrayList();        
@@ -46,6 +47,8 @@ public class Project extends Application {
         for(int i = 0; i < 4; i++){
             System.out.println("- " + questionList.get(0).getPossibleAnswers().get(i));
         }
+        System.out.println(questionList.get(0).getCategories());
+*/
     }
     
 }
