@@ -40,6 +40,7 @@ public class FXMLDocumentController implements Initializable {
         // to do: record whether question was correct, 
         // put checkmark graphic next to chosen answer or something else to show it 
         //         -> needs to be part of the question object to stay there if user leaves question and comes back
+        System.out.println("You clicked choice A");
     } 
     
     @FXML
@@ -69,6 +70,16 @@ public class FXMLDocumentController implements Initializable {
         if (questionNumber > 0) 
             questionNumber --;
         getInfoToShow();
+    }
+    
+    @FXML
+    public void handleFinishTest(ActionEvent event) {
+        
+    }
+    
+    @FXML
+    public void handlePause(ActionEvent event) {
+        
     }
     
     public void getInfoToShow() {
