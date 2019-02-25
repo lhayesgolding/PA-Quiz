@@ -5,11 +5,14 @@
  */
 package project;
 
+import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import jsonparser.JSONQuestionObject;
+import jsonparser.JSONReader;
 
 /**
  *
@@ -19,7 +22,7 @@ public class Project extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
         
         Scene scene = new Scene(root);
         
@@ -30,19 +33,19 @@ public class Project extends Application {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        launch(args);
+    public static void main(String[] args) throws Exception {
+      //  launch(args);
         
-//        Sample initialization of the JSON Reader        
-//        JSONReader jsonReader = new JSONReader();
-//        ArrayList<JSONQuestionObject> questionList = new ArrayList();        
-//        questionList = jsonReader.readJSONFile();
-//
-//        Example of extracting the parsed data from the ArrayList
-//        System.out.println(questionList.get(0).getQuestionText());
-//        for(int i = 0; i < 4; i++){
-//            System.out.println("- " + questionList.get(0).getPossibleAnswers().get(i));
-//        }
+      //  Sample initialization of the JSON Reader        
+        JSONReader jsonReader = new JSONReader();
+        ArrayList<JSONQuestionObject> questionList = new ArrayList();        
+        questionList = jsonReader.readJSONFile();
+
+       // Example of extracting the parsed data from the ArrayList
+        System.out.println(questionList.get(0).getQuestionText());
+        for(int i = 0; i < 4; i++){
+            System.out.println("- " + questionList.get(0).getPossibleAnswers().get(i));
+        }
     }
     
 }

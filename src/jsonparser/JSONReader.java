@@ -11,7 +11,7 @@ import java.util.List;
 public class JSONReader {
 
     public ArrayList readJSONFile() throws Exception{
-        File jsonFile = new File(getClass().getResource("Questions.json").getFile());
+        File jsonFile = new File("Questions.json");
         BufferedReader reader = new BufferedReader(new FileReader(jsonFile));
         StringBuilder builder = new StringBuilder();
         
