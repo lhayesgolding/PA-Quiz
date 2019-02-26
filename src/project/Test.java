@@ -20,7 +20,7 @@ public class Test {
     File file = new File("Questions.json");
     
     Test(){
-        numberOfQuestions = 75;
+        numberOfQuestions = 50;
         score = 0;
 //        testTimer.schedule(task, 0, 75 * 60 * 1000);
         this.initializequestionList(file);
@@ -44,6 +44,10 @@ public class Test {
         numberOfQuestions = questions;
     }
     
+    public Question getQuestion(int questIndex) {
+        return questionList.get(questIndex);
+    }
+    
     public void randomizeQuestionOrder(ArrayList questions){
         Collections.shuffle(questions);
     }
@@ -63,9 +67,8 @@ public class Test {
                   choices = (ArrayList<String>)jsonquestionList.get(i).getPossibleAnswers();
                   answer = jsonquestionList.get(i).getCorrectAnswerIdx();
                   hints = (ArrayList<String>)jsonquestionList.get(i).getExplanations();
-                  Question question;
-                  question = new Question(quest, choices, answer, hints);
-                  questionList.set(i, question);
+                  Question question = new Question(quest, choices, answer, hints);
+                  questionList.add(question);
                   
               }
               
