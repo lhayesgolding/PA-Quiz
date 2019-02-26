@@ -20,7 +20,7 @@ public class Test {
     File file = new File("Questions.json");
     
     Test(){
-        numberOfQuestions = 75;
+        numberOfQuestions = 50;
         score = 0;
 //        testTimer.schedule(task, 0, 75 * 60 * 1000);
         this.initializequestionList(file);
@@ -42,6 +42,10 @@ public class Test {
     
     public void setNumberOfQuestions(int questions){
         numberOfQuestions = questions;
+    }
+    
+    public Question getQuestion(int questIndex) {
+        return questionList.get(questIndex);
     }
     
     public void randomizeQuestionOrder(ArrayList questions){

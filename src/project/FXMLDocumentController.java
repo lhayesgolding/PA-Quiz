@@ -30,11 +30,7 @@ public class FXMLDocumentController implements Initializable {
     private int questionNumber = 0; // track which question user is currently on
     private Test test = new Test();
     
-    // won't need this - will get the questions from the Test class instead (need to add  individual question getter in test class)
-    private JSONReader jsonReader = new JSONReader();
-        ArrayList<JSONQuestionObject> questionList = new ArrayList();
-    
-    
+
     @FXML
     public void handleA(ActionEvent event) {
         // to do: record whether question was correct, 
@@ -83,22 +79,20 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void getInfoToShow() {
+        lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
+        
+        /*
         lbQuestionText.setText(questionList.get(questionNumber).getQuestionText());
         lbChoiceA.setText(questionList.get(questionNumber).getPossibleAnswers().get(0));
         lbChoiceB.setText(questionList.get(questionNumber).getPossibleAnswers().get(1));
         lbChoiceC.setText(questionList.get(questionNumber).getPossibleAnswers().get(2));
         lbChoiceD.setText(questionList.get(questionNumber).getPossibleAnswers().get(3));
+        */
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        // won't need this - get questions from Test class instead
-        try {
-            questionList = jsonReader.readJSONFile();
-        } catch (Exception ex) {
-            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
         getInfoToShow();
   
