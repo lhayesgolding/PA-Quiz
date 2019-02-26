@@ -80,14 +80,11 @@ public class FXMLDocumentController implements Initializable {
     
     public void getInfoToShow() {
         lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
-        
-        /*
-        lbQuestionText.setText(questionList.get(questionNumber).getQuestionText());
-        lbChoiceA.setText(questionList.get(questionNumber).getPossibleAnswers().get(0));
-        lbChoiceB.setText(questionList.get(questionNumber).getPossibleAnswers().get(1));
-        lbChoiceC.setText(questionList.get(questionNumber).getPossibleAnswers().get(2));
-        lbChoiceD.setText(questionList.get(questionNumber).getPossibleAnswers().get(3));
-        */
+        lbChoiceA.setText((String)test.getQuestion(questionNumber).getChoices().get(0));
+        lbChoiceB.setText((String)test.getQuestion(questionNumber).getChoices().get(1));
+        lbChoiceC.setText((String)test.getQuestion(questionNumber).getChoices().get(2));
+        lbChoiceD.setText((String)test.getQuestion(questionNumber).getChoices().get(3));
+  
     }
     
     @Override

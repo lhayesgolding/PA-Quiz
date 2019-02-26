@@ -67,9 +67,8 @@ public class Test {
                   choices = (ArrayList<String>)jsonquestionList.get(i).getPossibleAnswers();
                   answer = jsonquestionList.get(i).getCorrectAnswerIdx();
                   hints = (ArrayList<String>)jsonquestionList.get(i).getExplanations();
-                  Question question;
-                  question = new Question(quest, choices, answer, hints);
-                  questionList.set(i, question);
+                  Question question = new Question(quest, choices, answer, hints);
+                  questionList.add(question);
                   
               }
               

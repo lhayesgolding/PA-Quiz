@@ -34,10 +34,10 @@ public class Project extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws Exception {
-      // launch(args);
+       launch(args);
         
-      Test test = new Test();
-      System.out.println(test.getQuestion(0).getQuest());
+      //Test test = new Test();
+      //System.out.println(test.getQuestion(0).getQuest());
        /*
       //  Sample initialization of the JSON Reader        
         JSONReader jsonReader = new JSONReader();
