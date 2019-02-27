@@ -51,6 +51,15 @@ public class Test {
     public void randomizeQuestionOrder(ArrayList questions){
         Collections.shuffle(questions);
     }
+    
+    public void calculateScore() {
+        this.score = 0;
+        for (Question question : questionList) {
+            if (question.isCorrect()) {
+                this.score++;
+            }
+        }
+    }
 
     public void initializequestionList(File file0){
         try{

@@ -37,21 +37,53 @@ public class FXMLDocumentController implements Initializable {
         // put checkmark graphic next to chosen answer or something else to show it 
         //         -> needs to be part of the question object to stay there if user leaves question and comes back
         System.out.println("You clicked choice A");
+        test.getQuestion(questionNumber).setUserAnswer(0);
+        
+        if (test.getQuestion(questionNumber).isCorrect()) {
+            System.out.println("The answer selected is correct!");
+        }
+        else {
+            System.out.println("The answer selected is incorrect.");
+        }
     } 
     
     @FXML
     public void handleB(ActionEvent event) {
+        System.out.println("You clicked choice B");
+        test.getQuestion(questionNumber).setUserAnswer(1);
         
+        if (test.getQuestion(questionNumber).isCorrect()) {
+            System.out.println("The answer selected is correct!");
+        }
+        else {
+            System.out.println("The answer selected is incorrect.");
+        }
     }
     
      @FXML
     public void handleC(ActionEvent event) {
+        System.out.println("You clicked choice C");
+        test.getQuestion(questionNumber).setUserAnswer(2);
         
+        if (test.getQuestion(questionNumber).isCorrect()) {
+            System.out.println("The answer selected is correct!");
+        }
+        else {
+            System.out.println("The answer selected is incorrect.");
+        }
     }
     
      @FXML
     public void handleD(ActionEvent event) {
+        System.out.println("You clicked choice D");
+        test.getQuestion(questionNumber).setUserAnswer(3);
         
+        if (test.getQuestion(questionNumber).isCorrect()) {
+            System.out.println("The answer selected is correct!");
+        }
+        else {
+            System.out.println("The answer selected is incorrect.");
+        }
     }
     
     @FXML
@@ -70,7 +102,8 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void handleFinishTest(ActionEvent event) {
-        
+        test.calculateScore();
+        System.out.println("Your score: " + test.getScore());
     }
     
     @FXML
