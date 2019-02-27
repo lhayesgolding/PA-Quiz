@@ -7,6 +7,7 @@ public class Question {
     private String quest;
     private ArrayList<String> choices = new ArrayList<>(); // made this an ArrayList for convenience
     private Integer answer;
+    private Integer userAnswer;
     private ArrayList<String> hints = new ArrayList<>(); // same with this one
     
     Question(String quest0, ArrayList<String> choices0, Integer answer0, 
@@ -32,6 +33,17 @@ public class Question {
     
     public ArrayList getHints() {
         return hints;
+    }
+    
+    public Integer getUserAnswer() {
+        return userAnswer;
+    }
+    public void setUserAnswer(int selection) {
+        userAnswer = selection;
+    }
+    
+    public boolean isCorrect() {
+        return answer.equals(userAnswer);
     }
     
 }
