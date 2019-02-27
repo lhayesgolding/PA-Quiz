@@ -14,6 +14,7 @@ public class Test {
 
     
     private ArrayList<Question> questionList = new ArrayList<>();
+    private ArrayList<Question> questionListTemp = new ArrayList<>();
     private int score;
     private int numberOfQuestions;
     private Timer testTimer;
@@ -72,17 +73,20 @@ public class Test {
               Integer answer;
               ArrayList<String> hints;
               
-              for (int i = 0; i < numberOfQuestions; i++){
+              for (int i = 0; i < 73; i++){
                   quest = jsonquestionList.get(i).getQuestionText();
                   choices = (ArrayList<String>)jsonquestionList.get(i).getPossibleAnswers();
                   answer = jsonquestionList.get(i).getCorrectAnswerIdx();
                   hints = (ArrayList<String>)jsonquestionList.get(i).getExplanations();
                   Question question = new Question(quest, choices, answer, hints);
-                  questionList.add(question);
-                  
+                  questionListTemp.add(question);
+              }
+              Collections.shuffle(questionListTemp);
+              for (int i = 0; i < numberOfQuestions; i++) {
+                  questionList.add(questionListTemp.get(i));
               }
               
-                }
+        }
             catch (Exception e){
                     System.out.println("error loading from file");
                     }
