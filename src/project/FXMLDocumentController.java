@@ -24,11 +24,12 @@ import jsonparser.JSONReader;
  */
 public class FXMLDocumentController implements Initializable {
     
-    @FXML private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD;
+    @FXML private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD, lbQuestionNum;
     @FXML private Button btOptionA, btOptionB, btOptionC, btOptionD;
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
     private int questionNumber = 0; // track which question user is currently on
-    private Test test = new Test();
+    private Test test = new Test(15);
+    
     
 
     @FXML
@@ -117,13 +118,14 @@ public class FXMLDocumentController implements Initializable {
         lbChoiceB.setText((String)test.getQuestion(questionNumber).getChoices().get(1));
         lbChoiceC.setText((String)test.getQuestion(questionNumber).getChoices().get(2));
         lbChoiceD.setText((String)test.getQuestion(questionNumber).getChoices().get(3));
+        lbQuestionNum.setText("Question " + (questionNumber + 1) + "/" + test.getNumberOfQuestions());
   
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        
+        test.randomizeQuestionOrder();
         getInfoToShow();
   
     }    

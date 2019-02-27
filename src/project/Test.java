@@ -28,6 +28,7 @@ public class Test {
     Test(int numberOfQuestions){
         this.numberOfQuestions = numberOfQuestions;
         score = 0;
+        this.initializequestionList(file);
 //        testTimer.schedule(task, 0, numberOfQuestions * 60 * 1000);
     }
     public int getScore() {
@@ -48,8 +49,8 @@ public class Test {
         return questionList.get(questIndex);
     }
     
-    public void randomizeQuestionOrder(ArrayList questions){
-        Collections.shuffle(questions);
+    public void randomizeQuestionOrder(){
+        Collections.shuffle(questionList);
     }
     
     public void calculateScore() {
@@ -71,7 +72,7 @@ public class Test {
               Integer answer;
               ArrayList<String> hints;
               
-              for (int i = 0; i < 10; i++){
+              for (int i = 0; i < numberOfQuestions; i++){
                   quest = jsonquestionList.get(i).getQuestionText();
                   choices = (ArrayList<String>)jsonquestionList.get(i).getPossibleAnswers();
                   answer = jsonquestionList.get(i).getCorrectAnswerIdx();
