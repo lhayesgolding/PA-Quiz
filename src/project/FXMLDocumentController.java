@@ -10,11 +10,20 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import static javafx.animation.Animation.INDEFINITE;
+import javafx.animation.KeyFrame;
+import javafx.animation.KeyValue;
+import javafx.animation.Timeline;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.util.Duration;
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -27,8 +36,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD, lbQuestionNum;
     @FXML private Button btOptionA, btOptionB, btOptionC, btOptionD;
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
+    @FXML private Label lbTimer;
     private int questionNumber = 0; // track which question user is currently on
     private Test test = new Test(15);
+    private Timeline timeline;
+    private int numberOfQuestions = test.getNumberOfQuestions();
+    private IntegerProperty timeMinutes = new SimpleIntegerProperty(numberOfQuestions);
+
     
     
 
@@ -109,6 +123,19 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void handlePause(ActionEvent event) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Click OK to resume test", ButtonType.OK);
+            alert.setHeaderText("Test paused");
+            alert.show();
+//            timeline.pause();
+    }
+    
+    @FXML
+    public void displayTime(ActionEvent event){    
+        timeMinutes.set(numberOfQuestions);
+        timeline = new Timeline();
+        timeline.getKeyFrames().add(new KeyFrame(Duration.minutes(numberOfQuestions), 
+            new KeyValue(timeMinutes, 0)));
+        timeline.playFromStart();
         
     }
     
@@ -124,9 +151,8 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        getInfoToShow();
-  
+        lbTimer.textProperty().bind(timeMinutes.asString());
+        getInfoToShow();  
     }    
    
 }
