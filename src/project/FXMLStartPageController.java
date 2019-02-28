@@ -34,7 +34,7 @@ public class FXMLStartPageController implements Initializable {
     
     @FXML
     public void handleStartButton(ActionEvent event) throws IOException {  
-        Project.setnumOfQuestions((int)cbNumQuestions.getValue());
+        // Project.setnumOfQuestions((int)cbNumQuestions.getValue());
         Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene testPageScene = new Scene(testPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
