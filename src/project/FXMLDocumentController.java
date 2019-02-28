@@ -128,7 +128,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        test = new Test(Project.getnumOfQuestions());
+        test = new Test(Project.getNumOfQuestions());
         getInfoToShow();
   
     }    

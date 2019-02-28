@@ -20,6 +20,8 @@ import jsonparser.JSONReader;
  */
 public class Project extends Application {
     
+    private static int numOfQuestions = 10;
+    
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
@@ -51,6 +53,14 @@ public class Project extends Application {
         }
         System.out.println(questionList.get(0).getCategories());
 */
+    }
+    public static int getNumOfQuestions(){
+        return numOfQuestions;
+    }
+    
+    public static void setNumOfQuestions(int number){
+        numOfQuestions = number;
+    
     }
     
 }
