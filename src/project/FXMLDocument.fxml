@@ -5,33 +5,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="532.0" prefWidth="685.0" style="-fx-background-color: azure; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLDocumentController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="657.0" prefWidth="703.0" style="-fx-background-color: azure; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLDocumentController">
    <children>
-      <Label fx:id="lbQuestionText" layoutX="75.0" layoutY="113.0" prefHeight="18.0" prefWidth="413.0" text="Question text" textAlignment="CENTER" textFill="#2d13f0" wrapText="true">
+      <Label fx:id="lbQuestionText" layoutX="39.0" layoutY="77.0" prefHeight="168.0" prefWidth="630.0" text="Question text" textAlignment="CENTER" textFill="#2d13f0" wrapText="true">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lbChoiceA" layoutX="86.0" layoutY="172.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceA" wrapText="true" />
-      <Label fx:id="lbChoiceB" layoutX="86.0" layoutY="215.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceB" wrapText="true" />
-      <Label fx:id="lbChoiceC" layoutX="86.0" layoutY="258.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceC" wrapText="true" />
-      <Label fx:id="lbChoiceD" layoutX="86.0" layoutY="303.0" prefHeight="11.0" prefWidth="414.0" text="ChoiceD" wrapText="true" />
-      <Button fx:id="btOptionA" layoutX="580.0" layoutY="167.0" mnemonicParsing="false" onAction="#handleA" text="A" />
-      <Button fx:id="btOptionB" layoutX="580.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleB" text="B" />
-      <Button fx:id="btOptionC" layoutX="580.0" layoutY="253.0" mnemonicParsing="false" onAction="#handleC" text="C" />
-      <Button fx:id="btOptionD" layoutX="580.0" layoutY="298.0" mnemonicParsing="false" onAction="#handleD" text="D" />
-      <Button fx:id="btFinishTest" layoutX="19.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleFinishTest" text="Finish Test" />
-      <Button fx:id="btNext" layoutX="548.0" layoutY="420.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
-      <Button fx:id="btPrevious" layoutX="447.0" layoutY="420.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
-      <Label fx:id="lbTimeRemaining" layoutX="55.0" layoutY="395.0" text="Time Remaining" textFill="#2d13f0" />
-      <Label fx:id="lbTimer" layoutX="48.0" layoutY="425.0" text="(Countdown timer here)" />
-      <Label fx:id="lbQuestionNum" layoutX="456.0" layoutY="395.0" text="Question # / #" textFill="#2d13f0" />
-      <Label fx:id="lbFinishTest" layoutX="112.0" layoutY="484.0" prefHeight="42.0" prefWidth="299.0" text="Unanswered questions will be marked incorrect" wrapText="true" />
-      <Label fx:id="lbTitle" layoutX="45.0" layoutY="26.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
+      <Label fx:id="lbChoiceA" layoutX="75.0" layoutY="251.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceA" wrapText="true" />
+      <Label fx:id="lbChoiceB" layoutX="75.0" layoutY="307.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceB" wrapText="true" />
+      <Label fx:id="lbChoiceC" layoutX="75.0" layoutY="363.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceC" wrapText="true" />
+      <Label fx:id="lbChoiceD" layoutX="75.0" layoutY="419.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceD" wrapText="true" />
+      <Button fx:id="btOptionA" layoutX="580.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleA" text="A" />
+      <Button fx:id="btOptionB" layoutX="580.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleB" text="B" />
+      <Button fx:id="btOptionC" layoutX="580.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleC" text="C" />
+      <Button fx:id="btOptionD" layoutX="580.0" layoutY="427.0" mnemonicParsing="false" onAction="#handleD" text="D" />
+      <Button fx:id="btFinishTest" layoutX="14.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleFinishTest" text="Finish Test" />
+      <Button fx:id="btNext" layoutX="543.0" layoutY="529.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
+      <Button fx:id="btPrevious" layoutX="442.0" layoutY="529.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
+      <Label fx:id="lbTimeRemaining" layoutX="50.0" layoutY="504.0" text="Time Remaining" textFill="#2d13f0" />
+      <Label fx:id="lbTimer" layoutX="43.0" layoutY="534.0" text="(Countdown timer here)" />
+      <Label fx:id="lbQuestionNum" layoutX="451.0" layoutY="504.0" text="Question # / #" textFill="#2d13f0" />
+      <Label fx:id="lbFinishTest" layoutX="107.0" layoutY="593.0" prefHeight="42.0" prefWidth="299.0" text="Unanswered questions will be marked incorrect" wrapText="true" />
+      <Label fx:id="lbTitle" layoutX="61.0" layoutY="23.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btPause" layoutX="203.0" layoutY="420.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+      <Button fx:id="btPause" layoutX="198.0" layoutY="529.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
    </children>
 </AnchorPane>
