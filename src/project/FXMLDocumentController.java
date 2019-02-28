@@ -15,6 +15,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -28,7 +30,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Button btOptionA, btOptionB, btOptionC, btOptionD;
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
     private int questionNumber = 0; // track which question user is currently on
-    private Test test = new Test(15);
+    private Test test;
     
     
 
@@ -37,6 +39,7 @@ public class FXMLDocumentController implements Initializable {
         // to do: record whether question was correct, 
         // put checkmark graphic next to chosen answer or something else to show it 
         //         -> needs to be part of the question object to stay there if user leaves question and comes back
+        
         System.out.println("You clicked choice A");
         test.getQuestion(questionNumber).setUserAnswer(0);
         
@@ -125,6 +128,7 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
+        test = new Test(Project.getnumOfQuestions());
         getInfoToShow();
   
     }    
