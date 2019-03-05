@@ -5,6 +5,7 @@
  */
 package project;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -12,11 +13,16 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -105,9 +111,15 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
-    public void handleFinishTest(ActionEvent event) {
+    public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
         System.out.println("Your score: " + test.getScore());
+        Project.setTest(test);
+        Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));
+        Scene endPageScene = new Scene(endPageParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(endPageScene);
+        window.show();
     }
     
     @FXML

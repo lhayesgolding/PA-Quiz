@@ -21,6 +21,7 @@ import jsonparser.JSONReader;
 public class Project extends Application {
     
     private static int numOfQuestions = 10;
+    private static Test test = new Test();
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -61,6 +62,14 @@ public class Project extends Application {
     public static void setNumOfQuestions(int number){
         numOfQuestions = number;
     
+    }
+    
+    public static Test getTest() {
+        return test;
+    }
+    
+    public static void setTest(Test test0) {
+        test = test0;
     }
     
 }
