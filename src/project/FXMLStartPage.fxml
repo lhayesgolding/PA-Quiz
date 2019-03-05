@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLStartPageController">
    <children>
-      <AnchorPane id="AnchorPane" fx:id="anchorPane" layoutX="-3.0" layoutY="1.0" prefHeight="532.0" prefWidth="685.0" style="-fx-background-color: azure; -fx-border-color: blue;">
+      <AnchorPane id="AnchorPane" fx:id="anchorPane" layoutX="-3.0" layoutY="-1.0" prefHeight="534.0" prefWidth="687.0" style="-fx-background-color: azure; -fx-border-color: blue;">
          <children>
             <Label alignment="TOP_CENTER" layoutX="203.0" layoutY="100.0" prefHeight="19.0" prefWidth="280.0" text="Hello, (name)" textAlignment="CENTER" textFill="#2d13f0" wrapText="true">
                <font>
@@ -17,7 +17,7 @@
             </Label>
             <Label fx:id="lbNumQuestions" layoutX="176.0" layoutY="241.0" prefHeight="17.0" prefWidth="160.0" text="Number of Questions" wrapText="true" />
             <Button fx:id="btStart" layoutX="526.0" layoutY="445.0" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="27.0" prefWidth="95.0" text="Start Test" />
-            <Label layoutX="45.0" layoutY="26.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
+            <Label layoutX="65.0" layoutY="25.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
                <font>
                   <Font size="36.0" />
                </font>

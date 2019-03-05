@@ -114,6 +114,7 @@ public class FXMLDocumentController implements Initializable {
     public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
         System.out.println("Your score: " + test.getScore());
+        Project.setTest(test);
         Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));
         Scene endPageScene = new Scene(endPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -7,7 +7,7 @@
 
 <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="657.0" prefWidth="703.0" style="-fx-background-color: azure; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLDocumentController">
    <children>
-      <Label fx:id="lbQuestionText" layoutX="39.0" layoutY="77.0" prefHeight="168.0" prefWidth="630.0" text="Question text" textAlignment="CENTER" textFill="#2d13f0" wrapText="true">
+      <Label fx:id="lbQuestionText" layoutX="39.0" layoutY="77.0" prefHeight="168.0" prefWidth="630.0" text="Question text" textFill="#2d13f0" wrapText="true">
          <font>
             <Font size="15.0" />
          </font>

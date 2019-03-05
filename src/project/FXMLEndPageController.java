@@ -21,13 +21,18 @@ public class FXMLEndPageController implements Initializable {
 
     @FXML private Button btReviewTest, btReviewPrevious, btNewTest, btLogOut;
     @FXML private Label lbNumQuestions, lbNumQuestionsCorrect, lbPercentCorrect;
+    Test test = new Test();
     
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        test = Project.getTest();
+        lbNumQuestions.setText(String.valueOf(test.getNumberOfQuestions()));
+        lbNumQuestionsCorrect.setText(String.valueOf(test.getScore()));
+        int percent = 100 * test.getScore() / test.getNumberOfQuestions();
+        lbPercentCorrect.setText(String.valueOf(percent) + "%");
     }    
     
 }
