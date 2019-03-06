@@ -8,6 +8,7 @@ package project;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +19,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
@@ -124,7 +128,21 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void handlePause(ActionEvent event) {
+        lbQuestionText.setText("");
+        lbChoiceA.setText("");
+        lbChoiceB.setText("");
+        lbChoiceC.setText("");
+        lbChoiceD.setText("");
         
+        Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
+        Optional<ButtonType> result = pause.showAndWait();
+        if(result.get() == ButtonType.CLOSE) {
+            lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
+            lbChoiceA.setText((String)test.getQuestion(questionNumber).getChoices().get(0));
+            lbChoiceB.setText((String)test.getQuestion(questionNumber).getChoices().get(1));
+            lbChoiceC.setText((String)test.getQuestion(questionNumber).getChoices().get(2));
+            lbChoiceD.setText((String)test.getQuestion(questionNumber).getChoices().get(3));
+        }
     }
     
     public void getInfoToShow() {
