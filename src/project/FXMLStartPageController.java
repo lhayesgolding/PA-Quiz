@@ -34,6 +34,7 @@ public class FXMLStartPageController implements Initializable {
     
     @FXML
     public void handleStartButton(ActionEvent event) throws IOException {  
+        Project.setNumOfQuestions((int)cbNumQuestions.getValue());
         Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene testPageScene = new Scene(testPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -47,7 +48,9 @@ public class FXMLStartPageController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         cbNumQuestions.getItems().addAll(10, 20, 30, 40, 50);
+        cbNumQuestions.setValue(10);
         cbTestType.getItems().addAll("Recorded", "Practice");
+        cbTestType.setValue("Recorded");
     }    
     
 }

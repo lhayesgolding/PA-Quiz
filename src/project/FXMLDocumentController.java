@@ -5,8 +5,10 @@
  */
 package project;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -15,12 +17,27 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+<<<<<<< src/project/FXMLDocumentController.java
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
+=======
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
+import javafx.stage.Stage;
+>>>>>>> src/project/FXMLDocumentController.java
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -35,10 +52,14 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
     @FXML private Label lbTimer;
     private int questionNumber = 0; // track which question user is currently on
+<<<<<<< src/project/FXMLDocumentController.java
     private Test test = new Test(15);
     private Timeline timeline;
     private int seconds = test.getNumberOfQuestions() * 60;
 
+=======
+    private Test test;
+>>>>>>> src/project/FXMLDocumentController.java
     
     
 
@@ -47,6 +68,7 @@ public class FXMLDocumentController implements Initializable {
         // to do: record whether question was correct, 
         // put checkmark graphic next to chosen answer or something else to show it 
         //         -> needs to be part of the question object to stay there if user leaves question and comes back
+        
         System.out.println("You clicked choice A");
         test.getQuestion(questionNumber).setUserAnswer(0);
         
@@ -112,13 +134,20 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
-    public void handleFinishTest(ActionEvent event) {
+    public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
         System.out.println("Your score: " + test.getScore());
+        Project.setTest(test);
+        Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));
+        Scene endPageScene = new Scene(endPageParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(endPageScene);
+        window.show();
     }
     
     @FXML
     public void handlePause(ActionEvent event) {
+<<<<<<< src/project/FXMLDocumentController.java
 
     }
     
@@ -135,7 +164,23 @@ public class FXMLDocumentController implements Initializable {
         }));
         lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
         timeline.play();
+=======
+        lbQuestionText.setText("");
+        lbChoiceA.setText("");
+        lbChoiceB.setText("");
+        lbChoiceC.setText("");
+        lbChoiceD.setText("");
+>>>>>>> src/project/FXMLDocumentController.java
         
+        Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
+        Optional<ButtonType> result = pause.showAndWait();
+        if(result.get() == ButtonType.CLOSE) {
+            lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
+            lbChoiceA.setText((String)test.getQuestion(questionNumber).getChoices().get(0));
+            lbChoiceB.setText((String)test.getQuestion(questionNumber).getChoices().get(1));
+            lbChoiceC.setText((String)test.getQuestion(questionNumber).getChoices().get(2));
+            lbChoiceD.setText((String)test.getQuestion(questionNumber).getChoices().get(3));
+        }
     }
     
     public void getInfoToShow() {
@@ -150,8 +195,15 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+<<<<<<< src/project/FXMLDocumentController.java
         displayTime();
         getInfoToShow();  
+=======
+        
+        test = new Test(Project.getNumOfQuestions());
+        getInfoToShow();
+  
+>>>>>>> src/project/FXMLDocumentController.java
     }    
    
 }
