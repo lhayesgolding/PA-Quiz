@@ -19,13 +19,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-<<<<<<< src/project/FXMLDocumentController.java
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
-=======
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -37,7 +35,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
->>>>>>> src/project/FXMLDocumentController.java
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -52,70 +49,35 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
     @FXML private Label lbTimer;
     private int questionNumber = 0; // track which question user is currently on
-<<<<<<< src/project/FXMLDocumentController.java
     private Test test = new Test(15);
     private Timeline timeline;
     private int seconds = test.getNumberOfQuestions() * 60;
 
-=======
-    private Test test;
->>>>>>> src/project/FXMLDocumentController.java
     
-    
+        @FXML
+    public void handleAnswerChoice(ActionEvent event){
+        Button target = (Button)event.getTarget();
 
-    @FXML
-    public void handleA(ActionEvent event) {
-        // to do: record whether question was correct, 
-        // put checkmark graphic next to chosen answer or something else to show it 
-        //         -> needs to be part of the question object to stay there if user leaves question and comes back
-        
-        System.out.println("You clicked choice A");
-        test.getQuestion(questionNumber).setUserAnswer(0);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+     
+        if (target == btOptionA){
+            test.getQuestion(questionNumber).setUserAnswer(0);
+            lbChoiceA.setTextFill(Color.ORANGE);
         }
-        else {
-            System.out.println("The answer selected is incorrect.");
+        else if (target == btOptionB){
+            test.getQuestion(questionNumber).setUserAnswer(1);
+            lbChoiceB.setTextFill(Color.ORANGE);
         }
-    } 
-    
-    @FXML
-    public void handleB(ActionEvent event) {
-        System.out.println("You clicked choice B");
-        test.getQuestion(questionNumber).setUserAnswer(1);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
+        else if (target == btOptionC){
+            test.getQuestion(questionNumber).setUserAnswer(2);
+            lbChoiceC.setTextFill(Color.ORANGE);
         }
-        else {
-            System.out.println("The answer selected is incorrect.");
-        }
-    }
-    
-     @FXML
-    public void handleC(ActionEvent event) {
-        System.out.println("You clicked choice C");
-        test.getQuestion(questionNumber).setUserAnswer(2);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
-        }
-        else {
-            System.out.println("The answer selected is incorrect.");
-        }
-    }
-    
-     @FXML
-    public void handleD(ActionEvent event) {
-        System.out.println("You clicked choice D");
-        test.getQuestion(questionNumber).setUserAnswer(3);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
-        }
-        else {
-            System.out.println("The answer selected is incorrect.");
+        else if (target == btOptionD){
+            test.getQuestion(questionNumber).setUserAnswer(3);
+            lbChoiceD.setTextFill(Color.ORANGE);
         }
     }
     
@@ -123,13 +85,52 @@ public class FXMLDocumentController implements Initializable {
     public void handleNext(ActionEvent event) {
         if (questionNumber < test.getNumberOfQuestions() - 1) 
             questionNumber ++;
+        
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+        switch (test.getQuestion(questionNumber).getUserAnswer()){
+            case (0):
+                lbChoiceA.setTextFill(Color.ORANGE);
+                break;
+            case (1):
+                lbChoiceB.setTextFill(Color.ORANGE);   
+                break;
+            case (2):
+                lbChoiceC.setTextFill(Color.ORANGE);
+                break;
+            case (3):
+                lbChoiceD.setTextFill(Color.ORANGE);    
+        }
+        
         getInfoToShow();
     }
     
     @FXML
     public void handlePrevious(ActionEvent event) {
+        
         if (questionNumber > 0) 
             questionNumber --;
+        
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+        switch (test.getQuestion(questionNumber).getUserAnswer()){
+            case (0):
+                lbChoiceA.setTextFill(Color.ORANGE);
+                break;
+            case (1):
+                lbChoiceB.setTextFill(Color.ORANGE);   
+                break;
+            case (2):
+                lbChoiceC.setTextFill(Color.ORANGE);
+                break;
+            case (3):
+                lbChoiceD.setTextFill(Color.ORANGE);    
+        }
+        
         getInfoToShow();
     }
     
@@ -147,7 +148,6 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void handlePause(ActionEvent event) {
-<<<<<<< src/project/FXMLDocumentController.java
 
     }
     
@@ -164,13 +164,11 @@ public class FXMLDocumentController implements Initializable {
         }));
         lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
         timeline.play();
-=======
         lbQuestionText.setText("");
         lbChoiceA.setText("");
         lbChoiceB.setText("");
         lbChoiceC.setText("");
         lbChoiceD.setText("");
->>>>>>> src/project/FXMLDocumentController.java
         
         Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
         Optional<ButtonType> result = pause.showAndWait();
@@ -195,15 +193,12 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-<<<<<<< src/project/FXMLDocumentController.java
         displayTime();
         getInfoToShow();  
-=======
         
         test = new Test(Project.getNumOfQuestions());
         getInfoToShow();
   
->>>>>>> src/project/FXMLDocumentController.java
     }    
    
 }
