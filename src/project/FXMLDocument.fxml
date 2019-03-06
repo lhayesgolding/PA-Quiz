@@ -24,7 +24,7 @@
       <Button fx:id="btNext" layoutX="543.0" layoutY="529.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
       <Button fx:id="btPrevious" layoutX="442.0" layoutY="529.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
       <Label fx:id="lbTimeRemaining" layoutX="50.0" layoutY="504.0" text="Time Remaining" textFill="#2d13f0" />
-      <Label fx:id="lbTimer" layoutX="43.0" layoutY="534.0" text="(Countdown timer here)" />
+      <Label fx:id="lbTimer" layoutX="43.0" layoutY="534.0" />
       <Label fx:id="lbQuestionNum" layoutX="451.0" layoutY="504.0" text="Question # / #" textFill="#2d13f0" />
       <Label fx:id="lbFinishTest" layoutX="107.0" layoutY="593.0" prefHeight="42.0" prefWidth="299.0" text="Unanswered questions will be marked incorrect" wrapText="true" />
       <Label fx:id="lbTitle" layoutX="61.0" layoutY="23.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">

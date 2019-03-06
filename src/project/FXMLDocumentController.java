@@ -12,10 +12,20 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+<<<<<<< src/project/FXMLDocumentController.java
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import javafx.util.Duration;
+=======
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -27,6 +37,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+>>>>>>> src/project/FXMLDocumentController.java
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -39,8 +50,16 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD, lbQuestionNum;
     @FXML private Button btOptionA, btOptionB, btOptionC, btOptionD;
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
+    @FXML private Label lbTimer;
     private int questionNumber = 0; // track which question user is currently on
+<<<<<<< src/project/FXMLDocumentController.java
+    private Test test = new Test(15);
+    private Timeline timeline;
+    private int seconds = test.getNumberOfQuestions() * 60;
+
+=======
     private Test test;
+>>>>>>> src/project/FXMLDocumentController.java
     
     
 
@@ -128,11 +147,30 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void handlePause(ActionEvent event) {
+<<<<<<< src/project/FXMLDocumentController.java
+
+    }
+    
+    @FXML
+    public void displayTime(){    
+        timeline = new Timeline();
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), event -> {
+            seconds--;
+            lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+            if(seconds <= 0) {
+                timeline.stop();
+            }
+        }));
+        lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+        timeline.play();
+=======
         lbQuestionText.setText("");
         lbChoiceA.setText("");
         lbChoiceB.setText("");
         lbChoiceC.setText("");
         lbChoiceD.setText("");
+>>>>>>> src/project/FXMLDocumentController.java
         
         Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
         Optional<ButtonType> result = pause.showAndWait();
@@ -157,10 +195,15 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+<<<<<<< src/project/FXMLDocumentController.java
+        displayTime();
+        getInfoToShow();  
+=======
         
         test = new Test(Project.getNumOfQuestions());
         getInfoToShow();
   
+>>>>>>> src/project/FXMLDocumentController.java
     }    
    
 }
