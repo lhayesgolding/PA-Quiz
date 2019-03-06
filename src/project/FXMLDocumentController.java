@@ -45,9 +45,9 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
     private int questionNumber = 0; // track which question user is currently on
     private Test test;
-    private Label lbTimer;
+    @FXML private Label lbTimer;
     private Timeline timeline;
-//    private int seconds = test.getNumberOfQuestions() * 60;
+    private int seconds;
     
 
     @FXML
@@ -152,17 +152,17 @@ public class FXMLDocumentController implements Initializable {
     }
     
     public void displayTime(){
-//        timeline = new Timeline();
-//        timeline.setCycleCount(Animation.INDEFINITE);
-//        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), event -> {
-//            seconds--;
-//            lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
-//            if(seconds <= 0) {
-//                timeline.stop();
-//            }
-//        }));
-//        lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
-//        timeline.play();    
+        timeline = new Timeline();
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), event -> {
+            seconds--;
+            lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+            if(seconds <= 0) {
+                timeline.stop();
+            }
+        }));
+        lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+        timeline.play();    
     }
     
     public void getInfoToShow() {
@@ -179,6 +179,7 @@ public class FXMLDocumentController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         test = new Test(Project.getNumOfQuestions());
+        seconds = test.getNumberOfQuestions() * 60; 
         getInfoToShow();
         displayTime();
   
