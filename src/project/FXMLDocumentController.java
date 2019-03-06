@@ -12,6 +12,9 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +30,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Background;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
 
@@ -41,7 +45,9 @@ public class FXMLDocumentController implements Initializable {
     @FXML private Button btPause, btPrevious, btNext, btFinishTest;
     private int questionNumber = 0; // track which question user is currently on
     private Test test;
-    
+    private Label lbTimer;
+    private Timeline timeline;
+//    private int seconds = test.getNumberOfQuestions() * 60;
     
 
     @FXML
@@ -145,6 +151,20 @@ public class FXMLDocumentController implements Initializable {
         }
     }
     
+    public void displayTime(){
+//        timeline = new Timeline();
+//        timeline.setCycleCount(Animation.INDEFINITE);
+//        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), event -> {
+//            seconds--;
+//            lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+//            if(seconds <= 0) {
+//                timeline.stop();
+//            }
+//        }));
+//        lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+//        timeline.play();    
+    }
+    
     public void getInfoToShow() {
         lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
         lbChoiceA.setText((String)test.getQuestion(questionNumber).getChoices().get(0));
@@ -160,6 +180,7 @@ public class FXMLDocumentController implements Initializable {
         
         test = new Test(Project.getNumOfQuestions());
         getInfoToShow();
+        displayTime();
   
     }    
    
