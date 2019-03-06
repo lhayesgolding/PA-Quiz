@@ -51,58 +51,29 @@ public class FXMLDocumentController implements Initializable {
     
 
     @FXML
-    public void handleA(ActionEvent event) {
-        // to do: record whether question was correct, 
-        // put checkmark graphic next to chosen answer or something else to show it 
-        //         -> needs to be part of the question object to stay there if user leaves question and comes back
-        
-        System.out.println("You clicked choice A");
-        test.getQuestion(questionNumber).setUserAnswer(0);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
+    public void handleAnswerChoice(ActionEvent event){
+        Button target = (Button)event.getTarget();
+
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+     
+        if (target == btOptionA){
+            test.getQuestion(questionNumber).setUserAnswer(0);
+            lbChoiceA.setTextFill(Color.ORANGE);
         }
-        else {
-            System.out.println("The answer selected is incorrect.");
+        else if (target == btOptionB){
+            test.getQuestion(questionNumber).setUserAnswer(1);
+            lbChoiceB.setTextFill(Color.ORANGE);
         }
-    } 
-    
-    @FXML
-    public void handleB(ActionEvent event) {
-        System.out.println("You clicked choice B");
-        test.getQuestion(questionNumber).setUserAnswer(1);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
+        else if (target == btOptionC){
+            test.getQuestion(questionNumber).setUserAnswer(2);
+            lbChoiceC.setTextFill(Color.ORANGE);
         }
-        else {
-            System.out.println("The answer selected is incorrect.");
-        }
-    }
-    
-     @FXML
-    public void handleC(ActionEvent event) {
-        System.out.println("You clicked choice C");
-        test.getQuestion(questionNumber).setUserAnswer(2);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
-        }
-        else {
-            System.out.println("The answer selected is incorrect.");
-        }
-    }
-    
-     @FXML
-    public void handleD(ActionEvent event) {
-        System.out.println("You clicked choice D");
-        test.getQuestion(questionNumber).setUserAnswer(3);
-        
-        if (test.getQuestion(questionNumber).isCorrect()) {
-            System.out.println("The answer selected is correct!");
-        }
-        else {
-            System.out.println("The answer selected is incorrect.");
+        else if (target == btOptionD){
+            test.getQuestion(questionNumber).setUserAnswer(3);
+            lbChoiceD.setTextFill(Color.ORANGE);
         }
     }
     
@@ -110,13 +81,52 @@ public class FXMLDocumentController implements Initializable {
     public void handleNext(ActionEvent event) {
         if (questionNumber < test.getNumberOfQuestions() - 1) 
             questionNumber ++;
+        
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+        switch (test.getQuestion(questionNumber).getUserAnswer()){
+            case (0):
+                lbChoiceA.setTextFill(Color.ORANGE);
+                break;
+            case (1):
+                lbChoiceB.setTextFill(Color.ORANGE);   
+                break;
+            case (2):
+                lbChoiceC.setTextFill(Color.ORANGE);
+                break;
+            case (3):
+                lbChoiceD.setTextFill(Color.ORANGE);    
+        }
+        
         getInfoToShow();
     }
     
     @FXML
     public void handlePrevious(ActionEvent event) {
+        
         if (questionNumber > 0) 
             questionNumber --;
+        
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+        switch (test.getQuestion(questionNumber).getUserAnswer()){
+            case (0):
+                lbChoiceA.setTextFill(Color.ORANGE);
+                break;
+            case (1):
+                lbChoiceB.setTextFill(Color.ORANGE);   
+                break;
+            case (2):
+                lbChoiceC.setTextFill(Color.ORANGE);
+                break;
+            case (3):
+                lbChoiceD.setTextFill(Color.ORANGE);    
+        }
+        
         getInfoToShow();
     }
     
