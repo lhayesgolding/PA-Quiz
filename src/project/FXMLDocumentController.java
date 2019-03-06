@@ -119,10 +119,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     public void handlePause(ActionEvent event) {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Click OK to resume test", ButtonType.OK);
-            alert.setHeaderText("Test paused");
-            alert.show();
-//            timeline.pause();
+
     }
     
     @FXML
