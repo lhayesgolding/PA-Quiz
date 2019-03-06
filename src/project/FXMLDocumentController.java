@@ -10,12 +10,9 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static javafx.animation.Animation.INDEFINITE;
+import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
-import javafx.beans.property.IntegerProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,8 +37,7 @@ public class FXMLDocumentController implements Initializable {
     private int questionNumber = 0; // track which question user is currently on
     private Test test = new Test(15);
     private Timeline timeline;
-    private int numberOfQuestions = test.getNumberOfQuestions();
-    private IntegerProperty timeMinutes = new SimpleIntegerProperty(numberOfQuestions);
+    private int seconds = test.getNumberOfQuestions() * 60;
 
     
     
@@ -130,12 +126,18 @@ public class FXMLDocumentController implements Initializable {
     }
     
     @FXML
-    public void displayTime(ActionEvent event){    
-        timeMinutes.set(numberOfQuestions);
+    public void displayTime(){    
         timeline = new Timeline();
-        timeline.getKeyFrames().add(new KeyFrame(Duration.minutes(numberOfQuestions), 
-            new KeyValue(timeMinutes, 0)));
-        timeline.playFromStart();
+        timeline.setCycleCount(Animation.INDEFINITE);
+        timeline.getKeyFrames().add(new KeyFrame(Duration.seconds(1), event -> {
+            seconds--;
+            lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+            if(seconds <= 0) {
+                timeline.stop();
+            }
+        }));
+        lbTimer.setText(String.format("%d:%02d", seconds/60, seconds%60));
+        timeline.play();
         
     }
     
@@ -151,7 +153,7 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        lbTimer.textProperty().bind(timeMinutes.asString());
+        displayTime();
         getInfoToShow();  
     }    
    
