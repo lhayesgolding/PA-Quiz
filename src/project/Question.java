@@ -7,7 +7,7 @@ public class Question {
     private String quest;
     private ArrayList<String> choices = new ArrayList<>(); // made this an ArrayList for convenience
     private Integer answer;
-    private Integer userAnswer;
+    private Integer userAnswer = -1;
     private ArrayList<String> hints = new ArrayList<>(); // same with this one
     
     Question(String quest0, ArrayList<String> choices0, Integer answer0, 
