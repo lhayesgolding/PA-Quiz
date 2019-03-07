@@ -40,13 +40,16 @@ public class FXMLEndPageController implements Initializable {
                      + test.getQuestion(i).getChoices().get(test.getQuestion(i).getUserAnswer())
                      + "\n";
                 if (test.getQuestion(i).getAnswer() == test.getQuestion(i).getUserAnswer())
-                    questionString = questionString + "Correct: ";
-                else
-                    questionString = questionString + "Incorrect: "; 
-                questionString = questionString + test.getQuestion(i).getHints().get(test.getQuestion(i).getUserAnswer());
+                    questionString = questionString + "Correct: ";       
+                else {
+                    questionString = questionString + "Incorrect. The answer is "
+                            + test.getQuestion(i).getChoices().get(test.getQuestion(i).getAnswer())
+                            + ".\n"; 
+                }
+                questionString = questionString + test.getQuestion(i).getHints().get(test.getQuestion(i).getAnswer());
             } else
                 questionString = questionString + "\n\nYou did not answer this question.";
-        reviewText = reviewText + questionString + "\n\n";
+            reviewText = reviewText + questionString + "\n\n";
         }
         reviewTextArea.setText(reviewText);
         scrollPane.setVisible(true);
