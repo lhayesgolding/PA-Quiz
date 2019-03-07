@@ -149,6 +149,7 @@ public class FXMLDocumentController implements Initializable {
         lbChoiceB.setText("");
         lbChoiceC.setText("");
         lbChoiceD.setText("");
+        timeline.pause();
         
         Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
         Optional<ButtonType> result = pause.showAndWait();
@@ -158,6 +159,7 @@ public class FXMLDocumentController implements Initializable {
             lbChoiceB.setText((String)test.getQuestion(questionNumber).getChoices().get(1));
             lbChoiceC.setText((String)test.getQuestion(questionNumber).getChoices().get(2));
             lbChoiceD.setText((String)test.getQuestion(questionNumber).getChoices().get(3));
+            timeline.play();
         }
     }
     
