@@ -182,7 +182,6 @@ public class FXMLDocumentController implements Initializable {
         lbChoiceC.setText((String)test.getQuestion(questionNumber).getChoices().get(2));
         lbChoiceD.setText((String)test.getQuestion(questionNumber).getChoices().get(3));
         lbQuestionNum.setText("Question " + (questionNumber + 1) + "/" + test.getNumberOfQuestions());
-  
     }
     
     @Override
