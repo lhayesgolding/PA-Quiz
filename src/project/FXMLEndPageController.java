@@ -35,7 +35,7 @@ public class FXMLEndPageController implements Initializable {
         String questionString = "";
         for (int i = 0; i < test.getNumberOfQuestions(); i++) {
             questionString = (i + 1) + ". " + test.getQuestion(i).getQuest();
-            if (test.getQuestion(i).getUserAnswer() != null) {      
+            if (test.getQuestion(i).getUserAnswer() != -1) {      
                 questionString = questionString + "\n\nYou answered: " 
                      + test.getQuestion(i).getChoices().get(test.getQuestion(i).getUserAnswer())
                      + "\n";
