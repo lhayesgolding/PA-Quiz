@@ -12,26 +12,26 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Label fx:id="lbChoiceA" layoutX="75.0" layoutY="251.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceA" wrapText="true" />
-      <Label fx:id="lbChoiceB" layoutX="75.0" layoutY="307.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceB" wrapText="true" />
-      <Label fx:id="lbChoiceC" layoutX="75.0" layoutY="363.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceC" wrapText="true" />
-      <Label fx:id="lbChoiceD" layoutX="75.0" layoutY="419.0" prefHeight="42.0" prefWidth="450.0" text="ChoiceD" wrapText="true" />
-      <Button fx:id="btOptionA" layoutX="580.0" layoutY="259.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="A" />
-      <Button fx:id="btOptionB" layoutX="580.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="B" />
-      <Button fx:id="btOptionC" layoutX="580.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="C" />
-      <Button fx:id="btOptionD" layoutX="580.0" layoutY="427.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="D" />
-      <Button fx:id="btFinishTest" layoutX="14.0" layoutY="600.0" mnemonicParsing="false" onAction="#handleFinishTest" text="Finish Test" />
+      <Label fx:id="lbChoiceA" layoutX="107.0" layoutY="249.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceA" wrapText="true" />
+      <Label fx:id="lbChoiceB" layoutX="107.0" layoutY="307.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceB" wrapText="true" />
+      <Label fx:id="lbChoiceC" layoutX="107.0" layoutY="361.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceC" wrapText="true" />
+      <Label fx:id="lbChoiceD" layoutX="107.0" layoutY="417.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceD" wrapText="true" />
+      <Button fx:id="btOptionA" layoutX="66.0" layoutY="258.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="A" />
+      <Button fx:id="btOptionB" layoutX="66.0" layoutY="315.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="B" />
+      <Button fx:id="btOptionC" layoutX="66.0" layoutY="370.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="C" />
+      <Button fx:id="btOptionD" layoutX="65.0" layoutY="426.0" mnemonicParsing="false" onAction="#handleAnswerChoice" text="D" />
+      <Button fx:id="btFinishTest" layoutX="25.0" layoutY="601.0" mnemonicParsing="false" onAction="#handleFinishTest" text="Finish Test" />
       <Button fx:id="btNext" layoutX="543.0" layoutY="529.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
       <Button fx:id="btPrevious" layoutX="442.0" layoutY="529.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
-      <Label fx:id="lbTimeRemaining" layoutX="50.0" layoutY="504.0" text="Time Remaining" textFill="#2d13f0" />
-      <Label fx:id="lbTimer" layoutX="43.0" layoutY="534.0" text="(Countdown timer here)" />
-      <Label fx:id="lbQuestionNum" layoutX="451.0" layoutY="504.0" text="Question # / #" textFill="#2d13f0" />
-      <Label fx:id="lbFinishTest" layoutX="107.0" layoutY="593.0" prefHeight="42.0" prefWidth="299.0" text="Unanswered questions will be marked incorrect" wrapText="true" />
+      <Label fx:id="lbTimeRemaining" layoutX="50.0" layoutY="504.0" text="Time Remaining:" textFill="#2d13f0" />
+      <Label fx:id="lbTimer" layoutX="164.0" layoutY="504.0" text="10:00" />
+      <Label fx:id="lbQuestionNum" layoutX="496.0" layoutY="504.0" text="Question # / #" textFill="#2d13f0" />
+      <Label fx:id="lbFinishTest" layoutX="122.0" layoutY="593.0" prefHeight="42.0" prefWidth="394.0" text="Unanswered questions will be marked incorrect" wrapText="true" />
       <Label fx:id="lbTitle" layoutX="61.0" layoutY="23.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="btPause" layoutX="198.0" layoutY="529.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
+      <Button fx:id="btPause" layoutX="83.0" layoutY="530.0" mnemonicParsing="false" onAction="#handlePause" text="Pause" />
    </children>
 </AnchorPane>
