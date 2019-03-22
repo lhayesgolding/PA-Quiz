@@ -3,48 +3,45 @@ package project;
 import java.util.ArrayList;
 
 public class Question {
-    
-    private String quest;
-    private ArrayList<String> choices = new ArrayList<>(); // made this an ArrayList for convenience
-    private Integer answer;
-    private Integer userAnswer = -1;
-    private ArrayList<String> hints = new ArrayList<>(); // same with this one
-    
-    Question(String quest0, ArrayList<String> choices0, Integer answer0, 
-            ArrayList<String> hints0 ) {
-        quest = quest0;
-        choices = choices0;
-        answer = answer0;
-        hints = hints0;
-        
-    }
-    
-    public String getQuest() {
-        return quest;
-    }
-    
-    public ArrayList getChoices() {
-        return choices;
-    }
-    
-    public Integer getAnswer() {
-        return answer;
-    }
-    
-    public ArrayList getHints() {
-        return hints;
-    }
-    
-    public Integer getUserAnswer() {
-        return userAnswer;
-    }
-    public void setUserAnswer(int selection) {
-        userAnswer = selection;
-    }
-    
-    public boolean isCorrect() {
-        return answer.equals(userAnswer);
-    }
-    
-}
 
+  private String quest;
+  private ArrayList<String> choices = new ArrayList<>(); // made this an ArrayList for convenience
+  private Integer answer;
+  private Integer userAnswer = -1;
+  private ArrayList<String> hints = new ArrayList<>(); // same with this one
+
+  Question(String quest0, ArrayList<String> choices0, Integer answer0, ArrayList<String> hints0) {
+    quest = quest0;
+    choices = choices0;
+    answer = answer0;
+    hints = hints0;
+  }
+
+  public String getQuest() {
+    return quest;
+  }
+
+  public ArrayList getChoices() {
+    return choices;
+  }
+
+  public Integer getAnswer() {
+    return answer;
+  }
+
+  public ArrayList getHints() {
+    return hints;
+  }
+
+  public Integer getUserAnswer() {
+    return userAnswer;
+  }
+
+  public void setUserAnswer(int selection) {
+    userAnswer = selection;
+  }
+
+  public boolean isCorrect() {
+    return answer.equals(userAnswer);
+  }
+}
