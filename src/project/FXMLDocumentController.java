@@ -161,6 +161,19 @@ public class FXMLDocumentController implements Initializable {
                   lbTimer.setText(String.format("%d:%02d", seconds / 60, seconds % 60));
                   if (seconds <= 0) {
                     timeline.stop();
+                    lbQuestionText.setText("You have reached the end of the allocated time. "
+                        + "Click the Finish Test button to see your score");
+                    lbChoiceA.setText("");
+                    lbChoiceB.setText("");
+                    lbChoiceC.setText("");
+                    lbChoiceD.setText("");
+                    btOptionA.setDisable(true);
+                    btOptionB.setDisable(true);
+                    btOptionC.setDisable(true);
+                    btOptionD.setDisable(true);
+                    btNext.setDisable(true);
+                    btPrevious.setDisable(true);
+                    btPause.setDisable(true);
                   }
                 }));
     lbTimer.setText(String.format("%d:%02d", seconds / 60, seconds % 60));
