@@ -23,28 +23,24 @@ import javafx.stage.Stage;
  *
  * @author lizri
  */
-public class FXMLLogInController implements Initializable {
+public class FXMLCreateAccountController implements Initializable {
     
-    @FXML private Button btLogIn, btCreateAccount;
-    
-    @FXML
-    public void handleLogIn(ActionEvent event) throws IOException {
-        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
-        Scene startPageScene = new Scene(startPageParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(startPageScene);
-        window.show();
-    }
+    @FXML Button btSubmit, btReturn;
     
     @FXML
-    public void handleCreateAccount(ActionEvent event) throws IOException {
-        Parent createAccountParent = FXMLLoader.load(getClass().getResource("FXMLCreateAccount.fxml"));
-        Scene createAccountScene = new Scene(createAccountParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(createAccountScene);
-        window.show();
+    public void handleSubmit(ActionEvent event) throws IOException {
+        
     }
 
+    @FXML
+    public void handleReturn(ActionEvent event) throws IOException {
+        Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
+        Scene logInScene = new Scene(logInParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(logInScene);
+        window.show();
+    }
+    
     /**
      * Initializes the controller class.
      */
