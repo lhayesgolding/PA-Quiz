@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 
 /** @author jthre_000 */
 public class Project extends Application {
-<<<<<<< src/project/Project.java
     
     private static int numOfQuestions = 10;
     private static Test test = new Test();
