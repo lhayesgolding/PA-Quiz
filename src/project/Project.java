@@ -5,20 +5,15 @@
  */
 package project;
 
-import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import jsonparser.JSONQuestionObject;
-import jsonparser.JSONReader;
 
-/**
- *
- * @author jthre_000
- */
+/** @author jthre_000 */
 public class Project extends Application {
+<<<<<<< src/project/Project.java
     
     private static int numOfQuestions = 10;
     private static Test test = new Test();

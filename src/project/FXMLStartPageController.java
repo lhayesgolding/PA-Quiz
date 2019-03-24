@@ -2,7 +2,7 @@
  * Westfield State University: CAIS 220: Program Design II
  * @author Liz Hayes-Golding (ehayesgolding0123@westfield.ma.edu)
  * Created Feb 22, 2019 3:10:39 PM
- * 
+ *
  */
 package project;
 
@@ -27,30 +27,27 @@ import javafx.stage.Stage;
  * @author lizhayes-golding
  */
 public class FXMLStartPageController implements Initializable {
-    
-    @FXML private ChoiceBox cbNumQuestions, cbTestType;
-    @FXML private Button btStart;
-    @FXML private Label lbNumQuestions, lbTestType;
-    
-    @FXML
-    public void handleStartButton(ActionEvent event) throws IOException {  
-        Project.setNumOfQuestions((int)cbNumQuestions.getValue());
-        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        Scene testPageScene = new Scene(testPageParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(testPageScene);
-        window.show();
-    }
-    
-    /**
-     * Initializes the controller class.
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        cbNumQuestions.getItems().addAll(10, 20, 30, 40, 50);
-        cbNumQuestions.setValue(10);
-        cbTestType.getItems().addAll("Recorded", "Practice");
-        cbTestType.setValue("Recorded");
-    }    
-    
+
+  @FXML private ChoiceBox cbNumQuestions, cbTestType;
+  @FXML private Button btStart;
+  @FXML private Label lbNumQuestions, lbTestType;
+
+  @FXML
+  public void handleStartButton(ActionEvent event) throws IOException {
+    Project.setNumOfQuestions((int) cbNumQuestions.getValue());
+    Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+    Scene testPageScene = new Scene(testPageParent);
+    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    window.setScene(testPageScene);
+    window.show();
+  }
+
+  /** Initializes the controller class. */
+  @Override
+  public void initialize(URL url, ResourceBundle rb) {
+    cbNumQuestions.getItems().addAll(10, 20, 30, 40, 50);
+    cbNumQuestions.setValue(10);
+    cbTestType.getItems().addAll("Recorded", "Practice");
+    cbTestType.setValue("Recorded");
+  }
 }
