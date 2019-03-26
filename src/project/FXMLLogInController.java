@@ -55,7 +55,7 @@ public class FXMLLogInController implements Initializable {
             System.out.println("username: " + username);
             if (passwordfield.getText() != null) password = passwordfield.getText();
             System.out.println("password: " + password);
-            if(username.equals(""))
+            if(username.equals("") || password.equals(""))
                 invalidlogin.setVisible(true);
             if(!username.equals("") && !password.equals("")){
                 if (usermap.containsKey(username)) {
