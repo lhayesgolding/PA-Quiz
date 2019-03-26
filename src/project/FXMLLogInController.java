@@ -58,17 +58,21 @@ public class FXMLLogInController implements Initializable {
             if(username.equals(""))
                 invalidlogin.setVisible(true);
             if(!username.equals("") && !password.equals("")){
-                if (valid(usermap.get(username),password)){
-                    Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
-                    Scene startPageScene = new Scene(startPageParent);
-                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-                    window.setScene(startPageScene);
-                    window.show();
-                    
-                    //FIS.close();
-               }
-               else
-                   invalidlogin.setVisible(true);
+                if (usermap.containsKey(username)) {
+                    if (valid(usermap.get(username),password)){
+                        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+                        Scene startPageScene = new Scene(startPageParent);
+                        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                        window.setScene(startPageScene);
+                        window.show();
+
+                        //FIS.close();
+                    }
+                    else
+                        invalidlogin.setVisible(true);
+                }
+                else
+                    invalidlogin.setVisible(true);
             }
     }
     
