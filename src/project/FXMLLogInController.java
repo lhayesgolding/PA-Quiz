@@ -49,13 +49,15 @@ public class FXMLLogInController implements Initializable {
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException {
         
-            String username = null;
-            String password = null;
+            String username = "";
+            String password = "";
             if (userfield.getText() != null) username = userfield.getText();
             System.out.println("username: " + username);
             if (passwordfield.getText() != null) password = passwordfield.getText();
             System.out.println("password: " + password);
-            if(username != null && password != null){
+            if(username.equals(""))
+                invalidlogin.setVisible(true);
+            if(!username.equals("") && !password.equals("")){
                 if (valid(usermap.get(username),password)){
                     Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
                     Scene startPageScene = new Scene(startPageParent);

@@ -31,7 +31,7 @@
                   <Text fx:id="invalidlogin" fill="RED" layoutX="100.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="invalid login" textAlignment="CENTER" visible="false" wrappingWidth="141.13671875" AnchorPane.bottomAnchor="246.38828124999998" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="112.46328125000002" AnchorPane.topAnchor="88.05078125" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="443.0" layoutY="114.0" prefHeight="354.0" prefWidth="214.0" style="-fx-border-color: black;">
+            <AnchorPane layoutX="447.0" layoutY="114.0" prefHeight="353.0" prefWidth="210.0" style="-fx-border-color: black;">
                <children>
                   <Button fx:id="btCreateAccount" layoutX="53.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleCreateAccount" prefHeight="27.0" prefWidth="134.0" text="Create Account" />
                   <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="26.0" prefHeight="35.0" prefWidth="176.0" text="New Users" textAlignment="CENTER" textFill="#2d13f0" wrapText="true">
