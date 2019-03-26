@@ -1,9 +1,3 @@
-/*
- * Westfield State University: CAIS 220: Program Design II
- * @author Liz Hayes-Golding (ehayesgolding0123@westfield.ma.edu)
- * Created Feb 22, 2019 3:10:39 PM
- *
- */
 package project;
 
 import java.io.IOException;

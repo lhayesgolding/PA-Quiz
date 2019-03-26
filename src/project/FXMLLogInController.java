@@ -42,9 +42,9 @@ public class FXMLLogInController implements Initializable {
     @FXML private TextField userfield;
     @FXML private Text invalidlogin;
     private HashMap<String,User> usermap = new HashMap<String,User>();
-    final private File userfile = new File("C:\\Users\\Home\\Documents\\CS programs\\projectSE\\src\\datafiles\\userstorage.txt");
-    private FileInputStream FIS;
-    private FileOutputStream FOS;
+    final private File userfile = new File("src/datafiles/userstorage.txt");
+    //private FileInputStream FIS;
+    //private FileOutputStream FOS;
     
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException {
@@ -52,7 +52,9 @@ public class FXMLLogInController implements Initializable {
             String username = null;
             String password = null;
             if (userfield.getText() != null) username = userfield.getText();
+            System.out.println("username: " + username);
             if (passwordfield.getText() != null) password = passwordfield.getText();
+            System.out.println("password: " + password);
             if(username != null && password != null){
                 if (valid(usermap.get(username),password)){
                     Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
@@ -60,10 +62,11 @@ public class FXMLLogInController implements Initializable {
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                     window.setScene(startPageScene);
                     window.show();
-                    FIS.close();
-                }
-                else
-                    invalidlogin.setVisible(true);
+                    
+                    //FIS.close();
+               }
+               else
+                   invalidlogin.setVisible(true);
             }
     }
     
@@ -82,9 +85,9 @@ public class FXMLLogInController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try{
-            FIS = new FileInputStream(userfile);
-            FOS = new FileOutputStream(userfile);
-            Scanner scan = new Scanner(FIS);
+            //FIS = new FileInputStream(userfile);
+            //FOS = new FileOutputStream(userfile);
+            Scanner scan = new Scanner(userfile);
             String name;
             String email;
             String userID;
@@ -92,9 +95,13 @@ public class FXMLLogInController implements Initializable {
             
             while (scan.hasNext()){
                 name = scan.nextLine();
+                System.out.println("name: " + name);
                 email = scan.nextLine();
+                System.out.println("email: " + email);
                 userID = scan.nextLine();
+                System.out.println("userID: " + userID);
                 password = scan.nextLine();
+                System.out.println("password: " + password);
                 
                 User usertemp = new User(name,email,userID,password);
                 usermap.put(userID, usertemp);
@@ -110,6 +117,7 @@ public class FXMLLogInController implements Initializable {
         }    
     
     private boolean valid(User tempuser, String password){
+        
         if (tempuser.getPassword().equals(password)) return true;
         else return false;
     }
