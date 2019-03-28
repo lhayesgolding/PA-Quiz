@@ -24,6 +24,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -38,7 +39,7 @@ import javax.swing.KeyStroke;
 public class FXMLLogInController implements Initializable {
     
     @FXML private Button btLogIn, btCreateAccount;
-    @FXML private TextField passwordfield;
+    @FXML private PasswordField passwordfield;
     @FXML private TextField userfield;
     @FXML private Text invalidlogin;
     private HashMap<String,User> usermap = new HashMap<String,User>();
@@ -49,31 +50,30 @@ public class FXMLLogInController implements Initializable {
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException {
         
-            String username = "";
-            String password = "";
-            if (userfield.getText() != null) username = userfield.getText();
-            System.out.println("username: " + username);
-            if (passwordfield.getText() != null) password = passwordfield.getText();
-            System.out.println("password: " + password);
-            if(username.equals("") || password.equals(""))
-                invalidlogin.setVisible(true);
-            if(!username.equals("") && !password.equals("")){
-                if (usermap.containsKey(username)) {
-                    if (valid(usermap.get(username),password)){
-                        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
-                        Scene startPageScene = new Scene(startPageParent);
-                        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-                        window.setScene(startPageScene);
-                        window.show();
-
-                        //FIS.close();
-                    }
-                    else
-                        invalidlogin.setVisible(true);
+        String username = "";
+        String password = "";
+        if (userfield.getText() != null) username = userfield.getText();
+        System.out.println("username: " + username);
+        if (passwordfield.getText() != null) password = passwordfield.getText();
+        System.out.println("password: " + password);
+        if(username.equals("") || password.equals(""))
+            invalidlogin.setVisible(true);
+        if(!username.equals("") && !password.equals("")){
+            if (usermap.containsKey(username)) {
+                if (valid(usermap.get(username),password)){
+                    Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+                    Scene startPageScene = new Scene(startPageParent);
+                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    window.setScene(startPageScene);
+                    window.show();  
+                    //FIS.close();
                 }
                 else
                     invalidlogin.setVisible(true);
             }
+            else
+                invalidlogin.setVisible(true);
+        }
     }
     
     @FXML
