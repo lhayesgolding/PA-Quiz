@@ -6,9 +6,12 @@ import com.google.gson.annotations.SerializedName;
 
 public class JSONQuestionObject {
 
+@SerializedName("questionID")
+@Expose
+private Integer questionID;
 @SerializedName("categories")
 @Expose
-private Object categories;
+private List<String> categories = null;
 @SerializedName("questionText")
 @Expose
 private String questionText;
@@ -22,11 +25,19 @@ private List<String> explanations = null;
 @Expose
 private Integer correctAnswerIdx;
 
-public Object getCategories() {
+public Integer getQuestionID() {
+return questionID;
+}
+
+public void setQuestionID(Integer questionID) {
+this.questionID = questionID;
+}
+
+public List<String> getCategories() {
 return categories;
 }
 
-public void setCategories(Object categories) {
+public void setCategories(List<String> categories) {
 this.categories = categories;
 }
 
