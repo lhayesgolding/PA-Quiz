@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="534.0" prefWidth="687.0" style="-fx-background-color: azure; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLEndPageController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="534.0" prefWidth="687.0" style="-fx-background-color: azure; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLEndPageController">
    <children>
       <Label layoutX="65.0" layoutY="25.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
          <font>
