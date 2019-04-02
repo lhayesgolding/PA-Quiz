@@ -112,15 +112,16 @@ public class FXMLLogInController implements Initializable {
                 User usertemp = new User(name,email,userID,password);
                 usermap.put(userID, usertemp);
                 
-            }
-        
-        
+            } 
         }
+        
         catch (IOException except){
             System.out.println("there was an IOException when trying to access the userstorage file");
         }
         
-        }    
+        
+        
+    }    
     
     private boolean valid(User tempuser, String password){
         
