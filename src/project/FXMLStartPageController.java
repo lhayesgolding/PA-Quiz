@@ -23,7 +23,7 @@ import javafx.stage.Stage;
 public class FXMLStartPageController implements Initializable {
 
   @FXML private ChoiceBox cbNumQuestions, cbTestType;
-  @FXML private Button btStart;
+  @FXML private Button btStart, btAccount;
   @FXML private Label lbNumQuestions, lbTestType;
 
   @FXML
@@ -34,6 +34,14 @@ public class FXMLStartPageController implements Initializable {
     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
     window.setScene(testPageScene);
     window.show();
+  }
+  
+  public void handleAccountButton(ActionEvent event) throws IOException{
+    Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+    Scene testPageScene = new Scene(testPageParent);
+    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    window.setScene(testPageScene);
+    window.show();  
   }
 
   /** Initializes the controller class. */
