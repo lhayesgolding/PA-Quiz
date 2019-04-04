@@ -7,6 +7,7 @@ package project;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -37,6 +38,10 @@ public class FXMLUserAccountController implements Initializable {
     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
     window.setScene(testPageScene);
     window.show();  
+  }
+  
+  public void populatePastTests(ArrayList userScores){
+    
   }
 
   /**
