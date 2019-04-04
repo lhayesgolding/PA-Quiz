@@ -1,6 +1,33 @@
 [
     {
-        "categories": null,
+        "questionID": 0,
+		"categories": [
+            "Diagnostic Studies",
+            "Obstetrics",
+            "Gynecology"
+        ],
+        "questionText": "A 28 year-old female presents with lower abdominal pain and vaginal discharge. On examination the patient is toxic appearing and her temperature is 39�C. Pelvic examination reveals cervical motion tenderness. What is the next best step in the evaluation of this patient?",
+        "possibleAnswers": [
+            "Abdominal X-ray ",
+            "Endocervical culture ",
+            "Laparoscopy ",
+            "Hysterosalpingogram"
+        ],
+        "explanations": [
+            "Abdominal x-rays are not helpful in the diagnosis of pelvic inflammatory disease. ",
+            "Endocervical culture would be helpful in the diagnosis of pelvic infection ",
+            "Laparoscopy is invasive and would not be the next best step in evaluation of this patient ",
+            "Hysterosalpingogram is indicated in the evaluation of abnormal uterine bleeding and infertility."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 1,
+		"categories": [
+            "History & Physical",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "Which of the following is a common physical examination finding in early intestinal obstruction?",
         "possibleAnswers": [
             "high fever. ",
@@ -17,7 +44,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 2,
+		"categories": [
+            "Clinical Therapeutics",
+            "ENT"
+        ],
         "questionText": "A 26 year-old man complains of itching, redness, tearing of both eyes, sneezing, and a clear nasal discharge for over a week. Both eyes are injected and a watery discharge is noted. There is no foreign body with lid eversion and there is no uptake of fluorescein. Which of the following is the most appropriate topical treatment at this time?",
         "possibleAnswers": [
             "Bacitracin (AK-Tracin) ",
@@ -34,7 +65,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 3,
+		"categories": [
+            "Clinical Therapeutics",
+            "Pulmonology"
+        ],
         "questionText": "Which of the following is the first line agent in the outpatient management of Legionella pneumonia?",
         "possibleAnswers": [
             "Penicillin ",
@@ -51,7 +86,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 4,
+		"categories": [
+            "History & Physical",
+            "Pulmonology"
+        ],
         "questionText": "A 67 year-old male with COPD is most likely to have which of the following physical exam findings?",
         "possibleAnswers": [
             "Barrel chest ",
@@ -68,7 +107,11 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 5,
+		"categories": [
+            "Clinical Intervention",
+            "Pulmonology"
+        ],
         "questionText": "A 24 year-old near drowning victim has been hospitalized for 24 hours. The patient has now had a rapid decline in her respiratory status and has labored breathing, tachypnea and intercostal retractions. Arterial blood gases reveal a pH 7.28, PO2 60 mm Hg, PCO2 52 mm Hg, and bicarbonate 26 mEq/L. CXR reveals diffuse bilateral infiltrates, normal heart size and no pleural effusions. Which of the following is the most appropriate intervention in this patient?",
         "possibleAnswers": [
             "Tracheal intubation with positive-pressure",
@@ -85,7 +128,11 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 6,
+		"categories": [
+            "Scientific Concepts",
+            "Pulmonology"
+        ],
         "questionText": "A 65 year-old male presents with a transudative pleural effusion. This patient most likely has a history of which of the following?",
         "possibleAnswers": [
             "Uremia ",
@@ -102,7 +149,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 7,
+		"categories": [
+            "Diagnosis",
+            "Pulmonology"
+        ],
         "questionText": "A 36 year-old female with history of HIV presents with complaint of increasing dyspnea for three weeks. She admits to fever and nonproductive cough. She denies chest pain, congestion or edema. Physical exam reveals no wheezes or rales. Chest x-ray shows bilateral diffuse infiltrates. What is the most likely diagnosis?",
         "possibleAnswers": [
             "Pulmonary tuberculosis ",
@@ -119,7 +170,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 8,
+		"categories": [
+            "Clinical Therapeutics",
+            "ENT"
+        ],
         "questionText": "A 5 year-old with a severe penicillin allergy is diagnosed with acute otitis media. Which of the following is the treatment of choice?",
         "possibleAnswers": [
             "Trimethoprim-sulfamethoxazole (Bactrim). ",
@@ -136,7 +191,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 9,
+		"categories": [
+            "Health Maintenance",
+            "ENT"
+        ],
         "questionText": "A patient with streptococcal pharyngitis is treated to prevent which of the following conditions?",
         "possibleAnswers": [
             "Glomerulonephritis ",
@@ -153,7 +212,12 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 10,
+		"categories": [
+            "Diagnosis",
+            "Obstetrics",
+            "Gynecology"
+        ],
         "questionText": "A 16 year-old female G1POABO is 30 weeks pregnant. Her last two monthly prenatal exams have shown a trace to 1 plus proteinuria. The patient denies any previous history of hypertension, seizures, headache, visual disturbances or spotting. On examination, blood pressure is 150/98. The fundal height is 32 cm, the uterus is soft and nontender and fetal heart tones are 160 bpm. DTRs are 4 plus out of 4 plus in the upper and lower extremities, and there is moderate pedal edema bilaterally. The skin examination is unremarkable. Based upon these findings what is the most likely diagnosis?",
         "possibleAnswers": [
             "Eclampsia ",
@@ -170,7 +234,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 11,
+		"categories": [
+            "Clinical Intervention",
+            "Obstetrics",
+            "Gynecology"
+        ],
         "questionText": "A 34 year-old female G2P1Abo at 36 weeks gestation presents to the clinic with a complaint of a sudden gush of fluid from the vagina 18 hours ago. The patient denies any blood in the discharge but describes the fluid as watery. Examination reveals that there is a collection of fluid in the posterior fornix, the Nitrazine test is blue as well as the fluid giving a fern-like crystallization pattern on a slide. Given these findings what is the appropriate clinical intervention?",
         "possibleAnswers": [
             "Observation ",
@@ -187,7 +256,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID":12,
+		"categories": [
+            "Clinical Therapeutics",
+            "Obstetrics",
+            "Gynecology"
+        ],
         "questionText": "In the treatment of endometriosis, which of the following medications has a side effect profile that includes loss of bone mineral density, vasomotor symptoms, vaginal dryness and mood changes?",
         "possibleAnswers": [
             "Oral contraceptives ",
@@ -204,7 +278,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID":13,
+		"categories": [
+            "History & Physical",
+            "Dermatology"
+        ],
         "questionText": "Which of the following lesions is often associated with the nodular type of basal cell carcinoma?",
         "possibleAnswers": [
             "Spider vein ",
@@ -221,7 +299,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 14,
+		"categories": [
+            "Health Maintenance",
+            "Dermatology"
+        ],
         "questionText": "Which of the following is the most important factor in determining this patient's risk of sun reactivity and therefore higher risk of developing skin cancer?",
         "possibleAnswers": [
             "Ethnicity. ",
@@ -233,12 +315,16 @@
             "The skin phototypes of various ethnic groups has not yet been established and skin phototypes are not solely based on ethnicity. ",
             "Sunburn can occur at any latitude and therefore geography does not play a large role in a patient's risk ",
             "While very young children and the elderly are thought to have an increased risk of sunburn, this has not been studied and thoroughly documented. ",
-            "Sun reactivity is greatest in individuals who are classified with a \"white\" skin color and who have a limited ability to tan after exposure to ultraviolet radiation."
+            "Sun reactivity is greatest in individuals who are classified with a white skin color and who have a limited ability to tan after exposure to ultraviolet radiation."
         ],
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 15,
+		"categories": [
+            "Diagnosis",
+            "Cardiology"
+        ],
         "questionText": "A patient's carotid pulse has a quick upstroke associated with wide pulse pressure. These findings are suggestive of",
         "possibleAnswers": [
             "mitral stenosis ",
@@ -255,7 +341,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 16,
+		"categories": [
+            "Diagnostic Studies",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "Which of the following in examination of urinary sediment indicates contamination?",
         "possibleAnswers": [
             "Granular casts ",
@@ -272,7 +363,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 17,
+		"categories": [
+            "Clinical Intervention",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "A 62 year-old male presents with hematuria associated with flank pain. Review of a recent abdominal CT scan revealed the presence of 5 cm solid mass in the right kidney. Chest x-ray and bone scan are unremarkable. Which of the following is the most appropriate intervention?",
         "possibleAnswers": [
             "Chemotherapy ",
@@ -289,7 +385,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 18,
+		"categories": [
+            "Clinical Therapeutics",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "A 52 year-old female presents with complaints of incontinence which has become progressively worse over the past two months. Upon further questioning she relates that she will have an extreme urge to urinate, but is unable to make it to the bathroom prior to leakage of urine, She denies incontinence with coughing or sneezing, muscle weakness or suprapubic discomfort. Examination is essentially unremarkable including presence of good rectal sphincter tone. Which of the following is the most appropriate intervention?",
         "possibleAnswers": [
             "Topical estrogen cream ",
@@ -306,7 +407,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 19,
+		"categories": [
+            "Diagnostic Studies",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "Which of the following studies is most appropriate to diagnose celiac disease?",
         "possibleAnswers": [
             "Urinary D-xylose test ",
@@ -323,7 +429,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 20,
+		"categories": [
+            "Diagnostic Studies",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "Which of the following tumor markers is useful in monitoring a patient for recurrence of colorectal cancer after surgical resection?",
         "possibleAnswers": [
             "CA-125 ",
@@ -340,7 +451,34 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 21,
+		"categories": [
+            "History & Physical",
+            "Psychiatry",
+            "Behavioral Medicine"
+        ],
+        "questionText": "A 5 year-old is being evaluated for autism. Of the following, the finding most consistent with this diagnosis is",
+        "possibleAnswers": [
+            "extremely high IQ ",
+            "avoids eye contact ",
+            "easily consoled by hugging when hurt. ",
+            "frequently plays \"house\" or \"cops and robbers\""
+        ],
+        "explanations": [
+            "About 75% of children with autism also have mental retardation. ",
+            "Children with autism do not tend to make eye contact, and even avoid it. ",
+            "Children with autism do not accept comfort when hurt. They stiffen up when hugged. ",
+            "Children with autism do not tend to imitate grown-ups in their play, and do not usually play interactively with others; they tend to use others as \"props\" in their play."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 22,
+		"categories": [
+            "Diagnosis",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "A 14 month-old male who attends day care presents with a two-day history of frequent watery stools. His mother states that he had a fever and vomiting the day before but these have resolved. His mother denies pain in the child. The child is mildly dehydrated but otherwise appears well. Stool samples are free of blood and white blood cells. The lab reports no ova or parasites noted in the stool samples. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Intussusception.. ",
@@ -357,8 +495,33 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
-        "questionText": "Diseases Which of the following is the most common viral sexually transmitted disease in the US?",
+        "questionID": 23,
+		"categories": [
+            "History & Physical",
+            "Infectious Diseases"
+        ],
+        "questionText": "Which of the following findings, if present, helps to differentiate Lyme disease from fibromyalgia?",
+        "possibleAnswers": [
+            "Depression ",
+            "Dysesthesiasal ",
+            "Fatigue ",
+            "Headache"
+        ],
+        "explanations": [
+            "See B for explanation. ",
+            "Headache, fatigue, and depression can occur with both fibromyalgia and Lyme disease, but abnormal neurological findings are consistent with Lyme disease. ",
+            "See B for explanation. ",
+            "See B for explanation."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 24,
+		"categories": [
+            "Health Maintenance",
+            "Infectious Diseases"
+        ],
+        "questionText": "Which of the following is the most common viral sexually transmitted disease in the US?",
         "possibleAnswers": [
             "Hepatitis B virus ",
             "Herpes simplex virus ",
@@ -374,7 +537,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 25,
+		"categories": [
+            "Clinical Intervention",
+            "Cardiology"
+        ],
         "questionText": "Which of the following is the ideal method for the prevention of venous thromboembolism in a 38 year-old male undergoing an inguinal hernia repair?",
         "possibleAnswers": [
             "early ambulation ",
@@ -391,7 +558,33 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 26,
+		"categories": [
+            "History & Physical",
+            "Orthopedics",
+            "Rheumatology"
+        ],
+        "questionText": "Which of the following tests would be included in the physical exam to evaluate a high ankle sprain with instability?",
+        "possibleAnswers": [
+            "Anterior drawer ",
+            "Lachman ",
+            "Vibratory sense ",
+            "Thompson"
+        ],
+        "explanations": [
+            "Anterior drawer, in addition to compressing the ankle mortise, is most reliable to indicate rupture to the anterior talofibular, anterior inferior �biofibular and calcaneofibular ligaments. ",
+            "Lachman exam evaluates instability of the ACL in the knee. ",
+            "Vibratory sense will not provide any information about a high ankle sprain. ",
+            "Thompson sign evaluates for a complete Achilles tendon rupture by squeezing the calf."
+        ],
+        "correctAnswerIdx": 0
+    },
+    {
+        "questionID": 27,
+		"categories": [
+            "Diagnostic Studies",
+            "Cardiology"
+        ],
         "questionText": "Which of the following is considered to be the first EKG evidence of acute myocardial infarction?",
         "possibleAnswers": [
             "ST segment depression ",
@@ -408,7 +601,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 28,
+		"categories": [
+            "Diagnostic Studies",
+            "Cardiology"
+        ],
         "questionText": "A patient has an EKG performed revealing peaked P waves in lead II, tall Rwaves in V1 with strain and right axis deviation. Which of the following is the most likely explanation for these EKG findings?",
         "possibleAnswers": [
             "Anterior wall MI ",
@@ -425,7 +622,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 29,
+		"categories": [
+            "Scientific Concepts",
+            "Hematology"
+        ],
         "questionText": "What is the most common hypercoagulable state?",
         "possibleAnswers": [
             "Factor V Leiden ",
@@ -442,7 +643,34 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 30,
+		"categories": [
+            "History & Physical",
+            "Orthopedics",
+            "Rheumatology"
+        ],
+        "questionText": "A 35 year-old male placed in a thumb spica cast for a scaphoid fracture presents complaining of forearm and hand pain that is not relieved with pain medication and elevation. Which of the following is the earliest physical exam sign for his current condition?",
+        "possibleAnswers": [
+            "Slow capillary refill ",
+            "Loss of two-point discrimination ",
+            "Absent peripheral pulses ",
+            "Pain with passive stretch."
+        ],
+        "explanations": [
+            "Capillary refill is not affected early in compartment syndrome, ",
+            "Loss of two-point discrimination can be the earliest sign of compartment syndrome. ",
+            "Peripheral pulses are poor indicators of compartment syndrome as they remain intact until late ",
+            "Pain with passive stretch is a subjective finding early and must be differentiated from pain of the original injury Although a reliable finding it may be difficult to reproduce in the cast."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 31,
+		"categories": [
+            "Diagnostic Studies",
+            "Orthopedics",
+            "Rheumatology"
+        ],
         "questionText": "Which of the following is the most sensitive screening test for systemic lupus erythematosus?",
         "possibleAnswers": [
             "Anti-Ribonuclear protein (U1-RNP) ",
@@ -459,8 +687,13 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
-        "questionText": "A 35 year-old female who was a back seat passenger in a vehicle which was involved in a head-on collision is brought to the ED. She is able to tell you that she is having difficulty moving both of her legs and is experiencing bilateral leg pain as well. She is embarrassed because she has *wet myself.\" Physical examination reveals markedly diminished sensory and motor function of both legs and decreased rectal sphincter tone. Which of the following is the most likely diagnosis?",
+        "questionID": 32,
+		"categories": [
+            "Diagnosis",
+            "Orthopedics",
+            "Rheumatology"
+        ],
+        "questionText": "A 35 year-old female who was a back seat passenger in a vehicle which was involved in a head-on collision is brought to the ED. She is able to tell you that she is having difficulty moving both of her legs and is experiencing bilateral leg pain as well. She is embarrassed because she has *wet myself*. Physical examination reveals markedly diminished sensory and motor function of both legs and decreased rectal sphincter tone. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Herniated disc at L5-S1 and L4-L5 ",
             "An anterior cord lesion ",
@@ -476,7 +709,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 33,
+		"categories": [
+            "Scientific Concepts",
+            "Neurology"
+        ],
         "questionText": "During EOM testing, the patient is noted to have delayed adduction of the left eye. The rest of the examination is normal. Which of the following is the most likely underlying cause for this abnormality?",
         "possibleAnswers": [
             "Muscular dystrophy ",
@@ -493,7 +730,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 34,
+		"categories": [
+            "Diagnosis",
+            "Cardiology"
+        ],
         "questionText": "A 28 year-old female, 3 months post-partum, complains of gradually increasing dyspnea on exertion. She also complains of near syncope last week She denies chronic medical conditions and hospitalizations other than for the delivery of her child. She denies tobacco, alcohol or illicit drug abuse. Cardiovascular examination is noteworthy for a laterally displaced apical impulse, an $3 and a systolic murmur best heard in the left axilla. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Pulmonary embolism. ",
@@ -510,7 +751,32 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 35,
+		"categories": [
+            "History & Physical",
+            "Cardiology"
+        ],
+        "questionText": "Which of the following physical examination findings will be associated with hypertrophic cardiomyopathy?",
+        "possibleAnswers": [
+            "Murmur will worsen with squatting ",
+            "Murmur will decrease with deep breathing ",
+            "Fixed splitting of S2 ",
+            "Narrowed S2"
+        ],
+        "explanations": [
+            "See B for explanation. ",
+            "In hypertrophic cardiomyopathy, maneuvers that reduce left ventricular volume, such as standing, further narrow the left ventricular outflow and increase the degree of obstruction. An increase in the left ventricular volume that occurs with squatting will expand the outfiow tract and reduce the pressure gradient decreasing the murmur. ",
+            "in atrial septal defect, the S2 sound is widely split and fixed because right ventricular volume overload results in prolonged ejection period and delayed closure of the pulmonic valve. ",
+            "A narrowed S2 is seen with exhalation and aortic stenosis."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 36,
+		"categories": [
+            "Clinical Therapeutics",
+            "Cardiology"
+        ],
         "questionText": "Which of the following anti-hypertensive medications should be used with caution in a patient with preexisting heart block?",
         "possibleAnswers": [
             "Alpha blockers ",
@@ -527,7 +793,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 37,
+		"categories": [
+            "Diagnosis",
+            "Cardiology"
+        ],
         "questionText": "The acute onset of congestive heart failure associated with a loud systolic murmur along the left sternal border in a patient with myocardial infarction suggests which of the following?",
         "possibleAnswers": [
             "Pericarditis ",
@@ -544,7 +814,32 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID":38,
+		"categories": [
+            "History & Physical",
+            "Neurology"
+        ],
+        "questionText": "Which of the following is the earliest manifestation of dementia of the Alzheimer's type?",
+        "possibleAnswers": [
+            "Incontinence ",
+            "Memory deficit ",
+            "Aggressiveness ",
+            "Motor disturbances"
+        ],
+        "explanations": [
+            "Incontinence is not an early manifestation of Alzheimer's disease. ",
+            "A primary characteristic of dementia is memory impairment. A major component of the presenting symptoms is subjective complaints of memory difficulty. ",
+            "Aggressiveness may be seen, but is a later finding. ",
+            "Motor disturbances, such as akinesia/bradykinesia, postural/gait abnormalities, rigidity, and tremor, are signs and symptoms of Parkinson's."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 39,
+		"categories": [
+            "Clinical Therapeutics",
+            "Neurology"
+        ],
         "questionText": "A 45 year-old woman presents with sharp, burning pain that radiates from her mouth toward her right ear. The pain is intermittent, excruciating, lasting for a few seconds, and is worse with eating or touching her face. Which of the following is the drug of choice for long term treatment?",
         "possibleAnswers": [
             "Carbamazepine ",
@@ -561,7 +856,32 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 40,
+		"categories": [
+            "History & Physical",
+            "Pulmonology"
+        ],
+        "questionText": "Which of the following symptoms is most commonly found in a patient with viral croup?",
+        "possibleAnswers": [
+            "Drooling ",
+            "Cough with stridor ",
+            "Headache ",
+            "High fever"
+        ],
+        "explanations": [
+            "Drooling is absent in viral croup, but commonly found in epiglottitis. ",
+            "Patients with viral croup have a prodrome of upper respiratory tract symptoms followed by development of cough and stridor. ",
+            "Headache is not a common symptom in viral croup. ",
+            "High fever is more common in epiglottitis and bacterial tracheitis. Viral croup presents with no or low grade fever."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 41,
+		"categories": [
+            "Clinical Intervention",
+            "Pulmonology"
+        ],
         "questionText": "A patient presents with increasing shortness of breath. On examination there are decreased breath sounds on the right with hyperresonance to percussion. There is tracheal deviation to the left. Of the following which intervention is indicated?",
         "possibleAnswers": [
             "Open thoracotomy ",
@@ -578,7 +898,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 42,
+		"categories": [
+            "Diagnosis",
+            "Pulmonology"
+        ],
         "questionText": "A 26 year-old male presents with gradual onset of nonproductive cough. The patient admits to associated symptoms of headache, malaise and myalgias. The patient denies shortness of breath, chest pain, fever or nasal congestion. Lung exam reveals scattered rales. Chest x-ray shows patchy Infiltrates. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Pulmonary tuberculosis ",
@@ -595,7 +919,34 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 43,
+		"categories": [
+            "History & Physical",
+            "Obstetrics",
+            "Gynecology"
+        ],
+        "questionText": "Which of the following alters the tension on the capsule of the eye, allowing variable focus for near and distant objects?",
+        "possibleAnswers": [
+            "Orbicularis oculi ",
+            "Sphincter pupillae ",
+            "Superior tarsal muscle ",
+            "Ciliary muscle"
+        ],
+        "explanations": [
+            "Orbicularis oculi closes the eyelid ",
+            "Sphincter pupillae muscle closes the pupil. ",
+            "Superior tarsal muscle assists with opening and closing the eyelids. ",
+            "Ciliary muscle controls tension on the lens capsule allowing for variable focus. 28 "
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "questionID": 44,
+		"categories": [
+            "Diagnosis",
+            "Obstetrics",
+            "Gynecology"
+        ],
         "questionText": "A 32 year-old female G5P4Abo at 35 weeks gestation presents to the clinic with sudden painless, profuse vaginal bleeding. The patient states that during the first and second trimesters she had spotting but nothing like this episode. On examination the fetus appears in transverse lie and the uterus is soft, relaxed and nontender. The fetus does not appear in distress. Maternal vital signs are normal. What is the most likely diagnosis?",
         "possibleAnswers": [
             "Placenta previa ",
@@ -612,7 +963,11 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 45,
+		"categories": [
+            "Diagnostic Studies",
+            "Neurology"
+        ],
         "questionText": "A 12 month-old presents with possible viral meningitis. Which of the following laboratory results is most consistent with this diagnosis?",
         "possibleAnswers": [
             "Decreased CSF glucose level ",
@@ -629,7 +984,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 46,
+		"categories": [
+            "Scientific Concepts",
+            "Obstetrics",
+            "Gynecology"
+        ],
         "questionText": "Which of the following immunoglobulins crosses the placenta?",
         "possibleAnswers": [
             "IgM ",
@@ -646,7 +1006,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 47,
+		"categories": [
+            "Diagnostic Studies",
+            "Dermatology"
+        ],
         "questionText": "A 35 year-old female presents with complaints of severe itching. On examination, runs of vesicles and pustules with some excoriation are seen in the web spaces of the fingers. Which of the following will confirm the suspected diagnosis?",
         "possibleAnswers": [
             "Patch testing ",
@@ -663,7 +1027,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 48,
+		"categories": [
+            "Clinical Intervention",
+            "Dermatology"
+        ],
         "questionText": "A 45 year-old female patient with history of type 2 diabetes mellitus presents with complaints of a red painful lump in her right groin. She relates that she first noticed a fairly deep, firm red lump that was tender approximately 4 days ago, which suddenly became much larger and more painful. A large fluctuant erythematous mass in the right groin area is noted on examination. Which of the following is the most appropriate initial intervention?",
         "possibleAnswers": [
             "Cool compresses ",
@@ -680,7 +1048,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 49,
+		"categories": [
+            "Diagnostic Studies",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "A 70 year-old male presents with complaints of urinary frequency and urgency associated with gross painless hematuria for the past 3 weeks. He denies any fever or chills. Urinalysis reveals hematuria, but is otherwise unremarkable. IVP and ultrasound reveal the presence of a filling defect in the bladder. Which of the following is the most appropriate next step?",
         "possibleAnswers": [
             "Oral antibiotics ",
@@ -697,7 +1070,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 50,
+		"categories": [
+            "Clinical Intervention",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "A 23 year-old male complains of urethral discharge. He states that initially he noticed burning when he urinated 2 days ago. Since yesterday has had increasing pain and a purulent discharge. A Gram stain of the discharge reveals gram-negative intracellular diplococci. In addition to appropriate antibiotic therapy, which of the following is also indicated?",
         "possibleAnswers": [
             "Order an HLA-B27 ",
@@ -714,7 +1092,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 51,
+		"categories": [
+            "Scientific Concepts",
+            "Gastrointestinal"
+        ],
         "questionText": "Nutritional A patient develops abdominal cramps and watery diarrhea 10 to 12 hours after eating a plate of unrefrigerated meat and vegetables. The patient denies vomiting. The causative agent is most likely",
         "possibleAnswers": [
             "Staphylococcus aureus. ",
@@ -731,8 +1113,35 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
-        "questionText": "A jaundice B. palmar erythema C. pruritis. D. xanthomas, Explanations (u) A. Jaundice, palmar erythema and xanthomas appear late in the disease (u) B. See A for explanation. (c) C. Pruritus is the most common initial symptom in primary biliary cirrhosis due to the accumulation of bile salts. (u) D. See A for explanation. Ref: (28) 73. Clinical Therapeutics/Gastrointestinal/Nutritional Which of the following medications used in the treatment of peptic ulcer disease is classified as a proton pump inhibitor?",
+        "questionID": 52,
+		"categories": [
+            "History & Physical",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
+        "questionText": "The most common initial presenting symptom of primary biliary cirrhosis is",
+        "possibleAnswers": [
+            "jaundice ",
+            "palmar erythema ",
+            "pruritis. ",
+            "xanthomas,"
+        ],
+        "explanations": [
+            "Jaundice, palmar erythema and xanthomas appear late in the disease ",
+            "See A for explanation. ",
+            "Pruritus is the most common initial symptom in primary biliary cirrhosis due to the accumulation of bile salts. ",
+            "See A for explanation."
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "questionID": 53,
+		"categories": [
+            "Clinical Therapeutics",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
+        "questionText": "Which of the following medications used in the treatment of peptic ulcer disease is classified as a proton pump inhibitor?",
         "possibleAnswers": [
             "Cimetidine (Tagamet) ",
             "Sucralfate (Carafate) ",
@@ -748,7 +1157,34 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 54,
+		"categories": [
+            "History & Physical",
+            "Psychiatry",
+            "Behavioral Medicine"
+        ],
+        "questionText": "Which of the following is associated with normal grief?",
+        "possibleAnswers": [
+            "Disordered self-perception ",
+            "Suicidal ideation ",
+            "Lasts 9-12 months ",
+            "Begins within two months"
+        ],
+        "explanations": [
+            "Major depression is associated with thoughts of guilt, abnormal self-perception, suicidal ideation, lasts up to years, and may begin months prior to the loss. ",
+            "See A for explanation. ",
+            "See A for explanation. ",
+            "Normal grief has an onset within two months of loss, lasts less than two months, and is associated with normal self-perception."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "questionID": 55,
+		"categories": [
+            "Clinical Intervention",
+            "Psychiatry",
+            "Behavioral Medicine"
+        ],
         "questionText": "A patient presents with recurrence of severe depressive symptoms. Previous episodes have occurred on at least five occasions, with one episode responding to ECT. The current episode has lasted for over six months. After a two-month trial of fluoxetine (Prozac), followed by six weeks of amitriptyline (Elavil), the patient still has significant symptoms, including suicidal ideation. The patient is not eating, not sleeping, and is so nonfunctional that she has been fired for missing work. She has not kept appointments for psychotherapy. Which of the following is the most appropriate Intervention?",
         "possibleAnswers": [
             "Phototherapy ",
@@ -765,7 +1201,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 56,
+		"categories": [
+            "Health Maintenance",
+            "Endocrinology"
+        ],
         "questionText": "An asymptomatic 43 year-old patient with Type 2 diabetes mellitus presents for a routine appointment to review fasting blood work. His hemoglobin Atc is 6.2%, fasting blood glucose is 98 mg/dL, total cholesterol is 226 mg/dL, LDL cholesterol is 162 mg/dL, HDL cholesterol is 46 mg/dL and triglycerides of 90 mg/dL. What is the most appropriate action for preventing coronary heart disease in this patient?",
         "possibleAnswers": [
             "Initiate lifestyle changes and drug therapy ",
@@ -782,7 +1222,12 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 57,
+		"categories": [
+            "Clinical Intervention",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "Which of the following is the therapy of choice for long-term management of esophageal varices in a patient who cannot tolerate beta blocker therapy?",
         "possibleAnswers": [
             "?ctreotide (Sandostatin) ",
@@ -799,8 +1244,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
-        "questionText": "Diseases A 3 year-old presents with profuse watery diarrhea for the past three days. The child vomited twice yesterday, but not today. On exam, the child is febrile, with pulse of 142, respiratory rate of 18, and blood pressure of 60/40 mmHg. On exam, the child is alert and responsive, with no focal findings. Which of the following is the most appropriate intervention?",
+        "questionID": 58,
+		"categories": [
+            "Clinical Intervention",
+            "Infectious Diseases"
+        ],
+        "questionText": "A 3 year-old presents with profuse watery diarrhea for the past three days. The child vomited twice yesterday, but not today. On exam, the child is febrile, with pulse of 142, respiratory rate of 18, and blood pressure of 60/40 mmHg. On exam, the child is alert and responsive, with no focal findings. Which of the following is the most appropriate intervention?",
         "possibleAnswers": [
             "Antibiotic therapy ",
             "Begin soft diet",
@@ -816,7 +1265,33 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 59,
+		"categories": [
+            "History & Physical",
+            "Orthopedics",
+            "Rheumatology"
+        ],
+        "questionText": "A 34 year-old female presents with complaints of right forefoot pain. She notes the pain as a severe burning accentuated by activity. She notes her dress shoes aggravate the pain and is relieved when she doesn't have them on. Massage of her foot also helps to lessen the discomfort No foot deformity is noted on exam. To confirm the diagnosis, applying digital pressure along the forefoot would commonly create pain in what area?",
+        "possibleAnswers": [
+            "Between the first and second metatarsal ",
+            "Over the first MTP joint ",
+            "The base of the 2nd MTP joint ",
+            "Between the third and fourth metatarsal"
+        ],
+        "explanations": [
+            "Pain between the first and second metatarsal may be suggestive of a Lis-Franc dislocation fracture. ",
+            "Pain elicited over the first MTP joint may be gout or an inflamed bunion. ",
+            "Pain elicited at the base of the 2nd MTP joint may signify a metatarsalgia. ",
+            "Pain between the third and fourth metatarsal upon digital pressure is due to Morton's neuroma"
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "questionID": 60,
+		"categories": [
+            "Clinical Therapeutics",
+            "Cardiology"
+        ],
         "questionText": "Which of the following is indicated for use in patients with rheumatic fever that is complicated by carditis?",
         "possibleAnswers": [
             "Daily oral cephalosporins ",
@@ -833,7 +1308,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 61,
+		"categories": [
+            "Clinical Therapeutics",
+            "Cardiology"
+        ],
         "questionText": "Which of the following is the mechanism of action for the medication adenosine (Adenocard)?",
         "possibleAnswers": [
             "It raises the threshold for ventricular",
@@ -850,7 +1329,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 62,
+		"categories": [
+            "Diagnosis",
+            "Hematology"
+        ],
         "questionText": "A patient presents complaining of new onset of repeated mottled and numb fingers when exposed to previously tolerated cold weather. The patient denies color changes or itching. ANA is negative. CBC reveals a mild anemia and rouleaux. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Cold agglutinin disease ",
@@ -867,7 +1350,12 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 63,
+		"categories": [
+            "Clinical Therapeutics",
+            "Orthopedics",
+            "Rheumatology"
+        ],
         "questionText": "A patient who has chronic Crohn's disease now complains of a nondeforming asymmetric oligoarthritis of his large joints. The patient also notes that he has been having a flare of his Crohn's disease. Which of the following is the best treatment to alleviate both the inflammatory bowel disease and arthritic symptoms?",
         "possibleAnswers": [
             "Indomethacin ",
@@ -884,7 +1372,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 64,
+		"categories": [
+            "Clinical Intervention",
+            "Orthopedics",
+            "Rheumatology"
+        ],
         "questionText": "Which of the following is the most significant complication of a dislocation of the knee?",
         "possibleAnswers": [
             "Ligament damage ",
@@ -901,7 +1394,12 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 65,
+		"categories": [
+            "Diagnostic Studies",
+            "Orthopedics",
+            "Rheumatology"
+        ],
         "questionText": "A 60 year-old patient who has a 20 year history of diabetes mellitus arrives at the clinic with a complaint of mild to moderate ankle pain. There is no history of trauma. You note on exam that the joint is unstable but not erythematous or warm. On X-ray you would expect to see",
         "possibleAnswers": [
             "osteopenia ",
@@ -918,7 +1416,11 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 66,
+		"categories": [
+            "Health Maintenance",
+            "Pulmonology"
+        ],
         "questionText": "Which of the following patients has a contraindication for the use of live attenuated intranasal influenza vaccination?",
         "possibleAnswers": [
             "Asthma ",
@@ -935,7 +1437,11 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 67,
+		"categories": [
+            "Diagnostic Studies",
+            "Hematology"
+        ],
         "questionText": "A patient presents to the office for routine examination. Initial labs reveal a Hgb of 8.5 mg/dL and Hct of 26%, MCV 66 fL, and RDW 12.1. Peripheral blood smear shows numerous target cells. Based upon these findings what would be the next laboratory test to order?",
         "possibleAnswers": [
             "Hemoglobin electrophoresis ",
@@ -952,7 +1458,11 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 68,
+		"categories": [
+            "Diagnosis",
+            "Endocrinology"
+        ],
         "questionText": "A patient is noted to have microaneurysms, cotton-wool spots and neovascularization on funduscopic exam. What is the most likely diagnosis?",
         "possibleAnswers": [
             "HIVIAIDS ",
@@ -969,7 +1479,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 69,
+		"categories": [
+            "Clinical Intervention",
+            "Cardiology"
+        ],
         "questionText": "Which of the following is the first complication seen with mitral stenosis?",
         "possibleAnswers": [
             "Aortic regurgitation ",
@@ -986,7 +1500,53 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 70,
+		"categories": [
+            "History & Physical",
+            "Cardiology"
+        ],
+        "questionText": "Which of the following physical examination maneuvers should you have the patient perform to best identify a pericardial friction rub?",
+        "possibleAnswers": [
+            "Lean on the left side and exhale ",
+            "Lean on the left side and inhale deeply ",
+            "Perform valsalv� ",
+            "Take a deep breath while leaning forward"
+        ],
+        "explanations": [
+            "See D for explanation. ",
+            "See D for explanation. ",
+            "See D for explanation. ",
+            "Having the patient lean slightly forward while sitting can enhance the pericardial friction rub. Inhaling will cause an increase in the negative thoracic pressure which will increase venous return to the heart. This increased venous return will cause the heart to fill with blood and will put more pressure against the already inflamed pericardium."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "questionID": 71,
+		"categories": [
+            "History & Physical",
+            "Cardiology"
+        ],
+        "questionText": "Topic Which of the following is considered to be a key finding on a patient's physical examination when the patient has coarctation of the aorta?",
+        "possibleAnswers": [
+            "Femoral artery bruits ",
+            "BP greater in upper extremities than tower",
+            "Costovertebral angle tenderness ",
+            "Bilateral flank bruising"
+        ],
+        "explanations": [
+            "Bruits heard over the femoral artery are associated with atherosclerosis ",
+            "Clinically, most patients with coarctation have upper extremity hypertension with forceful carotid and upper extremity pulses. The pulses in the lower extremity are typically weak and delayed relative to the carotid upstroke. The key physical finding that helps in the diagnosis of coarctation is the upper extremity hypertension compared with a much lower blood pressure in the lower extremities 42 ",
+            "Patients who have pain over the flank is most commonly due to pyelonephritis or renal colic. ",
+            "Patients with bilateral flank bruising are most likely to have hemorrhagic pancreatitis (Grey-Turners sign)."
+        ],
+        "correctAnswerIdx": 1
+    },
+    {
+        "questionID": 72,
+		"categories": [
+            "Clinical Therapeutics",
+            "Pulmonology"
+        ],
         "questionText": "Which of the following agents is the first line ong term therapy of choice in a patient with persistent asthma?",
         "possibleAnswers": [
             "Theophylline ",
@@ -1003,7 +1563,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 73,
+		"categories": [
+            "Clinical Intervention",
+            "Obstetrics",
+            "Gynecology"
+        ],
         "questionText": "A postmenopausal patient is diagnosed with rade I breast cancer. The tumor is 0.7 cm in size, estrogenreceptor positive, and axillary nodes are negative. After undergoing a lumpectomy, which of the following adjuvant therapy is indicated for this patient?",
         "possibleAnswers": [
             "Chemotherapy ",
@@ -1020,7 +1585,32 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 74,
+		"categories": [
+            "History & Physical",
+            "Pulmonology"
+        ],
+        "questionText": "A 69 year-old male presents with complaint f increasing dyspnea over the past 6-8 months. The patient denies cough, chest pain or smoking history. Physical exam reveals inspiratory crackles at the bases and clubbing of the nails. Chest x-ray reveals interstitial fibrosis of the lower lungs, thickened pleura and calcified pleural plaques of the lateral chest wall. Pulmonary function testing shows a restrictive pattern with a decreased diffusing capacity. What is most likely noted in this patient's history?",
+        "possibleAnswers": [
+            "Coal mining ",
+            "Silica exposure ",
+            "Textile work ",
+            "Asbestos exposure"
+        ],
+        "explanations": [
+            "Patients with coal miners' pneumoconiosis are typically asymptomatic with unremarkable pulmonary function tests. CXR shows small opacities in the upper lungs. ",
+            "Patients with a history of silica exposure are also asymptomatic and have unaffected pulmonary function tests. CXR shows small rounded opacities throughout the lung and calcified hilar lymph nodes. ",
+            "Textile workers present with an asthma-like disorder with chest tightness, cough and dyspnea that is worse on the first day back to work and improves as the week goes on. ",
+            "Asbestosis exposure often presents years later with increasing dyspnea and interstitial fibrosis of the lower lungs, thickened pleura and calcified pleura plaques. They will have a restrictive pattern on PFT."
+        ],
+        "correctAnswerIdx": 3
+    },
+    {
+        "questionID": 75,
+		"categories": [
+            "Clinical Intervention",
+            "Pulmonology"
+        ],
         "questionText": "A 55 year-old female with history of ulmonary embolus and hypertension presents with a recurrent deep vein thrombosis. The patient's medications include warfarin 3mg daily and hydrochlorothiazide 25 mg daily. The patient's INRs have been averaging 2.6 over the past 3 months. The patient denies complaint of shortness of breath or chest pain. What is the most appropriate next step in the treatment of this patient?",
         "possibleAnswers": [
             "IV heparin therapy ",
@@ -1037,7 +1627,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 76,
+		"categories": [
+            "Diagnosis",
+            "Pulmonology"
+        ],
         "questionText": "A 43 year-old male presents with complaint f fever, fatigue and increasing dyspnea. The patient denies cough, chills, night sweats or smoking history. Physical exam reveals a tired appearing male in no acute distress. Lungs are clear to auscultation bilaterally. Hepatosplenomegaly is noted on abdominal exam. Chest X-ray findings include bilateral hilar adenopathy and diffuse reticular infiltrates, Labs reveal leukocytopenia, elevated sedimentation rate and hypercalcemia. What is the most likely diagnosis in this patient?",
         "possibleAnswers": [
             "Pulmonary tuberculosis ",
@@ -1054,7 +1648,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 77,
+		"categories": [
+            "Diagnosis",
+            "Pulmonology"
+        ],
         "questionText": "A 65 year-old male with a history of 50 pack year smoking presents with weight loss, cough and two episodes of hemoptysis. Chest x-ray reveals a hilar nodule with hilar adenopathy and mediastinal widening. What is the most likely diagnosis?",
         "possibleAnswers": [
             "Large cell lung cancer ",
@@ -1071,7 +1669,33 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 78,
+		"categories": [
+            "History & Physical",
+            "Obstetrics",
+            "Gynecology"
+        ],
+        "questionText": "A 29 year-old female G1P1Abo presents to the office with a one-month history of amenorrhea and a positive home pregnancy test. Her LNMP was April 4. Using N�gele's rule what is her EDC?",
+        "possibleAnswers": [
+            "January 1 ",
+            "January 7 ",
+            "January 11 ",
+            "January 18"
+        ],
+        "explanations": [
+            "See C for explanation. ",
+            "See C for explanation, ",
+            "N�gele's rule is LMP minus 3 months plus 7 days. April 4 minus 3 months equals January 4 plus 7 days equals January 11. ",
+            "See C for explanation,"
+        ],
+        "correctAnswerIdx": 2
+    },
+    {
+        "questionID": 79,
+		"categories": [
+            "Diagnosis",
+            "Neurology"
+        ],
         "questionText": "A 10 year-old male has abrupt, brief episodes of impaired consciousness and rhythmic blinking. Which of the following is the most likely type of seizure?",
         "possibleAnswers": [
             "Focal ",
@@ -1088,7 +1712,11 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 80,
+		"categories": [
+            "Diagnostic Studies",
+            "Dermatology"
+        ],
         "questionText": "A 32 year-old female presents with complaints of gradual color change in a mole that has been present since birth. The patient also notes the recent onset of tenderness when her clothes rub up against it and itchiness for the past three weeks. An asymmetrical flat plaque with irregular and sharply defined margins with color variegation is noted on examination. Which of the following is the most appropriate diagnostic evaluation?",
         "possibleAnswers": [
             "Diascopy ",
@@ -1105,7 +1733,11 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 81,
+		"categories": [
+            "Clinical Therapeutics",
+            "Dermatology"
+        ],
         "questionText": "An adolescent with mild acne is currently on a treatment regimen utilizing topical keratolytics, but is only having some mild improvement. Which of the following is most appropriate to add to the treatment regimen next?",
         "possibleAnswers": [
             "Oral antibiotics ",
@@ -1122,7 +1754,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 82,
+		"categories": [
+            "Diagnosis",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "A 53 year-old male presents with complaints of frequency, urgency and dysuria associated with fever and chills. He also notes some discomfort in his back. Physical examination reveals a febrile patient with minimal suprapubic tenderness and moderate costovertebral angle tenderness. The remainder of the exam is unremarkable. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Acute cystitis ",
@@ -1139,7 +1776,12 @@
         "correctAnswerIdx": 3
     },
     {
-        "categories": null,
+        "questionID": 83,
+		"categories": [
+            "Scientific Concepts",
+            "Urology",
+            "Renal"
+        ],
         "questionText": "Which of the following is the most common mechanism of post-renal azotemia?",
         "possibleAnswers": [
             "Ischemia ",
@@ -1156,7 +1798,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 84,
+		"categories": [
+            "Clinical Therapeutics",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "Initial pharmacologic treatment of acute hepatic encephalopathy consists of",
         "possibleAnswers": [
             "lactulose. ",
@@ -1173,7 +1820,12 @@
         "correctAnswerIdx": 0
     },
     {
-        "categories": null,
+        "questionID": 85,
+		"categories": [
+            "Diagnosis",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "A 72 year-old male presents to the ED complaining of acute onset of severe diffuse abdominal pain of four hours duration. He states that he has vomited twice since the onset of pain. He also complains of three days of constipation. He is afebrile and the physical examination is noteworthy for a distended, diffusely tender abdomen with normoactive bowel sounds. His rectal exam reveals hemoccult positive brown stool. Medications include omeprazole (Prilosec) for GERD, digoxin and warfarin (Coumadin) for atrial fibrillation, OTC multivitamins and stool softeners. The abdominal and chest x-rays show no abnormalities. Which of the following is the most likely diagnosis?",
         "possibleAnswers": [
             "Acute cholecystitis ",
@@ -1190,7 +1842,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 86,
+		"categories": [
+            "Health Maintenance",
+            "Gastrointestinal",
+            "Nutritional"
+        ],
         "questionText": "An asymptomatic 50 year-old person has no risk factors for colorectal cancer. In addition to yearly hemoccult screening of the stool, how often should flexible sigmoidoscopy be performed?",
         "possibleAnswers": [
             "Every year ",
@@ -1207,7 +1864,12 @@
         "correctAnswerIdx": 2
     },
     {
-        "categories": null,
+        "questionID": 86,
+		"categories": [
+            "Diagnostic Studies",
+            "Psychiatry",
+            "Behavioral Medicine"
+        ],
         "questionText": "A 65 year-old presents with mental status changes, including lack of attention to personal hygiene increasing social isolation, and is no longer engaging in previously enjoyed actvities, such as the daily crossword puzzle. Of the following tests, which would be most helpful in determining the nature of these changes?",
         "possibleAnswers": [
             "Beck Depression Inventory ",
@@ -1224,7 +1886,12 @@
         "correctAnswerIdx": 1
     },
     {
-        "categories": null,
+        "questionID": 87,
+		"categories": [
+            "Clinical Intervention",
+            "Psychiatry",
+            "Behavioral Medicine"
+        ],
         "questionText": "A 32 year-old mother of three presents with complaints of headache, abdominal pain, and general anxiety. Upon questioning, she admits that her husband has pressured her into sexual activity and has humiliated her in front of friends and family by implying that she is stupid and worthless. He gives her a weekly allowance, but does not allow her use of credit cards. She feels trapped and hopeless, and does not see any way out of this relationship. She finds herself crying often when the children are at school. You should",
         "possibleAnswers": [
             "encourage her to leave the home immediately. ",
@@ -1240,4 +1907,4 @@
         ],
         "correctAnswerIdx": 2
     }
-]
+    ]
