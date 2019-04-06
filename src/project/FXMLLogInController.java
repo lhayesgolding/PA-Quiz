@@ -59,6 +59,7 @@ public class FXMLLogInController implements Initializable {
         if(!username.equals("") && !password.equals("")){
             if (Project.getusermap().containsKey(username)) {
                 if (Project.valid(username, password)){
+                    Project.setUsername(username);
                     Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
                     Scene startPageScene = new Scene(startPageParent);
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
