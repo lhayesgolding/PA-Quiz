@@ -5,6 +5,13 @@
  */
 package project;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,6 +23,9 @@ public class Project extends Application {
     
     private static int numOfQuestions = 10;
     private static Test test = new Test();
+    private static String Username;
+    final static private File userfile = new File("src/datafiles/userstorage.txt");
+    private static HashMap<String,User> usermap = new HashMap<String,User>();
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -50,4 +60,72 @@ public class Project extends Application {
         test = test0;
     }
     
+    public static void setUsername(String username){
+        Username = username;
+    }
+    
+    public String getCurrentUser(){
+        return Username;
+    }
+    
+    public static void addNewUser(User newUser){
+        try {
+            try (FileWriter writer = new FileWriter(userfile,true)) {
+                writer.append(newUser.getName());
+                writer.append('\n');
+                writer.append(newUser.getEmail());
+                writer.append('\n');
+                writer.append(newUser.getUserID());
+                writer.append('\n');
+                writer.append(newUser.getPassword());
+                writer.append('\n');
+            }
+        } catch (IOException ex) {
+            System.out.println("error writing to userstorage.txt");
+        }
+        
+    
+    }
+    
+    public static void initializeUserMap(){
+        try{
+        Scanner scan = new Scanner(userfile);
+            String name;
+            String email;
+            String userID;
+            String password;
+            
+            while (scan.hasNext()){
+                name = scan.nextLine();
+                System.out.println("name: " + name);
+                email = scan.nextLine();
+                System.out.println("email: " + email);
+                userID = scan.nextLine();
+                System.out.println("userID: " + userID);
+                password = scan.nextLine();
+                System.out.println("password: " + password);
+                
+                User usertemp = new User(name,email,userID,password);
+                usermap.put(userID, usertemp);
+                
+            }
+        
+        
+        }
+        catch (IOException except){
+            System.out.println("there was an IOException when trying to access the userstorage file");
+        }
+    }
+    
+    public static boolean valid(String username, String password){
+        
+        
+        if (usermap.get(username).getPassword().equals(password)) return true;
+        else return false;
+    }
+    public static HashMap getusermap(){
+        return usermap;
+    }
 }
+    
+

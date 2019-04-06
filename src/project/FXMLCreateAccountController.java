@@ -16,6 +16,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -26,9 +28,23 @@ import javafx.stage.Stage;
 public class FXMLCreateAccountController implements Initializable {
     
     @FXML Button btSubmit, btReturn;
+    @FXML TextField nameField;
+    @FXML TextField emailField;
+    @FXML TextField usernameField;
+    @FXML PasswordField passwordField;
     
     @FXML
     public void handleSubmit(ActionEvent event) throws IOException {
+        User newuser;
+        String name = nameField.getText();
+        String email = emailField.getText();
+        String username = usernameField.getText();
+        String password = passwordField.getText();
+        newuser = new User(name,email,username,password);
+        
+        Project.addNewUser(newuser);
+        
+        
         
     }
 

@@ -42,10 +42,8 @@ public class FXMLLogInController implements Initializable {
     @FXML private PasswordField passwordfield;
     @FXML private TextField userfield;
     @FXML private Text invalidlogin;
-    private HashMap<String,User> usermap = new HashMap<String,User>();
     final private File userfile = new File("src/datafiles/userstorage.txt");
-    //private FileInputStream FIS;
-    //private FileOutputStream FOS;
+   
     
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException {
@@ -59,14 +57,13 @@ public class FXMLLogInController implements Initializable {
         if(username.equals("") || password.equals(""))
             invalidlogin.setVisible(true);
         if(!username.equals("") && !password.equals("")){
-            if (usermap.containsKey(username)) {
-                if (valid(usermap.get(username),password)){
+            if (Project.getusermap().containsKey(username)) {
+                if (Project.valid(username, password)){
                     Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
                     Scene startPageScene = new Scene(startPageParent);
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                     window.setScene(startPageScene);
                     window.show();  
-                    //FIS.close();
                 }
                 else
                     invalidlogin.setVisible(true);
@@ -90,42 +87,8 @@ public class FXMLLogInController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        try{
-            //FIS = new FileInputStream(userfile);
-            //FOS = new FileOutputStream(userfile);
-            Scanner scan = new Scanner(userfile);
-            String name;
-            String email;
-            String userID;
-            String password;
-            
-            while (scan.hasNext()){
-                name = scan.nextLine();
-                System.out.println("name: " + name);
-                email = scan.nextLine();
-                System.out.println("email: " + email);
-                userID = scan.nextLine();
-                System.out.println("userID: " + userID);
-                password = scan.nextLine();
-                System.out.println("password: " + password);
-                
-                User usertemp = new User(name,email,userID,password);
-                usermap.put(userID, usertemp);
-                
-            }
-        
-        
-        }
-        catch (IOException except){
-            System.out.println("there was an IOException when trying to access the userstorage file");
-        }
-        
+            Project.initializeUserMap();
         }    
     
-    private boolean valid(User tempuser, String password){
-        
-        if (tempuser.getPassword().equals(password)) return true;
-        else return false;
-    }
     
 }
