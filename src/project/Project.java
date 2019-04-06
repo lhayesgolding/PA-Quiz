@@ -64,7 +64,7 @@ public class Project extends Application {
         Username = username;
     }
     
-    public String getCurrentUser(){
+    public static String getCurrentUser(){
         return Username;
     }
     
@@ -118,13 +118,19 @@ public class Project extends Application {
     }
     
     public static boolean valid(String username, String password){
-        
-        
         if (usermap.get(username).getPassword().equals(password)) return true;
         else return false;
     }
     public static HashMap getusermap(){
         return usermap;
+    }
+    public static boolean existingUser(String possibleUser){
+        boolean answer = (usermap.containsKey(possibleUser));
+        return answer;
+    }
+    public static String getUsersName(){
+        String name = usermap.get(Username).getName();
+        return name;
     }
 }
     

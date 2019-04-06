@@ -25,6 +25,7 @@ public class FXMLStartPageController implements Initializable {
   @FXML private ChoiceBox cbNumQuestions, cbTestType;
   @FXML private Button btStart;
   @FXML private Label lbNumQuestions, lbTestType;
+  @FXML private Label helloMessage;
 
   @FXML
   public void handleStartButton(ActionEvent event) throws IOException {
@@ -43,5 +44,6 @@ public class FXMLStartPageController implements Initializable {
     cbNumQuestions.setValue(10);
     cbTestType.getItems().addAll("Recorded", "Practice");
     cbTestType.setValue("Recorded");
+    helloMessage.setText("Hello " + Project.getUsersName());
   }
 }
