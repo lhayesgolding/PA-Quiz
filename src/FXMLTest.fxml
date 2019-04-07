@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="570.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="444.8000152587891" minWidth="10.0" prefWidth="342.4" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="376.79997558593743" minWidth="0.0" prefWidth="343.19999999999993" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="94.20000305175782" minHeight="10.0" prefHeight="92.5999969482422" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="79.80000915527344" minHeight="10.0" prefHeight="38.39999237060546" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="85.19998779296876" minHeight="10.0" prefHeight="53.599999999999994" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="86.4" minHeight="10.0" prefHeight="67.0" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="93.19998779296873" minHeight="10.0" prefHeight="67.0" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="67.39997558593751" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="77.60002441406249" minHeight="10.0" prefHeight="77.60002441406249" vgrow="ALWAYS" />
+      <RowConstraints maxHeight="68.20004882812498" minHeight="10.0" prefHeight="67.39999999999998" vgrow="ALWAYS" />
+   </rowConstraints>
+   <children>
+      <Button fx:id="btReviewTest" mnemonicParsing="false" onAction="#handleReviewTest" prefHeight="26.0" prefWidth="175.0" text="Review Test" GridPane.halignment="RIGHT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" right="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btReviewPrevious" mnemonicParsing="false" onAction="#handleReviewPrevious" prefHeight="26.0" prefWidth="175.0" text="Review Previous Tests" GridPane.halignment="RIGHT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets right="10.0" top="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btNewTest" mnemonicParsing="false" onAction="#handleNewTest" prefHeight="26.0" prefWidth="175.0" text="Take New Test" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="6" GridPane.valignment="BOTTOM">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btLogOut" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="26.0" prefWidth="175.0" text="Log Out" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="7" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets left="10.0" top="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Label prefHeight="22.0" prefWidth="204.0" text="Percent Correct" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="5">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label prefHeight="22.0" prefWidth="204.0" text="Number of Questions Correct" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label contentDisplay="RIGHT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="22.0" prefWidth="204.0" text="Number of Questions" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbPercentCorrect" prefHeight="31.0" prefWidth="43.0" text="100" textFill="#df0d0d" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lbNumQuestionsCorrect" prefHeight="31.0" prefWidth="43.0" text="20" textFill="#df0d0d" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lbNumQuestions" prefHeight="31.0" prefWidth="43.0" text="20" textFill="#df0d0d" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="21.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="30.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="lbTestResults" alignment="CENTER" contentDisplay="CENTER" prefHeight="44.0" prefWidth="686.0" text="(name)'s Test Results" textAlignment="CENTER" textFill="#2d13f0" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="54.0" prefWidth="686.0" text="WSU PA Practice Certification Test" textFill="#df0d0d" GridPane.columnSpan="2">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ScrollPane fx:id="scrollPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="312.0" prefWidth="542.0" visible="false" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.rowSpan="4" GridPane.vgrow="ALWAYS">
+         <content>
+            <TextArea fx:id="reviewTextArea" prefHeight="363.0" prefWidth="686.0" wrapText="true" />
+         </content>
+      </ScrollPane>
+   </children>
+</GridPane>

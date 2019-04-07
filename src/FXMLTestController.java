@@ -26,18 +26,18 @@ import javafx.stage.Stage;
  *
  * @author lizri
  */
-public class FXMLEndPageController implements Initializable {
+public class FXMLTestController implements Initializable {
 
     @FXML
     private Button btReviewTest, btReviewPrevious, btNewTest, btLogOut;
     @FXML
     private Label lbNumQuestions, lbNumQuestionsCorrect, lbPercentCorrect;
     @FXML
+    private ScrollPane scrollPane;
+    @FXML
     private TextArea reviewTextArea;
 
     Test test = new Test();
-    @FXML
-    private Label lbTestResults;
 
     @FXML
     public void handleReviewTest(ActionEvent event) {
@@ -68,13 +68,13 @@ public class FXMLEndPageController implements Initializable {
             reviewText = reviewText + questionString + "\n\n";
         }
         reviewTextArea.setText(reviewText);
-        reviewTextArea.setVisible(true);
+        scrollPane.setVisible(true);
     }
     
     @FXML
     public void handleReviewPrevious(ActionEvent event) {
         reviewTextArea.setText("Information about previous tests will show up here.");
-        reviewTextArea.setVisible(true);
+        scrollPane.setVisible(true);
     }
     
     
