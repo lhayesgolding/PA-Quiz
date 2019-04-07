@@ -1,11 +1,20 @@
 package project;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class User {
 
   private String name;
   private String email;
   private String userID;
   private String password;
+  private ArrayList<Double> scores = new ArrayList<>();
 
   User() {
     name = "Guest";
@@ -14,11 +23,19 @@ public class User {
     password = "None";
   }
 
-  User(String n, String e, String u, String p) {
+  User(String n, String e, String u, String p) throws FileNotFoundException {
     name = n;
     email = e;
     userID = u;
     password = p;
+    
+    File file = new File(userID + "Scores");
+    if (file.exists()) {
+      Scanner s = new Scanner(file);
+      while (s.hasNextLine()) {
+          scores.add(Double.parseDouble(s.nextLine()));
+      }
+    }
   }
   
 
@@ -52,5 +69,21 @@ public class User {
 
   public void setPassword(String x) {
     password = x;
+  }
+  
+  public void addScore(Test t) {
+      double score = t.getScore();
+      scores.add(score);
+  }
+  
+  public void saveScores() throws FileNotFoundException, IOException {
+      File file = new File(userID + "Scores");
+      file.createNewFile();
+      PrintWriter pw = new PrintWriter(new FileOutputStream(file));
+      for (double s : scores)
+      {
+          pw.println(s);
+      }
+      pw.close();
   }
 }

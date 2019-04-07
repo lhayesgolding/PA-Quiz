@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="534.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLStartPageController">
@@ -21,11 +26,50 @@
                <font>
                   <Font size="36.0" />
                </font>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
             </Label>
-            <ChoiceBox fx:id="cbNumQuestions" layoutX="366.0" layoutY="236.0" prefHeight="27.0" prefWidth="95.0" />
-            <ChoiceBox fx:id="cbTestType" layoutX="366.0" layoutY="284.0" prefHeight="27.0" prefWidth="95.0" />
-            <Label fx:id="lbTestType" layoutX="176.0" layoutY="289.0" prefHeight="17.0" prefWidth="160.0" text="Type of Test" wrapText="true" />
-         </children>
-      </AnchorPane>
+         </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <top>
+                  <Label alignment="TOP_CENTER" prefHeight="19.0" prefWidth="280.0" text="Hello, (name)" textAlignment="CENTER" textFill="#2d13f0" wrapText="true" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Label>
+               </top>
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="193.9999984741211" minHeight="10.0" prefHeight="137.60002746582032" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="155.4" minHeight="10.0" prefHeight="139.1999755859375" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="192.9999908447266" minHeight="10.0" prefHeight="123.80001220703124" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="192.9999908447266" minHeight="10.0" prefHeight="74.19998779296878" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <ChoiceBox fx:id="cbNumQuestions" prefHeight="27.0" prefWidth="95.0" GridPane.columnIndex="1" GridPane.valignment="BOTTOM" />
+                        <ChoiceBox fx:id="cbTestType" prefHeight="27.0" prefWidth="95.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="lbNumQuestions" prefHeight="18.0" prefWidth="159.0" text="Number of Questions" wrapText="true" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="lbTestType" prefHeight="18.0" prefWidth="112.0" text="Type of Test" wrapText="true" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+                        <Button fx:id="btStart" mnemonicParsing="false" onAction="#handleStartButton" prefHeight="27.0" prefWidth="95.0" text="Start Test" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
