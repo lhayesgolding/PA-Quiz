@@ -6,6 +6,7 @@
 package project;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.HashMap;
@@ -83,8 +84,13 @@ public class Project extends Application {
         } catch (IOException ex) {
             System.out.println("error writing to userstorage.txt");
         }
-        
-    
+        User usertemp;
+        try {
+            usertemp = new User(newUser.getName(), newUser.getEmail(), newUser.getUserID(), newUser.getPassword());
+            usermap.put(newUser.getUserID(), usertemp);
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(Project.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public static void initializeUserMap(){

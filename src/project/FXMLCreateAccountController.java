@@ -47,10 +47,11 @@ public class FXMLCreateAccountController implements Initializable {
             
             newuser = new User(name,email,username,password);
             Project.addNewUser(newuser);
-            Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
-            Scene logInScene = new Scene(logInParent);
+            Project.setUsername(username);
+            Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+            Scene startPageScene = new Scene(startPageParent);
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-            window.setScene(logInScene);
+            window.setScene(startPageScene);
             window.show();
             
         }

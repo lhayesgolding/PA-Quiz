@@ -102,6 +102,7 @@ public class FXMLEndPageController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        lbTestResults.setText(Project.getUsersName() + "'s Test Results");
         test = Project.getTest();
         lbNumQuestions.setText(String.valueOf(test.getNumberOfQuestions()));
         lbNumQuestionsCorrect.setText(String.valueOf(test.getScore()));
