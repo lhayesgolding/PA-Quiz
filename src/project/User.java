@@ -30,6 +30,8 @@ public class User {
     password = p;
     
     File file = new File(userID + "Scores");
+    //System.out.println("FILE: " + file.toString());
+    //System.out.println("exists: " + file.exists());
     if (file.exists()) {
       Scanner s = new Scanner(file);
       while (s.hasNextLine()) {

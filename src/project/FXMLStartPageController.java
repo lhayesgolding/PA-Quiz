@@ -44,6 +44,6 @@ public class FXMLStartPageController implements Initializable {
     cbNumQuestions.setValue(10);
     cbTestType.getItems().addAll("Recorded", "Practice");
     cbTestType.setValue("Recorded");
-    helloMessage.setText("Hello " + Project.getUsersName());
+    helloMessage.setText("Hello, " + Project.getUsersName());
   }
 }
