@@ -19,7 +19,6 @@ public class Test {
   Test() {
     numberOfQuestions = 50;
     score = 0;
-    //        testTimer.schedule(task, 0, 75 * 60 * 1000);
     this.initializequestionList(file);
   }
 
@@ -27,17 +26,16 @@ public class Test {
     this.numberOfQuestions = numberOfQuestions;
     score = 0;
     this.initializequestionList(file);
-    //        testTimer.schedule(task, 0, numberOfQuestions * 60 * 1000);
   }
 
   public int getScore() {
     return score;
   }
 
-  public void setScore(int questionsCorrect, int numberOfQuestions) {
-    score = questionsCorrect / numberOfQuestions * 100;
+  public int getScorePercent() {
+      return 100 * score / numberOfQuestions;
   }
-
+  
   public int getNumberOfQuestions() {
     return numberOfQuestions;
   }
@@ -54,6 +52,7 @@ public class Test {
     Collections.shuffle(questionList);
   }
 
+  
   public void calculateScore() {
     this.score = 0;
     for (Question question : questionList) {

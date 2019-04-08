@@ -27,7 +27,7 @@
          <center>
             <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <top>
-                  <Label alignment="TOP_CENTER" prefHeight="19.0" prefWidth="280.0" text="Hello, (name)" textAlignment="CENTER" textFill="#2d13f0" wrapText="true" BorderPane.alignment="CENTER">
+                  <Label fx:id="helloMessage" alignment="TOP_CENTER" prefHeight="19.0" prefWidth="280.0" text="Hello, (name)" textAlignment="CENTER" textFill="#2d13f0" wrapText="true" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="24.0" />
                      </font>
