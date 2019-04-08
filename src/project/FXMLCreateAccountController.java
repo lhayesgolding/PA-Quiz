@@ -34,16 +34,53 @@ public class FXMLCreateAccountController implements Initializable {
     @FXML TextField usernameField;
     @FXML PasswordField passwordField;
     @FXML Text errorMessage;
+    @FXML PasswordField verifyPasswordField;
+    @FXML Text nameAst;
+    @FXML Text emailAst;
+    @FXML Text usernameAst;
+    @FXML Text passwordAst;
+    @FXML Text password2Ast;
     
     @FXML
     public void handleSubmit(ActionEvent event) throws IOException {
+        nameAst.setVisible(false);
+        emailAst.setVisible(false);
+        usernameAst.setVisible(false);
+        passwordAst.setVisible(false);
+        password2Ast.setVisible(false);
+        errorMessage.setVisible(false);
+        
         User newuser;
         String name = nameField.getText();
         String email = emailField.getText();
         String username = usernameField.getText();
         String password = passwordField.getText();
+        String password2 = verifyPasswordField.getText();
         
-        if (!Project.existingUser(username)){
+        if (name.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()
+                || password2.isEmpty()){
+            
+            if (name.isEmpty()) nameAst.setVisible(true);
+            if (email.isEmpty()) emailAst.setVisible(true);
+            if (username.isEmpty()) usernameAst.setVisible(true);
+            if (password.isEmpty()) passwordAst.setVisible(true);
+            if (password2.isEmpty()) password2Ast.setVisible(true);
+            
+            errorMessage.setText("must complete all fields!");
+            errorMessage.setVisible(true);
+        }
+        else if (Project.existingUser(username)){
+            errorMessage.setText("username already exists");
+            errorMessage.setVisible(true);
+        }
+        else if(!(password.equals(password2))){
+            errorMessage.setText("passwords do not match");
+            errorMessage.setVisible(true);
+            passwordAst.setVisible(true);
+            password2Ast.setVisible(true);
+        }
+        else{
+            
             
             newuser = new User(name,email,username,password);
             Project.addNewUser(newuser);
@@ -55,8 +92,6 @@ public class FXMLCreateAccountController implements Initializable {
             window.show();
             
         }
-        else
-            errorMessage.setVisible(true);
         
     }
 
