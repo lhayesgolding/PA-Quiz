@@ -16,16 +16,29 @@ import java.security.SecureRandom;
  */
 public class PasswordHashing {
   
-    public byte[] hashPassword(String password) throws NoSuchAlgorithmException{
-      SecureRandom random = new SecureRandom();
-      byte[] salt = new byte[16];
-      random.nextBytes(salt);
-      
-      MessageDigest md = MessageDigest.getInstance("SHA-512");
-      md.update(salt);
-      
-      byte[] hashedPassword = md.digest(password.getBytes(StandardCharsets.UTF_8));
-      
-      return hashedPassword;
+    public String hashPassword(String password) throws NoSuchAlgorithmException{
+      String algorithm = "SHA";
+
+      byte[] plainText = password.getBytes();
+
+          MessageDigest md = MessageDigest.getInstance(algorithm);
+
+          md.reset();
+          md.update(plainText);
+          byte[] encodedPassword = md.digest();
+
+          StringBuilder sb = new StringBuilder();
+          for (int i = 0; i < encodedPassword.length; i++) {
+              if ((encodedPassword[i] & 0xff) < 0x10) {
+                  sb.append("0");
+              }
+
+              sb.append(Long.toString(encodedPassword[i] & 0xff, 16));
+          }
+
+          System.out.println("Plain    : " + password);
+          System.out.println("Encrypted: " + sb.toString());
+          
+          return sb.toString();
     }    
 }

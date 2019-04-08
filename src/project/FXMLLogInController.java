@@ -54,12 +54,7 @@ public class FXMLLogInController implements Initializable {
         PasswordHashing ph = new PasswordHashing();
         if (userfield.getText() != null) username = userfield.getText();
         System.out.println("username: " + username);
-        if (passwordfield.getText() != null){ 
-          password = passwordfield.getText().trim();
-          System.out.println("Login unhashed password: " + password);
-          password = ph.hashPassword(password).toString();
-          System.out.println("Login hashed password: " + password);
-        }
+        if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
         System.out.println("password: " + password);
         if(username.equals("") || password.equals(""))
             invalidlogin.setVisible(true);

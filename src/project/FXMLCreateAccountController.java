@@ -46,10 +46,7 @@ public class FXMLCreateAccountController implements Initializable {
         String name = nameField.getText();
         String email = emailField.getText();
         String username = usernameField.getText();
-        String password = passwordField.getText().trim();
-        System.out.println("Create account unhashed password: " + password);
-        password = ph.hashPassword(password).toString();
-        System.out.println("Create account hashed password: " + password);
+        String password = ph.hashPassword(passwordField.getText());
         
         if (!Project.existingUser(username)){
             
