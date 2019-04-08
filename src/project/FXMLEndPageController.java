@@ -17,7 +17,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
 
@@ -106,7 +105,7 @@ public class FXMLEndPageController implements Initializable {
         test = Project.getTest();
         lbNumQuestions.setText(String.valueOf(test.getNumberOfQuestions()));
         lbNumQuestionsCorrect.setText(String.valueOf(test.getScore()));
-        int percent = 100 * test.getScore() / test.getNumberOfQuestions();
+        int percent = test.getScorePercent();
         lbPercentCorrect.setText(String.valueOf(percent) + "%");
     }
 }
