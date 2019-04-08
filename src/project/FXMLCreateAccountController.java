@@ -7,6 +7,10 @@ package project;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,12 +40,16 @@ public class FXMLCreateAccountController implements Initializable {
     @FXML Text errorMessage;
     
     @FXML
-    public void handleSubmit(ActionEvent event) throws IOException {
+    public void handleSubmit(ActionEvent event) throws IOException, NoSuchAlgorithmException {
         User newuser;
+        PasswordHashing ph = new PasswordHashing();
         String name = nameField.getText();
         String email = emailField.getText();
         String username = usernameField.getText();
-        String password = passwordField.getText();
+        String password = passwordField.getText().trim();
+        System.out.println("Create account unhashed password: " + password);
+        password = ph.hashPassword(password).toString();
+        System.out.println("Create account hashed password: " + password);
         
         if (!Project.existingUser(username)){
             
@@ -68,6 +76,19 @@ public class FXMLCreateAccountController implements Initializable {
         window.setScene(logInScene);
         window.show();
     }
+    
+//    public String hashPassword(String password) throws NoSuchAlgorithmException{
+//      SecureRandom random = new SecureRandom();
+//      byte[] salt = new byte[16];
+//      random.nextBytes(salt);
+//      
+//      MessageDigest md = MessageDigest.getInstance("SHA-512");
+//      md.update(salt);
+//      
+//      byte[] hashedPassword = md.digest(password.getBytes(StandardCharsets.UTF_8));
+//      
+//      return hashedPassword.toString();
+//    }
     
     /**
      * Initializes the controller class.

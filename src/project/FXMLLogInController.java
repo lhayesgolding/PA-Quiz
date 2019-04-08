@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -46,13 +47,19 @@ public class FXMLLogInController implements Initializable {
    
     
     @FXML
-    public void handleLogIn(ActionEvent event) throws IOException {
+    public void handleLogIn(ActionEvent event) throws IOException, NoSuchAlgorithmException {
         
         String username = "";
         String password = "";
+        PasswordHashing ph = new PasswordHashing();
         if (userfield.getText() != null) username = userfield.getText();
         System.out.println("username: " + username);
-        if (passwordfield.getText() != null) password = passwordfield.getText();
+        if (passwordfield.getText() != null){ 
+          password = passwordfield.getText().trim();
+          System.out.println("Login unhashed password: " + password);
+          password = ph.hashPassword(password).toString();
+          System.out.println("Login hashed password: " + password);
+        }
         System.out.println("password: " + password);
         if(username.equals("") || password.equals(""))
             invalidlogin.setVisible(true);
