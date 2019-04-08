@@ -70,6 +70,7 @@ public class FXMLCreateAccountController implements Initializable {
             errorMessage.setVisible(true);
         }
         else if (Project.existingUser(username)){
+            usernameAst.setVisible(true);
             errorMessage.setText("username already exists");
             errorMessage.setVisible(true);
         }
