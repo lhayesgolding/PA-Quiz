@@ -28,15 +28,13 @@ import javafx.stage.Stage;
 public class FXMLEndPageController implements Initializable {
 
     @FXML
-    private Button btReviewTest, btReviewPrevious, btNewTest, btLogOut;
+    private Button btReviewTest, btViewAccount, btNewTest, btLogOut;
     @FXML
-    private Label lbNumQuestions, lbNumQuestionsCorrect, lbPercentCorrect;
+    private Label lbNumQuestions, lbNumQuestionsCorrect, lbPercentCorrect, lbTestResults;
     @FXML
     private TextArea reviewTextArea;
 
     Test test = new Test();
-    @FXML
-    private Label lbTestResults;
 
     /**
      * Shows the user the results of the test, with their answers and 
@@ -72,17 +70,6 @@ public class FXMLEndPageController implements Initializable {
             reviewText = reviewText + questionString + "\n\n";
         }
         reviewTextArea.setText(reviewText);
-        reviewTextArea.setVisible(true);
-    }
-    
-    /**
-     * Shows a review for a previous test
-     * @param event indicates that the Review Previous Test button has 
-     * been pressed
-     */
-    @FXML
-    public void handleReviewPrevious(ActionEvent event) {
-        reviewTextArea.setText("Information about previous tests will show up here.");
         reviewTextArea.setVisible(true);
     }
     

@@ -92,10 +92,6 @@
                <GridPane.margin>
                   <Insets bottom="10.0" left="20.0" />
                </GridPane.margin></Button>
-            <Button fx:id="btReviewPrevious" mnemonicParsing="false" onAction="#handleReviewPrevious" prefHeight="26.0" prefWidth="175.0" text="Review Previous Tests" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
-               <GridPane.margin>
-                  <Insets right="20.0" top="10.0" />
-               </GridPane.margin></Button>
             <Button fx:id="btLogOut" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="26.0" prefWidth="175.0" text="Log Out" GridPane.columnIndex="1" GridPane.rowIndex="5" GridPane.valignment="TOP">
                <GridPane.margin>
                   <Insets left="20.0" top="10.0" />
@@ -105,9 +101,9 @@
                   <Font size="14.0" />
                </font>
             </TextArea>
-            <Button mnemonicParsing="false" onAction="#handleUserAccount" prefHeight="26.0" prefWidth="175.0" text="View Account" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+            <Button fx:id="btViewAccount" mnemonicParsing="false" onAction="#handleUserAccount" prefHeight="26.0" prefWidth="175.0" text="View Account" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="TOP">
                <GridPane.margin>
-                  <Insets right="20.0" top="25.0" />
+                  <Insets right="20.0" top="10.0" />
                </GridPane.margin>
             </Button>
          </children>
