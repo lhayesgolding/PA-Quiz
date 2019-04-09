@@ -95,6 +95,14 @@ public class FXMLEndPageController implements Initializable {
         window.setScene(logInScene);
         window.show();
     }
+    @FXML
+    public void handleUserAccount(ActionEvent event) throws IOException{
+      Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+      Scene testPageScene = new Scene(testPageParent);
+      Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+      window.setScene(testPageScene);
+      window.show();
+    }
 
     /**
      * Initializes the controller class.

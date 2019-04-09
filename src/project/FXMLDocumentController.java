@@ -79,6 +79,9 @@ public class FXMLDocumentController implements Initializable {
         if (questionNumber < test.getNumberOfQuestions() - 1) {
             questionNumber++;
         }
+        if(questionNumber == test.getNumberOfQuestions() - 1){
+          btNext.setDisable(true);
+        }
 
         lbChoiceA.setTextFill(Color.BLACK);
         lbChoiceB.setTextFill(Color.BLACK);
@@ -103,10 +106,13 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     public void handlePrevious(ActionEvent event) {
-
-        if (questionNumber > 0) {
+        
+      if (questionNumber > 0) {
             questionNumber--;
         }
+      if(questionNumber == 0){
+          btPrevious.setDisable(true);
+        } 
 
         lbChoiceA.setTextFill(Color.BLACK);
         lbChoiceB.setTextFill(Color.BLACK);
@@ -220,6 +226,6 @@ public class FXMLDocumentController implements Initializable {
         test = new Test(Project.getNumOfQuestions());
         seconds = test.getNumberOfQuestions() * 60;
         getInfoToShow();
-        displayTime();
+        displayTime();        
     }
 }
