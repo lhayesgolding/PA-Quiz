@@ -41,6 +41,11 @@ public class FXMLCreateAccountController implements Initializable {
     @FXML Text passwordAst;
     @FXML Text password2Ast;
     
+    /**
+     * 
+     * @param event indicates that the Submit button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleSubmit(ActionEvent event) throws IOException {
         nameAst.setVisible(false);
@@ -95,7 +100,13 @@ public class FXMLCreateAccountController implements Initializable {
         }
         
     }
-
+    
+    
+    /**
+     *
+     * @param event indicates that the Return button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleReturn(ActionEvent event) throws IOException {
         Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
@@ -107,6 +118,9 @@ public class FXMLCreateAccountController implements Initializable {
     
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
+
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

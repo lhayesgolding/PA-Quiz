@@ -27,6 +27,11 @@ public class FXMLStartPageController implements Initializable {
   @FXML private Label lbNumQuestions, lbTestType;
   @FXML private Label helloMessage;
 
+    /**
+     * Starts the test with the number of questions the user requests
+     * @param event indicates that the Start Test button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
   @FXML
   public void handleStartButton(ActionEvent event) throws IOException {
     Project.setNumOfQuestions((int) cbNumQuestions.getValue());
@@ -37,7 +42,10 @@ public class FXMLStartPageController implements Initializable {
     window.show();
   }
 
-  /** Initializes the controller class. */
+  /** Initializes the controller class. 
+   * @param url
+   * @param rb
+   */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
     cbNumQuestions.getItems().addAll(10, 20, 30, 40, 50);

@@ -50,6 +50,11 @@ public class FXMLDocumentController implements Initializable {
     private Timeline timeline;
     private int seconds;
 
+    /**
+     * Sets user answer to the answer that is selected
+     * @param event indicates that the user has pressed a button
+     * for an answer
+     */
     @FXML
     public void handleAnswerChoice(ActionEvent event) {
         Button target = (Button) event.getTarget();
@@ -74,6 +79,11 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
+    /**
+     * Switches to next question, and changes color of the answer
+     * the user selects
+     * @param event indicates that the Next button has been pressed
+     */
     @FXML
     public void handleNext(ActionEvent event) {
         if (questionNumber < test.getNumberOfQuestions() - 1) {
@@ -101,6 +111,11 @@ public class FXMLDocumentController implements Initializable {
         getInfoToShow();
     }
 
+    /**
+     * Switches to previous question, and changes color of the answer
+     * the user selects
+     * @param event indicates that the Previous button has been pressed
+     */
     @FXML
     public void handlePrevious(ActionEvent event) {
 
@@ -129,6 +144,11 @@ public class FXMLDocumentController implements Initializable {
         getInfoToShow();
     }
 
+    /**
+     * Displays user score and end screen
+     * @param event indicates that the Finish button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
@@ -152,6 +172,10 @@ public class FXMLDocumentController implements Initializable {
         window.show();
     }
 
+    /**
+     * Pauses the timer and hides questions until the user resumes
+     * @param event indicates that the Pause button has been pressed
+     */
     @FXML
     public void handlePause(ActionEvent event) {
         lbQuestionText.setText("");
@@ -173,6 +197,9 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
+    /**
+     * Shows the timer for the test, and ends the test if time reaches 0
+     */
     public void displayTime() {
         timeline = new Timeline();
         timeline.setCycleCount(Animation.INDEFINITE);
@@ -205,6 +232,9 @@ public class FXMLDocumentController implements Initializable {
         timeline.play();
     }
 
+    /**
+     * Gets information for the question and answers
+     */
     public void getInfoToShow() {
         lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
         lbChoiceA.setText((String) test.getQuestion(questionNumber).getChoices().get(0));

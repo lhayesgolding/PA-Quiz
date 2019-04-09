@@ -38,6 +38,11 @@ public class FXMLEndPageController implements Initializable {
     @FXML
     private Label lbTestResults;
 
+    /**
+     * Shows the user the results of the test, with their answers and 
+     * correct answers
+     * @param event indicates that the Review Test button has been pressed
+     */
     @FXML
     public void handleReviewTest(ActionEvent event) {
         String reviewText = "";
@@ -70,6 +75,11 @@ public class FXMLEndPageController implements Initializable {
         reviewTextArea.setVisible(true);
     }
     
+    /**
+     * Shows a review for a previous test
+     * @param event indicates that the Review Previous Test button has 
+     * been pressed
+     */
     @FXML
     public void handleReviewPrevious(ActionEvent event) {
         reviewTextArea.setText("Information about previous tests will show up here.");
@@ -77,7 +87,11 @@ public class FXMLEndPageController implements Initializable {
     }
     
     
-    
+    /**
+     * Starts new test
+     * @param event indicates that the Take New Test button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleNewTest(ActionEvent event) throws IOException {
         Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
@@ -87,6 +101,11 @@ public class FXMLEndPageController implements Initializable {
         window.show();
     }
     
+    /**
+     * Logs the user out of the program
+     * @param event indicates that the Log Out button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleLogOut(ActionEvent event) throws IOException {
         Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
@@ -98,6 +117,8 @@ public class FXMLEndPageController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {

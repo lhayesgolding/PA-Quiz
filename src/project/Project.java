@@ -40,23 +40,41 @@ public class Project extends Application {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.Exception thrown if there is an exception 
+     * during runtime
      */
     public static void main(String[] args) throws Exception {
        launch(args);
     }
+    
+    /**
+     * Returns numOfQuestions
+     * @return the number of questions
+     */
     public static int getNumOfQuestions(){
         return numOfQuestions;
     }
     
+    /**
+     * Sets numOfQuestions
+     * @param number the number of questions
+     */
     public static void setNumOfQuestions(int number){
         numOfQuestions = number;
-    
     }
     
+    /**
+     * Returns test
+     * @return the test
+     */
     public static Test getTest() {
         return test;
     }
     
+    /**
+     * Sets test
+     * @param test0 the test to set test to
+     */
     public static void setTest(Test test0) {
         test = test0;
     }

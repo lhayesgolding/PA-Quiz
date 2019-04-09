@@ -28,31 +28,59 @@ public class Test {
     this.initializequestionList(file);
   }
 
+  /**
+   * Returns score
+   * @return the score of this test
+   */
   public int getScore() {
     return score;
   }
 
+  /**
+   * Sets score
+   * @param questionsCorrect number of questions correct
+   * @param numberOfQuestions total number of questions
+   */
   public int getScorePercent() {
       return 100 * score / numberOfQuestions;
   }
   
+  /**
+   * Returns numberOfQuestions
+   * @return the number of questions
+   */
   public int getNumberOfQuestions() {
     return numberOfQuestions;
   }
 
+  /**
+   * Sets numberOfQuestions
+   * @param questions the number of questions
+   */
   public void setNumberOfQuestions(int questions) {
     numberOfQuestions = questions;
   }
 
+  /**
+   * Returns the question in the passed index
+   * @param questIndex the index of the question requested
+   * @return the question requested
+   */
   public Question getQuestion(int questIndex) {
     return questionList.get(questIndex);
   }
 
+  /**
+   * Randomizes the question order
+   */
   public void randomizeQuestionOrder() {
     Collections.shuffle(questionList);
   }
-
   
+  /**
+   * Calculates the score based on how many questions the user 
+   * answered correctly
+   */
   public void calculateScore() {
     this.score = 0;
     for (Question question : questionList) {
@@ -62,6 +90,11 @@ public class Test {
     }
   }
 
+  /**
+   * Creates an array of questions from a JSON file containing 
+   * question information
+   * @param file0 the JSON file that contains question information
+   */
   public void initializequestionList(File file0) {
     try {
       JSONReader jsonReader = new JSONReader();

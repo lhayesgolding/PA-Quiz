@@ -44,7 +44,12 @@ public class FXMLLogInController implements Initializable {
     @FXML private Text invalidlogin;
     final private File userfile = new File("src/datafiles/userstorage.txt");
    
-    
+    /**
+     * Lets the user log in with their username and password. If
+     * this information is incorrect, the user cannot log in
+     * @param event indicates that the Log In button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException {
         
@@ -74,6 +79,11 @@ public class FXMLLogInController implements Initializable {
         }
     }
     
+    /**
+     * Opens the screen to create a new account
+     * @param event indicates that the Create Account button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleCreateAccount(ActionEvent event) throws IOException {
         Parent createAccountParent = FXMLLoader.load(getClass().getResource("FXMLCreateAccount.fxml"));
@@ -85,6 +95,8 @@ public class FXMLLogInController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
