@@ -58,6 +58,7 @@
                               <Insets />
                            </GridPane.margin>
                         </Button>
+                        <Button fx:id="btAccount" mnemonicParsing="false" onAction="#handleAccountButton" text="View Account" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                </center>

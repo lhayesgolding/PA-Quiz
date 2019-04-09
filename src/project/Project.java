@@ -156,6 +156,14 @@ public class Project extends Application {
         String name = usermap.get(Username).getName();
         return name;
     }
+    public static String getUserID(){
+      String userID = usermap.get(Username).getUserID();
+      return userID;
+    }
+    public static String getUserEmail(){
+      String email = usermap.get(Username).getEmail();
+      return email;
+    }
 }
     
 

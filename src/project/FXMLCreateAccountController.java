@@ -7,6 +7,7 @@ package project;
 
 import java.io.IOException;
 import java.net.URL;
+import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -47,7 +48,7 @@ public class FXMLCreateAccountController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     @FXML
-    public void handleSubmit(ActionEvent event) throws IOException {
+    public void handleSubmit(ActionEvent event) throws IOException, NoSuchAlgorithmException {
         nameAst.setVisible(false);
         emailAst.setVisible(false);
         usernameAst.setVisible(false);
@@ -56,6 +57,7 @@ public class FXMLCreateAccountController implements Initializable {
         errorMessage.setVisible(false);
         
         User newuser;
+        PasswordHashing ph = new PasswordHashing();
         String name = nameField.getText();
         String email = emailField.getText();
         String username = usernameField.getText();
@@ -87,7 +89,7 @@ public class FXMLCreateAccountController implements Initializable {
         }
         else{
             
-            
+            password = ph.hashPassword(password);
             newuser = new User(name,email,username,password);
             Project.addNewUser(newuser);
             Project.setUsername(username);
