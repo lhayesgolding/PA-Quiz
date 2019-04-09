@@ -105,6 +105,11 @@
                   <Font size="14.0" />
                </font>
             </TextArea>
+            <Button mnemonicParsing="false" onAction="#handleUserAccount" prefHeight="26.0" prefWidth="175.0" text="View Account" GridPane.halignment="RIGHT" GridPane.rowIndex="5" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="20.0" top="25.0" />
+               </GridPane.margin>
+            </Button>
          </children>
       </GridPane>
    </children>
