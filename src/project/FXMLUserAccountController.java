@@ -56,14 +56,16 @@ public class FXMLUserAccountController implements Initializable {
   public void populatePastTests() throws FileNotFoundException, IOException{
     String userID = Project.getUserID();
     File scoreFile = new File("src/datafiles/"+userID+".txt");
-    BufferedReader reader = new BufferedReader(new FileReader (scoreFile));
-    
-    String score = reader.readLine();
-    while (score != null){
-      lvTestScores.getItems().add(score);
-      score = reader.readLine();
+    if(scoreFile.exists()){
+      BufferedReader reader = new BufferedReader(new FileReader (scoreFile));
+      String score = reader.readLine();
+      while (score != null){
+        lvTestScores.getItems().add(score);
+        score = reader.readLine();
+      }
     }
-     
+    else
+      lvTestScores.getItems().add("No past scores");     
   }
   
   public void populateUserFields(){
@@ -77,9 +79,9 @@ public class FXMLUserAccountController implements Initializable {
    */
   @Override
   public void initialize(URL url, ResourceBundle rb) {
+    populateUserFields();
     try {
       populatePastTests();
-      populateUserFields();
     } catch (IOException ex) {
       Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
     }
