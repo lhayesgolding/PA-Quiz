@@ -99,18 +99,21 @@ public class Test {
     try {
       JSONReader jsonReader = new JSONReader();
       ArrayList<JSONQuestionObject> jsonquestionList = new ArrayList();
-      jsonquestionList = jsonReader.readJSONFile();
+      jsonquestionList = jsonReader.readJSONQuestionsFile();
       String quest;
       ArrayList<String> choices;
       Integer answer;
+      Integer questionID;
       ArrayList<String> hints;
 
-      for (int i = 0; i < 73; i++) {
+      for (int i = 0; i < 87; i++) {
         quest = jsonquestionList.get(i).getQuestionText();
         choices = (ArrayList<String>) jsonquestionList.get(i).getPossibleAnswers();
         answer = jsonquestionList.get(i).getCorrectAnswerIdx();
         hints = (ArrayList<String>) jsonquestionList.get(i).getExplanations();
-        Question question = new Question(quest, choices, answer, hints);
+        questionID = jsonquestionList.get(i).getQuestionID();
+        
+        Question question = new Question(quest, choices, answer, hints, questionID);
         questionListTemp.add(question);
       }
       Collections.shuffle(questionListTemp);

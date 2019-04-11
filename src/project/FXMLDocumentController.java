@@ -5,10 +5,12 @@
  */
 package project;
 
+import com.google.gson.GsonBuilder;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -43,7 +45,7 @@ public class FXMLDocumentController implements Initializable {
     private Button btOptionA, btOptionB, btOptionC, btOptionD;
     @FXML
     private Button btPause, btPrevious, btNext, btFinishTest;
-    private int questionNumber = 0; // track which question user is currently on
+    private Integer questionNumber = 0; // track which question user is currently on
     private Test test;
     @FXML
     private Label lbTimer;
@@ -163,6 +165,7 @@ public class FXMLDocumentController implements Initializable {
         String userFileString = "src/datafiles/" + Project.getCurrentUser() + ".txt";
         File file = new File(userFileString);
         try {
+            saveTest();
             FileWriter writer = new FileWriter(file, true);
             writer.append(String.valueOf(test.getScorePercent()));
             writer.append("\n");
@@ -248,6 +251,30 @@ public class FXMLDocumentController implements Initializable {
         lbChoiceC.setText((String) test.getQuestion(questionNumber).getChoices().get(2));
         lbChoiceD.setText((String) test.getQuestion(questionNumber).getChoices().get(3));
         lbQuestionNum.setText("Question " + (questionNumber + 1) + "/" + test.getNumberOfQuestions());
+    }
+    
+    /**
+     * Writes the user's test to a file in json format
+     * Saves the following fields: userAnswer, questionID
+     */    
+    public void saveTest() throws IOException {
+      File file = new File("src/datafiles/" + Project.getCurrentUser() + "Tests.json");
+      GsonBuilder gson = new GsonBuilder();
+      int questionID = 0, userAnswer = 0;
+      Question question;
+      ArrayList questions = new ArrayList();
+      
+      for(int i = 0; i < Project.getNumOfQuestions(); i++){
+        questionID = test.getQuestion(i).getQuestionID();
+        userAnswer = test.getQuestion(i).getUserAnswer();
+        question = new Question(questionID, userAnswer);
+        questions.add(question);
+      }
+      
+      FileWriter writer = new FileWriter(file, true);
+      writer.append(gson.setPrettyPrinting().create().toJson(questions));
+      writer.append("\n");
+      writer.close();
     }
 
     @Override

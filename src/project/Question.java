@@ -9,12 +9,22 @@ public class Question {
   private Integer answer;
   private Integer userAnswer = -1;
   private ArrayList<String> hints = new ArrayList<>(); // same with this one
-
-  Question(String quest0, ArrayList<String> choices0, Integer answer0, ArrayList<String> hints0) {
+  private Integer questionID;
+  
+  Question(Integer qID, Integer uAnsw){
+    questionID = qID;
+    userAnswer = uAnsw;
+    quest = null;
+    choices = null;
+    answer = null;
+    hints = null;
+  }
+  Question(String quest0, ArrayList<String> choices0, Integer answer0, ArrayList<String> hints0, Integer questionID0) {
     quest = quest0;
     choices = choices0;
     answer = answer0;
     hints = hints0;
+    questionID = questionID0;
   }
 
   /**
@@ -55,6 +65,14 @@ public class Question {
    */
   public Integer getUserAnswer() {
     return userAnswer;
+  }
+  
+  /**
+   * Returns questionID
+   * @return the Integer of the question's ID
+   */  
+  public Integer getQuestionID(){
+    return questionID;
   }
 
   /**
