@@ -31,60 +31,72 @@ import javafx.stage.Stage;
  * @author ConorLaptop
  */
 public class FXMLUserAccountController implements Initializable {
-  
-  @FXML private Label setName;
-  @FXML private Label setUsername;
-  @FXML private Label setEmail;
-  @FXML private ListView lvTestScores;
-  
-  public void handleLogoutButton(ActionEvent event) throws IOException{
-    Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
-    Scene testPageScene = new Scene(testPageParent);
-    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    window.setScene(testPageScene);
-    window.show();  
-  }
-  
-  public void handleTestButton (ActionEvent event) throws IOException{
-    Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
-    Scene testPageScene = new Scene(testPageParent);
-    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    window.setScene(testPageScene);
-    window.show();  
-  }
-  
-  public void populatePastTests() throws FileNotFoundException, IOException{
-    String userID = Project.getUserID();
-    File scoreFile = new File("src/datafiles/"+userID+".txt");
-    if(scoreFile.exists()){
-      BufferedReader reader = new BufferedReader(new FileReader (scoreFile));
-      String score = reader.readLine();
-      while (score != null){
-        lvTestScores.getItems().add(score);
-        score = reader.readLine();
-      }
-    }
-    else
-      lvTestScores.getItems().add("No past scores");     
-  }
-  
-  public void populateUserFields(){
-    setName.setText(Project.getUsersName());
-    setUsername.setText(Project.getUserID());
-    setEmail.setText(Project.getUserEmail());
-  }
 
-  /**
-   * Initializes the controller class.
-   */
-  @Override
-  public void initialize(URL url, ResourceBundle rb) {
-    populateUserFields();
-    try {
-      populatePastTests();
-    } catch (IOException ex) {
-      Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
+    @FXML
+    private Label setName;
+    @FXML
+    private Label setUsername;
+    @FXML
+    private Label setEmail;
+    @FXML
+    private ListView lvTestScores;
+
+    public void handleLogoutButton(ActionEvent event) throws IOException {
+        showLogInPage(event);
     }
-  }  
-  
+
+    public void handleTestButton(ActionEvent event) throws IOException {
+        startNewTest(event);
+    }
+
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        populateUserFields();
+        try {
+            populatePastTests();
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void showLogInPage(ActionEvent event) throws IOException {
+        Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
+        Scene logInScene = new Scene(logInParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(logInScene);
+        window.show();
+    }
+    
+    public void startNewTest(ActionEvent event) throws IOException {
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Scene startPageScene = new Scene(startPageParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(startPageScene);
+        window.show();
+    }
+    
+    public void populatePastTests() throws FileNotFoundException, IOException {
+        String userID = Project.getUserID();
+        File scoreFile = new File("src/datafiles/" + userID + ".txt");
+        if (scoreFile.exists()) {
+            BufferedReader reader = new BufferedReader(new FileReader(scoreFile));
+            String score = reader.readLine();
+            while (score != null) {
+                lvTestScores.getItems().add(score);
+                score = reader.readLine();
+            }
+        } else {
+            lvTestScores.getItems().add("No past scores");
+        }
+    }
+
+    public void populateUserFields() {
+        setName.setText(Project.getUsersName());
+        setUsername.setText(Project.getUserID());
+        setEmail.setText(Project.getUserEmail());
+    }
 }

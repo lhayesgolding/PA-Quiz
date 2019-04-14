@@ -37,12 +37,62 @@ public class FXMLEndPageController implements Initializable {
     Test test = new Test();
 
     /**
-     * Shows the user the results of the test, with their answers and 
-     * correct answers
+     * Shows the user the results of the test, with their answers and correct
+     * answers
+     *
      * @param event indicates that the Review Test button has been pressed
      */
     @FXML
     public void handleReviewTest(ActionEvent event) {
+        String reviewText = createReviewText();
+        reviewTextArea.setText(reviewText);
+        reviewTextArea.setVisible(true);
+    }
+
+    /**
+     * Starts new test
+     *
+     * @param event indicates that the Take New Test button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
+    @FXML
+    public void handleNewTest(ActionEvent event) throws IOException {
+        startNewTest(event);
+    }
+
+    /**
+     * Logs the user out of the program
+     *
+     * @param event indicates that the Log Out button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
+    @FXML
+    public void handleLogOut(ActionEvent event) throws IOException {
+        showLogInPage(event);
+    }
+
+    @FXML
+    public void handleUserAccount(ActionEvent event) throws IOException {
+        showUserAccountPage(event);
+    }
+
+    /**
+     * Initializes the controller class.
+     *
+     * @param url
+     * @param rb
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        lbTestResults.setText(Project.getUsersName() + "'s Test Results");
+        test = Project.getTest();
+        lbNumQuestions.setText(String.valueOf(test.getNumberOfQuestions()));
+        lbNumQuestionsCorrect.setText(String.valueOf(test.getScore()));
+        int percent = test.getScorePercent();
+        lbPercentCorrect.setText(String.valueOf(percent) + "%");
+    }
+
+    public String createReviewText() {
         String reviewText = "";
         String questionString = "";
         for (int i = 0; i < test.getNumberOfQuestions(); i++) {
@@ -69,59 +119,31 @@ public class FXMLEndPageController implements Initializable {
             }
             reviewText = reviewText + questionString + "\n\n";
         }
-        reviewTextArea.setText(reviewText);
-        reviewTextArea.setVisible(true);
+        return reviewText;
     }
-    
-    
-    /**
-     * Starts new test
-     * @param event indicates that the Take New Test button has been pressed
-     * @throws IOException thrown when I/O error occurs
-     */
-    @FXML
-    public void handleNewTest(ActionEvent event) throws IOException {
+
+    public void startNewTest(ActionEvent event) throws IOException {
         Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
         window.show();
     }
-    
-    /**
-     * Logs the user out of the program
-     * @param event indicates that the Log Out button has been pressed
-     * @throws IOException thrown when I/O error occurs
-     */
-    @FXML
-    public void handleLogOut(ActionEvent event) throws IOException {
+
+    public void showLogInPage(ActionEvent event) throws IOException {
         Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);
-        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(logInScene);
         window.show();
     }
-    @FXML
-    public void handleUserAccount(ActionEvent event) throws IOException{
-      Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
-      Scene testPageScene = new Scene(testPageParent);
-      Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-      window.setScene(testPageScene);
-      window.show();
-    }
 
-    /**
-     * Initializes the controller class.
-     * @param url
-     * @param rb
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        lbTestResults.setText(Project.getUsersName() + "'s Test Results");
-        test = Project.getTest();
-        lbNumQuestions.setText(String.valueOf(test.getNumberOfQuestions()));
-        lbNumQuestionsCorrect.setText(String.valueOf(test.getScore()));
-        int percent = test.getScorePercent();
-        lbPercentCorrect.setText(String.valueOf(percent) + "%");
+    public void showUserAccountPage(ActionEvent event) throws IOException {
+        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+        Scene userAccountScene = new Scene(testPageParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(userAccountScene);
+        window.show();
     }
+    
 }
