@@ -33,6 +33,9 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import jsonparser.JSONReader;
+import jsonparser.JSONUserQuestionObject;
+import jsonparser.JSONUserTestObject;
 
 /**
  * @author jthre_000
@@ -158,7 +161,7 @@ public class FXMLDocumentController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     @FXML
-    public void handleFinishTest(ActionEvent event) throws IOException {
+    public void handleFinishTest(ActionEvent event) throws IOException, Exception {
         test.calculateScore();
         System.out.println("Your score: " + test.getScore());
         System.out.println("Percent: " + test.getScorePercent());
@@ -182,7 +185,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     /**
-     * Pauses the timer and hides questions until the user resumes
+     * Pauses the timer and hides testQuestionsArray until the user resumes
      * @param event indicates that the Pause button has been pressed
      */
     @FXML
@@ -257,22 +260,35 @@ public class FXMLDocumentController implements Initializable {
      * Writes the user's test to a file in json format
      * Saves the following fields: userAnswer, questionID
      */    
-    public void saveTest() throws IOException {
-      File file = new File("src/datafiles/" + Project.getCurrentUser() + "Tests.json");
-      GsonBuilder gson = new GsonBuilder();
-      int questionID = 0, userAnswer = 0;
-      Question question;
-      ArrayList questions = new ArrayList();
+    public void saveTest() throws Exception{
+      File testsFile = new File("src/datafiles/"+Project.getUserID()+"Tests.json");
+      ArrayList<JSONUserTestObject> testsArray = new ArrayList();
       
-      for(int i = 0; i < Project.getNumOfQuestions(); i++){
-        questionID = test.getQuestion(i).getQuestionID();
-        userAnswer = test.getQuestion(i).getUserAnswer();
-        question = new Question(questionID, userAnswer);
-        questions.add(question);
+      if(testsFile.exists()){
+        JSONReader jReader = new JSONReader();
+        testsArray = jReader.readJSONUserTestFile(testsFile);
       }
       
-      FileWriter writer = new FileWriter(file, true);
-      writer.append(gson.setPrettyPrinting().create().toJson(questions));
+      GsonBuilder gson = new GsonBuilder();
+      int questionID = 0, userAnswer = 0;
+      JSONUserQuestionObject question = new JSONUserQuestionObject();
+      JSONUserTestObject newTest = new JSONUserTestObject();
+      ArrayList<JSONUserQuestionObject> testQuestionsArray = new ArrayList();
+
+      for(int i = 0; i < test.getNumberOfQuestions(); i++){
+        questionID = test.getQuestion(i).getQuestionID();
+        userAnswer = test.getQuestion(i).getUserAnswer();
+        question = new JSONUserQuestionObject();
+        question.setQuestionID(questionID);
+        question.setUserAnswer(userAnswer);
+        testQuestionsArray.add(question);
+      }
+      
+      newTest.setQuestions(testQuestionsArray);
+      testsArray.add(newTest);
+      
+      FileWriter writer = new FileWriter(testsFile, false);
+      writer.write(gson.setPrettyPrinting().create().toJson(testsArray));
       writer.append("\n");
       writer.close();
     }

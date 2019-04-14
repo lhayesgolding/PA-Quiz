@@ -8,7 +8,7 @@ package jsonparser;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class JSONUserAnswersObject {
+public class JSONUserQuestionObject {
 
 @SerializedName("userAnswer")
 @Expose

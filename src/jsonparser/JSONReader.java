@@ -12,7 +12,7 @@ public class JSONReader {
   
     /**
      * Returns questionList
-     * @return the list of questions from the Questions.json file
+     * @return returns the list of questions from the Questions.json file
      */
     public ArrayList readJSONQuestionsFile() throws Exception{
         File jsonFile = new File("Questions.json");
@@ -34,11 +34,11 @@ public class JSONReader {
     
     /**
      * Returns testList
-     * @return the list of tests from the user's test.json file
+     * @param testsFile
+     * @return returns the list of tests from the user's test.json file
      */
-    public ArrayList readJSONUserTestFile(String userID) throws Exception{
-      File testFile = new File("/src/datafiles" + userID + "Tests.json");
-      BufferedReader reader = new BufferedReader(new FileReader(testFile));
+    public ArrayList readJSONUserTestFile(File testsFile) throws Exception{
+      BufferedReader reader = new BufferedReader(new FileReader(testsFile));
       StringBuilder builder = new StringBuilder();
       
       String line = reader.readLine();
@@ -49,8 +49,11 @@ public class JSONReader {
       }
       
       String importedJson = builder.toString();
-      ArrayList<JSONUserAnswersObject> testList = new Gson().fromJson(importedJson, 
-              new TypeToken<List<JSONUserAnswersObject>>(){}.getType());
-      return testList;
+//      ArrayList<JSONUserQuestionObject> testList = new Gson().fromJson(importedJson, 
+//              new TypeToken<List<JSONUserQuestionObject>>(){}.getType());
+      ArrayList<JSONUserTestObject> testObject = new Gson().fromJson(importedJson, 
+              new TypeToken<List<JSONUserTestObject>>(){}.getType());
+      
+      return testObject;
     }
 }

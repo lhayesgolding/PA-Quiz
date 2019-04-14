@@ -12,9 +12,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox id="vBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLUserAccountController">
+<VBox id="vBox" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: azure;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLUserAccountController">
    <children>
-      <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="407.0" prefWidth="600.0">
+      <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="800.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.79998779296875" minWidth="10.0" prefWidth="412.79998779296875" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="412.800048828125" minWidth="10.0" prefWidth="187.20001220703125" />
@@ -25,8 +25,8 @@
          <children>
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: azure;">
                <children>
-                  <Button layoutX="97.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" />
-                  <Button layoutX="256.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleTestButton" text="Take a Test" />
+                  <Button layoutX="79.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" />
+                  <Button layoutX="268.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleTestButton" text="Take a Test" />
                   <Text layoutX="106.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Account Page">
                      <font>
                         <Font size="24.0" />
@@ -79,14 +79,14 @@
                 <RowConstraints maxHeight="354.19997215270996" minHeight="10.0" prefHeight="329.39998626708984" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Past Test Attempts" textAlignment="CENTER" wrappingWidth="186.8648681640625">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Past Test Attempts" textAlignment="CENTER" wrappingWidth="186.8648681640625" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
                   <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                      <content>
-                        <ListView fx:id="lvTestScores" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="327.0" prefWidth="187.0" />
+                        <ListView fx:id="lvTestScores" prefHeight="353.0" prefWidth="386.0" />
                      </content>
                   </ScrollPane>
                </children>
