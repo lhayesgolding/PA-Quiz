@@ -48,6 +48,10 @@ public class FXMLUserAccountController implements Initializable {
     public void handleTestButton(ActionEvent event) throws IOException {
         startNewTest(event);
     }
+    
+    public void handleCompareScoresButton(ActionEvent event) throws IOException {
+        showCompareScoresPage(event);
+    }
 
 
     /**
@@ -76,6 +80,14 @@ public class FXMLUserAccountController implements Initializable {
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
+        window.show();
+    }
+    
+    public void showCompareScoresPage(ActionEvent event) throws IOException {
+        Parent compareScoresParent = FXMLLoader.load(getClass().getResource("FXMLComparePage.fxml"));
+        Scene compareScoresScene = new Scene(compareScoresParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareScoresScene);
         window.show();
     }
     

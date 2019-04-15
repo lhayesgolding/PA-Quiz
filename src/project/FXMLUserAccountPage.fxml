@@ -25,8 +25,8 @@
          <children>
             <Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: azure;">
                <children>
-                  <Button layoutX="97.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" />
-                  <Button layoutX="256.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleTestButton" text="Take a Test" />
+                  <Button layoutX="52.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleLogoutButton" text="Logout" />
+                  <Button layoutX="306.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleTestButton" text="Take a Test" />
                   <Text layoutX="106.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Account Page">
                      <font>
                         <Font size="24.0" />
@@ -68,6 +68,7 @@
                            </font></Label>
                      </children>
                   </GridPane>
+                  <Button layoutX="155.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleCompareScoresButton" text="Compare Scores" />
                </children>
             </Pane>
             <GridPane alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: azure;" GridPane.columnIndex="1">

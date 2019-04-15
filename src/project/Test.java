@@ -37,9 +37,8 @@ public class Test {
   }
 
   /**
-   * Sets score
-   * @param questionsCorrect number of questions correct
-   * @param numberOfQuestions total number of questions
+   * Gets the score percentage based on number of correct answers
+   * @return the score percentage
    */
   public int getScorePercent() {
       return 100 * score / numberOfQuestions;
