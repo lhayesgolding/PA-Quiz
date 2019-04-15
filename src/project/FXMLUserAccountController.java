@@ -14,6 +14,10 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,10 +25,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import jsonparser.JSONReader;
+import jsonparser.JSONUserTestObject;
 
 /**
  * FXML Controller class
@@ -36,7 +42,8 @@ public class FXMLUserAccountController implements Initializable {
   @FXML private Label setName;
   @FXML private Label setUsername;
   @FXML private Label setEmail;
-  @FXML private ListView lvTestScores;
+  @FXML private ListView lvTests;
+  @FXML private Button btReviewTest;
   
   public void handleLogoutButton(ActionEvent event) throws IOException{
     Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
@@ -54,34 +61,38 @@ public class FXMLUserAccountController implements Initializable {
     window.show();  
   }
   
-  public void populateUserTests() throws Exception{
+//  @FXML
+//  public void handlePastUserTest(ActionEvent event) throws IOException{
+//    lvTestScores.getSelectionModel().selectedItemProperty().addListener(
+//            new ChangeListener<String>() {
+//                public void changed(ObservableValue<? extends String> ov, 
+//                    String old_val, String new_val) {
+//                        int index = lvTestScores.getSelectionModel().getSelectedIndex();
+//                        System.out.println(new_val);
+//            }
+//        });
+//
+//    System.out.println(lvTestScores.getSelectionModel().getSelectedIndex());
+//  }
+  
+    public void populateTests() throws Exception{
     String userID = Project.getUserID();
     File testsFile = new File("src/datafiles/"+userID+"Tests.json");
     File scoresFile = new File("src/datafiles/"+userID+".txt");
-    ArrayList userScores = new ArrayList();
+    ObservableList<Test> listItems = FXCollections.observableArrayList();
     
     if(testsFile.exists() && scoresFile.exists()){
-      JSONReader jReader = new JSONReader();
-      ArrayList userTests = jReader.readJSONUserTestFile(testsFile);
-      BufferedReader bReader = new BufferedReader(new FileReader(scoresFile));
-      String score = bReader.readLine();
-      while(score != null){
-        userScores.add(score);
-        score = bReader.readLine();
-      }
-      
-      int testCount = 1;
+      JSONReader jsonReader = new JSONReader();
+      ArrayList<JSONUserTestObject> userTests = jsonReader.readJSONUserTestFile(testsFile);
       for(int i = 0; i < userTests.size(); i++){
-        StringBuilder builder = new StringBuilder();
-        builder.append("Test").append(testCount).append(": ").toString();
-        builder.append("   ").append("Score: ").append(userScores.get(i));
-        String listRow = builder.toString();
-        lvTestScores.getItems().add(listRow);
-        testCount++;
+        Test test = new Test(userTests.get(i).getQuestions().size());
+        test = test.retrievePastTest((JSONUserTestObject) userTests.get(i));
+        listItems.add(test);
       }
+      lvTests.setItems(listItems);
     }
     else
-      lvTestScores.getItems().add("No past scores");
+      lvTests.getItems().add("No past scores");
   }
   
   public void populateUserFields(){
@@ -97,7 +108,7 @@ public class FXMLUserAccountController implements Initializable {
   public void initialize(URL url, ResourceBundle rb) {
     populateUserFields();
     try {
-      populateUserTests();
+      populateTests();
     } catch (Exception ex) {
       Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
     }

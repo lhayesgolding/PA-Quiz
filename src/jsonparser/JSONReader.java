@@ -49,8 +49,6 @@ public class JSONReader {
       }
       
       String importedJson = builder.toString();
-//      ArrayList<JSONUserQuestionObject> testList = new Gson().fromJson(importedJson, 
-//              new TypeToken<List<JSONUserQuestionObject>>(){}.getType());
       ArrayList<JSONUserTestObject> testObject = new Gson().fromJson(importedJson, 
               new TypeToken<List<JSONUserTestObject>>(){}.getType());
       
