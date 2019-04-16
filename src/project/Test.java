@@ -15,6 +15,7 @@ public class Test {
   private int numberOfQuestions;
   private Timer testTimer;
   File file = new File("Questions.json");
+  private static String testType = "recorded";
 
   Test() {
     numberOfQuestions = 50;
@@ -121,4 +122,14 @@ public class Test {
       System.out.println("error loading from file");
     }
   }
+  
+  public static void setTestType(String type){
+      testType = type;
+  }
+  public static String getTestType(){
+    return testType;
+}
+  public static void resetTestType(){
+          testType = null;
+}
 }

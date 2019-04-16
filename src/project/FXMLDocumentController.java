@@ -95,9 +95,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
-        saveScore(Project.getCurrentUser());
-        saveScore("all");
+        if (Test.getTestType().equals("Recorded")) {
+            saveScore(Project.getCurrentUser());
+            saveScore("all");
+        }
         showEndScreen(event);
+        Test.resetTestType();
     }
 
     /**

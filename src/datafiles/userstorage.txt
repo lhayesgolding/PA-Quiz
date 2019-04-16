@@ -18,11 +18,7 @@ gsd
 lhdg
 lhsgfwe
 e80b2d2608711cbb3312db7c4727a46fbad9601a
-Joe
-jthresher5806@westfield.ma.edu
-JoeT
-a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
-test
-test
-test
-a94a8fe5ccb19ba61c4c0873d391e987982fbbd3
+john
+coady
+jcoady9281@westfield.ma.edu
+4998e7dfd6d5f34d0735f49123a8bd76e4d71cb7

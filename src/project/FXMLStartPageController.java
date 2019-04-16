@@ -39,9 +39,12 @@ public class FXMLStartPageController implements Initializable {
      */
     @FXML
     public void handleStartButton(ActionEvent event) throws IOException {
-        startNewTest(event);
+        
+        
+        startNewTest(event, (String)cbTestType.getValue());
+        
+        
     }
-
     public void handleAccountButton(ActionEvent event) throws IOException {
         showUserAccountPage(event);
     }
@@ -56,12 +59,13 @@ public class FXMLStartPageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         cbNumQuestions.getItems().addAll(10, 20, 30, 40, 50);
         cbNumQuestions.setValue(10);
-        cbTestType.getItems().addAll("Recorded", "Practice");
+        cbTestType.getItems().addAll("Recorded", "traditional Practice", "custom question practice");
         cbTestType.setValue("Recorded");
         helloMessage.setText("Hello, " + Project.getUsersName());
     }
     
-    public void startNewTest(ActionEvent event) throws IOException {
+    public void startNewTest(ActionEvent event, String testType) throws IOException {
+        Test.setTestType(testType);
         Parent documentParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         Scene documentScene = new Scene(documentParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
