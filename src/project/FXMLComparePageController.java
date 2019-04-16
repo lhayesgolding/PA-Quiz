@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,6 +24,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 /**
@@ -33,7 +35,9 @@ import javafx.stage.Stage;
 public class FXMLComparePageController implements Initializable {
 
     @FXML
-    private Label setAverage;
+    private Label setAverageAll, setAverageUser;
+    @FXML
+    private Text txtUserScores;
     @FXML
     private ListView lvUserScores;
     @FXML
@@ -51,7 +55,8 @@ public class FXMLComparePageController implements Initializable {
         try {
             populatePastTests();
             populateAllTests();
-            populateAverage();
+            populateAverage(Project.getUserID());
+            populateAverage("all");
         } catch (IOException ex) {
             Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -72,6 +77,7 @@ public class FXMLComparePageController implements Initializable {
             BufferedReader reader = new BufferedReader(new FileReader(scoreFile));
             String score = reader.readLine();
             while (score != null) {
+                score = score + "%";
                 lvUserScores.getItems().add(score);
                 score = reader.readLine();
             }
@@ -86,6 +92,7 @@ public class FXMLComparePageController implements Initializable {
             BufferedReader reader = new BufferedReader(new FileReader(file));
             String score = reader.readLine();
             while (score != null) {
+                score = score + "%";
                 lvPastScores.getItems().add(score);
                 score = reader.readLine();
             }
@@ -94,10 +101,37 @@ public class FXMLComparePageController implements Initializable {
         }
     }
     
-    public void populateAverage() {
+    public void populateAverage(String user) {
         Double average = 0.0;
-        
-        // this is a placeholder, will write average function later
-        setAverage.setText(Double.toString(average));
+        ArrayList<String> scores = new ArrayList<String>();
+        String currentScore;
+        File scoreFile;
+        if (user.equals("all")) {;
+            scoreFile = new File("src/datafiles/AllScores.txt");
+        }
+        else
+            scoreFile = new File("src/datafiles/" + user + ".txt");
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(scoreFile));
+            while ((currentScore = br.readLine()) != null) {
+                scores.add(currentScore);
+            }
+            br.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FXMLComparePageController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLComparePageController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int total = 0;
+        for (int i = 0; i < scores.size(); i++) {
+            total += Integer.valueOf(scores.get(i));
+        }
+        average = total / Double.valueOf(scores.size());
+        if (user.equals("all"))
+            setAverageAll.setText(Double.toString(average) + "%");
+        else {
+            setAverageUser.setText(Double.toString(average) + "%");
+            txtUserScores.setText(user + "'s Scores");
+        }
     }
 }

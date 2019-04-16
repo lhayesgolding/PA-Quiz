@@ -5,10 +5,14 @@
  */
 package project;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -91,8 +95,10 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
-        if (Test.getTestType().equals("Recorded"))
-            saveScore();
+        if (Test.getTestType().equals("Recorded")) {
+            saveScore(Project.getCurrentUser());
+            saveScore("all");
+        }
         showEndScreen(event);
         Test.resetTestType();
     }
@@ -214,28 +220,47 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
-    public void saveScore() {
-        String userFileString = "src/datafiles/" + Project.getCurrentUser() + ".txt";
-        File file = new File(userFileString);
-        try {
-            FileWriter writer = new FileWriter(file, true);
-            writer.append(String.valueOf(test.getScorePercent()));
-            writer.append("\n");
-            writer.close();
-        } catch (IOException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        String scoreFileString = "src/datafiles/" + "AllScores.txt";
+    public void saveScore(String user) {
+        String scoreFileString;
+        if (user.equals("all"))
+            scoreFileString = "src/datafiles/AllScores.txt";
+        else
+            scoreFileString = "src/datafiles/" + user + ".txt";
         File scoreFile = new File(scoreFileString);
+        ArrayList<String> scores = new ArrayList<String>();
+        String currentScore;
         try {
             FileWriter writer = new FileWriter(scoreFile, true);
             writer.append(String.valueOf(test.getScorePercent()));
             writer.append("\n");
+            // if list of scores > 50, remove first score
+            BufferedReader br = new BufferedReader(new FileReader(scoreFile));
+            while ((currentScore = br.readLine()) != null) {
+                scores.add(currentScore);
+            }
+            scores.add(String.valueOf(test.getScorePercent())); //having to add this separetely because it's not getting added in the loop.
+            br.close();
+            System.out.println("size: " + scores.size());
             writer.close();
+            
+            if (scores.size() > 50) {
+                // new FileWriter object - not appendable to clear out AllScores file
+                FileWriter writer2 = new FileWriter(scoreFile, false);
+                writer2.write("");
+                writer2.close();
+                scores.remove(0);
+                // another new FileWrite object to make appendable again
+                FileWriter writer3 = new FileWriter(scoreFile, true);
+                for (int i = 0; i < 50; i++) {
+                    writer3.append(scores.get(i));
+                    writer3.append("\n");
+                }
+                writer3.close();
+            }                
         } catch (IOException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
     }
     
     public void pauseTest() {
