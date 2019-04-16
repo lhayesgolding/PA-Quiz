@@ -225,6 +225,17 @@ public class FXMLDocumentController implements Initializable {
         } catch (IOException ex) {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        String scoreFileString = "src/datafiles/" + "AllScores.txt";
+        File scoreFile = new File(scoreFileString);
+        try {
+            FileWriter writer = new FileWriter(scoreFile, true);
+            writer.append(String.valueOf(test.getScorePercent()));
+            writer.append("\n");
+            writer.close();
+        } catch (IOException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     public void pauseTest() {
