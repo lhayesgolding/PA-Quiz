@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -96,8 +97,27 @@ public class FXMLComparePageController implements Initializable {
     
     public void populateAverage() {
         Double average = 0.0;
-        
-        // this is a placeholder, will write average function later
+        ArrayList<String> scores = new ArrayList<String>();
+        String currentScore;
+        File scoreFile = new File("src/datafiles/AllScores.txt");
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(scoreFile));
+            while ((currentScore = br.readLine()) != null) {
+                scores.add(currentScore);
+                System.out.println("score added: " + currentScore);
+            }
+            br.close();
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(FXMLComparePageController.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLComparePageController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        int total = 0;
+        System.out.println("scores size: " + scores.size());
+        for (int i = 0; i < scores.size(); i++) {
+            total += Integer.valueOf(scores.get(i));
+        }
+        average = total / Double.valueOf(scores.size());
         setAverage.setText(Double.toString(average));
     }
 }
