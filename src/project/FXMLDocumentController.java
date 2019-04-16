@@ -95,7 +95,8 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void handleFinishTest(ActionEvent event) throws IOException {
         test.calculateScore();
-        saveScore();
+        saveScore(Project.getCurrentUser());
+        saveScore("all");
         showEndScreen(event);
     }
 
@@ -216,19 +217,12 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
-    public void saveScore() {
-        String userFileString = "src/datafiles/" + Project.getCurrentUser() + ".txt";
-        File file = new File(userFileString);
-        try {
-            FileWriter writer = new FileWriter(file, true);
-            writer.append(String.valueOf(test.getScorePercent()));
-            writer.append("\n");
-            writer.close();
-        } catch (IOException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        String scoreFileString = "src/datafiles/AllScores.txt";
+    public void saveScore(String user) {
+        String scoreFileString;
+        if (user.equals("all"))
+            scoreFileString = "src/datafiles/AllScores.txt";
+        else
+            scoreFileString = "src/datafiles/" + user + ".txt";
         File scoreFile = new File(scoreFileString);
         ArrayList<String> scores = new ArrayList<String>();
         String currentScore;
