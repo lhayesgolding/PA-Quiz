@@ -27,8 +27,7 @@ public class Project extends Application {
     private static String Username;
     final static private File userfile = new File("src/datafiles/userstorage.txt");
     private static HashMap<String,User> usermap = new HashMap<String,User>();
- 
-    
+     
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));

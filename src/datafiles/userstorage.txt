@@ -22,3 +22,7 @@ john
 coady
 jcoady9281@westfield.ma.edu
 4998e7dfd6d5f34d0735f49123a8bd76e4d71cb7
+user
+user@email.com
+username
+5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8

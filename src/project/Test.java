@@ -3,31 +3,33 @@ package project;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Timer;
 import jsonparser.JSONQuestionObject;
 import jsonparser.JSONReader;
+import jsonparser.JSONUserQuestionObject;
+import jsonparser.JSONUserTestObject;
 
 public class Test {
 
   private ArrayList<Question> questionList = new ArrayList<>();
   private ArrayList<Question> questionListTemp = new ArrayList<>();
+  private ArrayList<Question> questionListUser = new ArrayList<>();
   private int score;
   private int numberOfQuestions;
-  private Timer testTimer;
   File file = new File("Questions.json");
   private static String testType = "recorded";
 
   Test() {
     numberOfQuestions = 50;
     score = 0;
-    this.initializequestionList(file);
+    this.initializeQuestionList(file);
   }
 
   Test(int numberOfQuestions) {
     this.numberOfQuestions = numberOfQuestions;
     score = 0;
-    this.initializequestionList(file);
+    this.initializeQuestionList(file);
   }
+  
 
   /**
    * Returns score
@@ -69,6 +71,23 @@ public class Test {
   public Question getQuestion(int questIndex) {
     return questionList.get(questIndex);
   }
+  
+  /**
+   * Returns the question in the passed index (past test)
+   * @param questIndex the index of the question requested
+   * @return the question requested
+   */  
+  public Question getPastQuestion(int questIndex){
+    return questionListUser.get(questIndex);
+  }
+  
+  /**
+   * Adds a question to the array
+   * @param q the question to be added
+   */  
+  public void addQuestion(Question q){
+    questionListUser.add(q);
+  }
 
   /**
    * Randomizes the question order
@@ -95,22 +114,25 @@ public class Test {
    * question information
    * @param file0 the JSON file that contains question information
    */
-  public void initializequestionList(File file0) {
+  public void initializeQuestionList(File file0) {
     try {
       JSONReader jsonReader = new JSONReader();
       ArrayList<JSONQuestionObject> jsonquestionList = new ArrayList();
-      jsonquestionList = jsonReader.readJSONFile();
+      jsonquestionList = jsonReader.readJSONQuestionsFile();
       String quest;
       ArrayList<String> choices;
       Integer answer;
+      Integer questionID;
       ArrayList<String> hints;
 
-      for (int i = 0; i < 73; i++) {
+      for (int i = 0; i < 87; i++) {
         quest = jsonquestionList.get(i).getQuestionText();
         choices = (ArrayList<String>) jsonquestionList.get(i).getPossibleAnswers();
         answer = jsonquestionList.get(i).getCorrectAnswerIdx();
         hints = (ArrayList<String>) jsonquestionList.get(i).getExplanations();
-        Question question = new Question(quest, choices, answer, hints);
+        questionID = jsonquestionList.get(i).getQuestionID();
+        
+        Question question = new Question(quest, choices, answer, hints, questionID);
         questionListTemp.add(question);
       }
       Collections.shuffle(questionListTemp);
@@ -123,6 +145,23 @@ public class Test {
     }
   }
   
+  public Test retrievePastTest(JSONUserTestObject test) throws Exception{
+    ArrayList<JSONUserQuestionObject> userQuestions = (ArrayList<JSONUserQuestionObject>) test.getQuestions();
+    Test newTest = new Test();
+    
+    for(int i = 0; i < userQuestions.size(); i++){
+      int questionID = userQuestions.get(i).getQuestionID();
+      int userAnswer = userQuestions.get(i).getUserAnswer();
+      for(int j = 0; j < questionListTemp.size(); j++){
+        if(questionID == questionListTemp.get(j).getQuestionID()){
+          newTest.addQuestion(questionListTemp.get(j));
+          newTest.getPastQuestion(i).setUserAnswer(userAnswer);
+          break;
+        }
+      }
+    }
+    return newTest;
+  }
   public static void setTestType(String type){
       testType = type;
   }

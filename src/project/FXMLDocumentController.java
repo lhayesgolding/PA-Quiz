@@ -5,9 +5,9 @@
  */
 package project;
 
+import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -35,6 +35,9 @@ import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import jsonparser.JSONReader;
+import jsonparser.JSONUserQuestionObject;
+import jsonparser.JSONUserTestObject;
 
 /**
  * @author jthre_000
@@ -47,7 +50,7 @@ public class FXMLDocumentController implements Initializable {
     private Button btOptionA, btOptionB, btOptionC, btOptionD;
     @FXML
     private Button btPause, btPrevious, btNext, btFinishTest;
-    private int questionNumber = 0; // track which question user is currently on
+    private Integer questionNumber = 0; // track which question user is currently on
     private Test test;
     @FXML
     private Label lbTimer;
@@ -93,8 +96,9 @@ public class FXMLDocumentController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     @FXML
-    public void handleFinishTest(ActionEvent event) throws IOException {
+    public void handleFinishTest(ActionEvent event) throws IOException, Exception {
         test.calculateScore();
+        saveTest();
         if (Test.getTestType().equals("Recorded")) {
             saveScore(Project.getCurrentUser());
             saveScore("all");
@@ -104,7 +108,7 @@ public class FXMLDocumentController implements Initializable {
     }
 
     /**
-     * Pauses the timer and hides questions until the user resumes
+     * Pauses the timer and hides testQuestionsArray until the user resumes
      * @param event indicates that the Pause button has been pressed
      */
     @FXML
@@ -261,6 +265,43 @@ public class FXMLDocumentController implements Initializable {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+    }
+    
+    /**
+     * Writes the user's test to a file in json format
+     * Saves the following fields: userAnswer, questionID
+     */    
+    public void saveTest() throws Exception{
+      File testsFile = new File("src/datafiles/"+Project.getUserID()+"Tests.json");
+      ArrayList<JSONUserTestObject> testsArray = new ArrayList();
+      
+      if(testsFile.exists()){
+        JSONReader jReader = new JSONReader();
+        testsArray = jReader.readJSONUserTestFile(testsFile);
+      }
+      
+      GsonBuilder gson = new GsonBuilder();
+      int questionID = 0, userAnswer = 0;
+      JSONUserQuestionObject question = new JSONUserQuestionObject();
+      JSONUserTestObject newTest = new JSONUserTestObject();
+      ArrayList<JSONUserQuestionObject> testQuestionsArray = new ArrayList();
+
+      for(int i = 0; i < test.getNumberOfQuestions(); i++){
+        questionID = test.getQuestion(i).getQuestionID();
+        userAnswer = test.getQuestion(i).getUserAnswer();
+        question = new JSONUserQuestionObject();
+        question.setQuestionID(questionID);
+        question.setUserAnswer(userAnswer);
+        testQuestionsArray.add(question);
+      }
+      
+      newTest.setQuestions(testQuestionsArray);
+      testsArray.add(newTest);
+      
+      FileWriter writer = new FileWriter(testsFile, false);
+      writer.write(gson.setPrettyPrinting().create().toJson(testsArray));
+      writer.append("\n");
+      writer.close();
     }
     
     public void pauseTest() {
