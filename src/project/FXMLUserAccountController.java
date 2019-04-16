@@ -5,9 +5,7 @@
  */
 package project;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -25,7 +23,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
@@ -38,30 +35,91 @@ import jsonparser.JSONUserTestObject;
  * @author ConorLaptop
  */
 public class FXMLUserAccountController implements Initializable {
+
+    @FXML
+    private Label setName;
+    @FXML
+    private Label setUsername;
+    @FXML
+    private Label setEmail;
+    @FXML
+    private ListView lvTestScores;
+
+    public void handleLogoutButton(ActionEvent event) throws IOException {
+        showLogInPage(event);
+    }
+
+    public void handleTestButton(ActionEvent event) throws IOException {
+        startNewTest(event);
+    }
+    
+    public void handleCompareScoresButton(ActionEvent event) throws IOException {
+        showCompareScoresPage(event);
+    }
+
+
+    /**
+     * Initializes the controller class.
+     */
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        populateUserFields();
+      try {
+        populateTests();
+      } catch (Exception ex) {
+        Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
+      }
+    }
+
+    public void showLogInPage(ActionEvent event) throws IOException {
+        Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
+        Scene logInScene = new Scene(logInParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(logInScene);
+        window.show();
+    }
+    
+    public void startNewTest(ActionEvent event) throws IOException {
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Scene startPageScene = new Scene(startPageParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(startPageScene);
+        window.show();
+    }
+    
+    public void showCompareScoresPage(ActionEvent event) throws IOException {
+        Parent compareScoresParent = FXMLLoader.load(getClass().getResource("FXMLComparePage.fxml"));
+        Scene compareScoresScene = new Scene(compareScoresParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(compareScoresScene);
+        window.show();
+    }
+
+    public void populateUserFields() {
+        setName.setText(Project.getUsersName());
+        setUsername.setText(Project.getUserID());
+        setEmail.setText(Project.getUserEmail());
+    }
   
-  @FXML private Label setName;
-  @FXML private Label setUsername;
-  @FXML private Label setEmail;
-  @FXML private ListView lvTests;
-  @FXML private Button btReviewTest;
-  
-  public void handleLogoutButton(ActionEvent event) throws IOException{
-    Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
-    Scene testPageScene = new Scene(testPageParent);
-    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    window.setScene(testPageScene);
-    window.show();  
+    public void populateTests() throws Exception{
+    String userID = Project.getUserID();
+    File testsFile = new File("src/datafiles/"+userID+"Tests.json");
+    ObservableList<Test> listItems = FXCollections.observableArrayList();
+    
+    if(testsFile.exists()){
+      JSONReader jsonReader = new JSONReader();
+      ArrayList<JSONUserTestObject> userTests = jsonReader.readJSONUserTestFile(testsFile);
+      for(int i = 0; i < userTests.size(); i++){
+        Test test = new Test(userTests.get(i).getQuestions().size());
+        test = test.retrievePastTest((JSONUserTestObject) userTests.get(i));
+        listItems.add(test);
+      }
+      lvTestScores.setItems(listItems);
+    }
+    else
+      lvTestScores.getItems().add("No past attempts");
   }
-  
-  public void handleTestButton (ActionEvent event) throws IOException{
-    Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
-    Scene testPageScene = new Scene(testPageParent);
-    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-    window.setScene(testPageScene);
-    window.show();  
-  }
-  
-//  @FXML
+    
 //  public void handlePastUserTest(ActionEvent event) throws IOException{
 //    lvTestScores.getSelectionModel().selectedItemProperty().addListener(
 //            new ChangeListener<String>() {
@@ -74,44 +132,4 @@ public class FXMLUserAccountController implements Initializable {
 //
 //    System.out.println(lvTestScores.getSelectionModel().getSelectedIndex());
 //  }
-  
-    public void populateTests() throws Exception{
-    String userID = Project.getUserID();
-    File testsFile = new File("src/datafiles/"+userID+"Tests.json");
-    File scoresFile = new File("src/datafiles/"+userID+".txt");
-    ObservableList<Test> listItems = FXCollections.observableArrayList();
-    
-    if(testsFile.exists() && scoresFile.exists()){
-      JSONReader jsonReader = new JSONReader();
-      ArrayList<JSONUserTestObject> userTests = jsonReader.readJSONUserTestFile(testsFile);
-      for(int i = 0; i < userTests.size(); i++){
-        Test test = new Test(userTests.get(i).getQuestions().size());
-        test = test.retrievePastTest((JSONUserTestObject) userTests.get(i));
-        listItems.add(test);
-      }
-      lvTests.setItems(listItems);
-    }
-    else
-      lvTests.getItems().add("No past scores");
-  }
-  
-  public void populateUserFields(){
-    setName.setText(Project.getUsersName());
-    setUsername.setText(Project.getUserID());
-    setEmail.setText(Project.getUserEmail());
-  }
-
-  /**
-   * Initializes the controller class.
-   */
-  @Override
-  public void initialize(URL url, ResourceBundle rb) {
-    populateUserFields();
-    try {
-      populateTests();
-    } catch (Exception ex) {
-      Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
-    }
-  }  
-  
 }

@@ -16,6 +16,7 @@ public class Test {
   private int score;
   private int numberOfQuestions;
   File file = new File("Questions.json");
+  private static String testType = "recorded";
 
   Test() {
     numberOfQuestions = 50;
@@ -39,9 +40,8 @@ public class Test {
   }
 
   /**
-   * Sets score
-   * @param questionsCorrect number of questions correct
-   * @param numberOfQuestions total number of questions
+   * Gets the score percentage based on number of correct answers
+   * @return the score percentage
    */
   public int getScorePercent() {
       return 100 * score / numberOfQuestions;
@@ -72,10 +72,19 @@ public class Test {
     return questionList.get(questIndex);
   }
   
+  /**
+   * Returns the question in the passed index (past test)
+   * @param questIndex the index of the question requested
+   * @return the question requested
+   */  
   public Question getPastQuestion(int questIndex){
     return questionListUser.get(questIndex);
   }
   
+  /**
+   * Adds a question to the array
+   * @param q the question to be added
+   */  
   public void addQuestion(Question q){
     questionListUser.add(q);
   }
@@ -153,4 +162,13 @@ public class Test {
     }
     return newTest;
   }
+  public static void setTestType(String type){
+      testType = type;
+  }
+  public static String getTestType(){
+    return testType;
+}
+  public static void resetTestType(){
+          testType = null;
+}
 }

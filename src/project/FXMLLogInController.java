@@ -44,7 +44,14 @@ public class FXMLLogInController implements Initializable {
      */
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException, NoSuchAlgorithmException {
-        
+        /*boolean credentialsOK = checkCredentials(event);
+        System.out.println("checked");
+        System.out.println(credentialsOK);
+        if (credentialsOK) {
+            System.out.println("OK1");
+            //showCreateAccountPage(event);
+            System.out.println("OK2");
+        }*/
         String username = "";
         String password = "";
         PasswordHashing ph = new PasswordHashing();
@@ -70,6 +77,7 @@ public class FXMLLogInController implements Initializable {
             else
                 invalidlogin.setVisible(true);
         }
+
     }
     
     /**
@@ -79,11 +87,7 @@ public class FXMLLogInController implements Initializable {
      */
     @FXML
     public void handleCreateAccount(ActionEvent event) throws IOException {
-        Parent createAccountParent = FXMLLoader.load(getClass().getResource("FXMLCreateAccount.fxml"));
-        Scene createAccountScene = new Scene(createAccountParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(createAccountScene);
-        window.show();
+        showCreateAccountPage(event);
     }
 
     /**
@@ -96,5 +100,43 @@ public class FXMLLogInController implements Initializable {
             Project.initializeUserMap();
         }    
     
+    public boolean checkCredentials(ActionEvent event) throws IOException, NoSuchAlgorithmException {
+        String username = "";
+        String password = "";
+        PasswordHashing ph = new PasswordHashing();
+        if (userfield.getText() != null) username = userfield.getText();
+        System.out.println("username: " + username);
+        if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
+        System.out.println("password: " + password);
+        if(username.equals("") || password.equals(""))
+            invalidlogin.setVisible(true);
+        if(!username.equals("") && !password.equals("")){
+            if (Project.getusermap().containsKey(username)) {
+                if (Project.valid(username, password)){
+                    return true;
+                }
+                else
+                    invalidlogin.setVisible(true);
+            }
+            else
+                invalidlogin.setVisible(true);
+        }
+        return false;
+    }
     
+    public void startNewTest(ActionEvent event) throws IOException {
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Scene startPageScene = new Scene(startPageParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(startPageScene);
+        window.show();
+    }
+    
+    public void showCreateAccountPage(ActionEvent event) throws IOException {
+        Parent createAccountParent = FXMLLoader.load(getClass().getResource("FXMLCreateAccount.fxml"));
+        Scene createAccountScene = new Scene(createAccountParent);
+        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+        window.setScene(createAccountScene);
+        window.show();
+    }
 }

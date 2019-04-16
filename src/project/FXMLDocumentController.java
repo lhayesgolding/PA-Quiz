@@ -6,7 +6,9 @@
 package project;
 
 import com.google.gson.GsonBuilder;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
@@ -63,25 +65,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void handleAnswerChoice(ActionEvent event) {
         Button target = (Button) event.getTarget();
-
-        lbChoiceA.setTextFill(Color.BLACK);
-        lbChoiceB.setTextFill(Color.BLACK);
-        lbChoiceC.setTextFill(Color.BLACK);
-        lbChoiceD.setTextFill(Color.BLACK);
-
-        if (target == btOptionA) {
-            test.getQuestion(questionNumber).setUserAnswer(0);
-            lbChoiceA.setTextFill(Color.ORANGE);
-        } else if (target == btOptionB) {
-            test.getQuestion(questionNumber).setUserAnswer(1);
-            lbChoiceB.setTextFill(Color.ORANGE);
-        } else if (target == btOptionC) {
-            test.getQuestion(questionNumber).setUserAnswer(2);
-            lbChoiceC.setTextFill(Color.ORANGE);
-        } else if (target == btOptionD) {
-            test.getQuestion(questionNumber).setUserAnswer(3);
-            lbChoiceD.setTextFill(Color.ORANGE);
-        }
+        recordAnswer(target);
     }
 
     /**
@@ -91,31 +75,7 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     public void handleNext(ActionEvent event) {
-        if (questionNumber < test.getNumberOfQuestions() - 1) {
-            questionNumber++;
-        }
-//        if(questionNumber == test.getNumberOfQuestions() - 1){
-//          btNext.setDisable(true);
-//        } else btNext.setDisable(false);
-
-        lbChoiceA.setTextFill(Color.BLACK);
-        lbChoiceB.setTextFill(Color.BLACK);
-        lbChoiceC.setTextFill(Color.BLACK);
-        lbChoiceD.setTextFill(Color.BLACK);
-        switch (test.getQuestion(questionNumber).getUserAnswer()) {
-            case (0):
-                lbChoiceA.setTextFill(Color.ORANGE);
-                break;
-            case (1):
-                lbChoiceB.setTextFill(Color.ORANGE);
-                break;
-            case (2):
-                lbChoiceC.setTextFill(Color.ORANGE);
-                break;
-            case (3):
-                lbChoiceD.setTextFill(Color.ORANGE);
-        }
-
+        goToQuestion("next");
         getInfoToShow();
     }
 
@@ -126,32 +86,7 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     public void handlePrevious(ActionEvent event) {
-        
-      if (questionNumber > 0) {
-            questionNumber--;
-        }
-//      if(questionNumber == 0){
-//          btPrevious.setDisable(true);
-//        } else btPrevious.setDisable(false);
-
-        lbChoiceA.setTextFill(Color.BLACK);
-        lbChoiceB.setTextFill(Color.BLACK);
-        lbChoiceC.setTextFill(Color.BLACK);
-        lbChoiceD.setTextFill(Color.BLACK);
-        switch (test.getQuestion(questionNumber).getUserAnswer()) {
-            case (0):
-                lbChoiceA.setTextFill(Color.ORANGE);
-                break;
-            case (1):
-                lbChoiceB.setTextFill(Color.ORANGE);
-                break;
-            case (2):
-                lbChoiceC.setTextFill(Color.ORANGE);
-                break;
-            case (3):
-                lbChoiceD.setTextFill(Color.ORANGE);
-        }
-
+        goToQuestion("previous");
         getInfoToShow();
     }
 
@@ -163,25 +98,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void handleFinishTest(ActionEvent event) throws IOException, Exception {
         test.calculateScore();
-        System.out.println("Your score: " + test.getScore());
-        System.out.println("Percent: " + test.getScorePercent());
-        String userFileString = "src/datafiles/" + Project.getCurrentUser() + ".txt";
-        File file = new File(userFileString);
-        try {
-            saveTest();
-            FileWriter writer = new FileWriter(file, true);
-            writer.append(String.valueOf(test.getScorePercent()));
-            writer.append("\n");
-            writer.close();
-        } catch (IOException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        saveTest();
+        if (Test.getTestType().equals("Recorded")) {
+            saveScore(Project.getCurrentUser());
+            saveScore("all");
         }
-        Project.setTest(test);
-        Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));
-        Scene endPageScene = new Scene(endPageParent);
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(endPageScene);
-        window.show();
+        showEndScreen(event);
+        Test.resetTestType();
     }
 
     /**
@@ -190,23 +113,7 @@ public class FXMLDocumentController implements Initializable {
      */
     @FXML
     public void handlePause(ActionEvent event) {
-        lbQuestionText.setText("");
-        lbChoiceA.setText("");
-        lbChoiceB.setText("");
-        lbChoiceC.setText("");
-        lbChoiceD.setText("");
-        timeline.pause();
-
-        Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
-        Optional<ButtonType> result = pause.showAndWait();
-        if (result.get() == ButtonType.CLOSE) {
-            lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
-            lbChoiceA.setText((String) test.getQuestion(questionNumber).getChoices().get(0));
-            lbChoiceB.setText((String) test.getQuestion(questionNumber).getChoices().get(1));
-            lbChoiceC.setText((String) test.getQuestion(questionNumber).getChoices().get(2));
-            lbChoiceD.setText((String) test.getQuestion(questionNumber).getChoices().get(3));
-            timeline.play();
-        }
+        pauseTest();
     }
 
     /**
@@ -255,6 +162,110 @@ public class FXMLDocumentController implements Initializable {
         lbChoiceD.setText((String) test.getQuestion(questionNumber).getChoices().get(3));
         lbQuestionNum.setText("Question " + (questionNumber + 1) + "/" + test.getNumberOfQuestions());
     }
+
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+        test = new Test(Project.getNumOfQuestions());
+        seconds = test.getNumberOfQuestions() * 60;
+        getInfoToShow();
+        displayTime();        
+    }
+    
+    public void recordAnswer(Button target) {
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+
+        if (target == btOptionA) {
+            test.getQuestion(questionNumber).setUserAnswer(0);
+            lbChoiceA.setTextFill(Color.ORANGE);
+        } else if (target == btOptionB) {
+            test.getQuestion(questionNumber).setUserAnswer(1);
+            lbChoiceB.setTextFill(Color.ORANGE);
+        } else if (target == btOptionC) {
+            test.getQuestion(questionNumber).setUserAnswer(2);
+            lbChoiceC.setTextFill(Color.ORANGE);
+        } else if (target == btOptionD) {
+            test.getQuestion(questionNumber).setUserAnswer(3);
+            lbChoiceD.setTextFill(Color.ORANGE);
+        }
+    }
+    
+    public void goToQuestion(String direction) {
+        if (direction == "next") {
+            if (questionNumber < test.getNumberOfQuestions() - 1) {
+                questionNumber++;
+            }
+        }
+        else if (direction == "previous") {
+            if (questionNumber > 0) {
+                questionNumber--;
+            }
+        }
+
+        lbChoiceA.setTextFill(Color.BLACK);
+        lbChoiceB.setTextFill(Color.BLACK);
+        lbChoiceC.setTextFill(Color.BLACK);
+        lbChoiceD.setTextFill(Color.BLACK);
+        switch (test.getQuestion(questionNumber).getUserAnswer()) {
+            case (0):
+                lbChoiceA.setTextFill(Color.ORANGE);
+                break;
+            case (1):
+                lbChoiceB.setTextFill(Color.ORANGE);
+                break;
+            case (2):
+                lbChoiceC.setTextFill(Color.ORANGE);
+                break;
+            case (3):
+                lbChoiceD.setTextFill(Color.ORANGE);
+        }
+    }
+
+    public void saveScore(String user) {
+        String scoreFileString;
+        if (user.equals("all"))
+            scoreFileString = "src/datafiles/AllScores.txt";
+        else
+            scoreFileString = "src/datafiles/" + user + ".txt";
+        File scoreFile = new File(scoreFileString);
+        ArrayList<String> scores = new ArrayList<String>();
+        String currentScore;
+        try {
+            FileWriter writer = new FileWriter(scoreFile, true);
+            writer.append(String.valueOf(test.getScorePercent()));
+            writer.append("\n");
+            // if list of scores > 50, remove first score
+            BufferedReader br = new BufferedReader(new FileReader(scoreFile));
+            while ((currentScore = br.readLine()) != null) {
+                scores.add(currentScore);
+            }
+            scores.add(String.valueOf(test.getScorePercent())); //having to add this separetely because it's not getting added in the loop.
+            br.close();
+            System.out.println("size: " + scores.size());
+            writer.close();
+            
+            if (scores.size() > 50) {
+                // new FileWriter object - not appendable to clear out AllScores file
+                FileWriter writer2 = new FileWriter(scoreFile, false);
+                writer2.write("");
+                writer2.close();
+                scores.remove(0);
+                // another new FileWrite object to make appendable again
+                FileWriter writer3 = new FileWriter(scoreFile, true);
+                for (int i = 0; i < 50; i++) {
+                    writer3.append(scores.get(i));
+                    writer3.append("\n");
+                }
+                writer3.close();
+            }                
+        } catch (IOException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
     
     /**
      * Writes the user's test to a file in json format
@@ -292,13 +303,33 @@ public class FXMLDocumentController implements Initializable {
       writer.append("\n");
       writer.close();
     }
+    
+    public void pauseTest() {
+        lbQuestionText.setText("");
+        lbChoiceA.setText("");
+        lbChoiceB.setText("");
+        lbChoiceC.setText("");
+        lbChoiceD.setText("");
+        timeline.pause();
 
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-
-        test = new Test(Project.getNumOfQuestions());
-        seconds = test.getNumberOfQuestions() * 60;
-        getInfoToShow();
-        displayTime();        
+        Alert pause = new Alert(AlertType.NONE, "Test paused", ButtonType.CLOSE);
+        Optional<ButtonType> result = pause.showAndWait();
+        if (result.get() == ButtonType.CLOSE) {
+            lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
+            lbChoiceA.setText((String) test.getQuestion(questionNumber).getChoices().get(0));
+            lbChoiceB.setText((String) test.getQuestion(questionNumber).getChoices().get(1));
+            lbChoiceC.setText((String) test.getQuestion(questionNumber).getChoices().get(2));
+            lbChoiceD.setText((String) test.getQuestion(questionNumber).getChoices().get(3));
+            timeline.play();
+        }
+    }
+    
+    public void showEndScreen(ActionEvent event) throws IOException {
+        Project.setTest(test);
+        Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));
+        Scene endPageScene = new Scene(endPageParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(endPageScene);
+        window.show();
     }
 }
