@@ -43,7 +43,10 @@ public class FXMLUserAccountController implements Initializable {
     @FXML
     private Label setEmail;
     @FXML
-    private ListView lvTestScores;
+    private ListView<String> lvTestScores;
+    private ArrayList<Test> tests = new ArrayList();
+    private int testIndex;
+    private ObservableList<String> listItems = FXCollections.observableArrayList();
 
     public void handleLogoutButton(ActionEvent event) throws IOException {
         showLogInPage(event);
@@ -56,6 +59,10 @@ public class FXMLUserAccountController implements Initializable {
     public void handleCompareScoresButton(ActionEvent event) throws IOException {
         showCompareScoresPage(event);
     }
+    
+    public void handleReviewTestButton(ActionEvent event) throws IOException{
+      goToReviewTest(event);
+    }
 
 
     /**
@@ -64,6 +71,11 @@ public class FXMLUserAccountController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         populateUserFields();
+      try {
+        handlePastUserTest();
+      } catch (IOException ex) {
+        Logger.getLogger(FXMLUserAccountController.class.getName()).log(Level.SEVERE, null, ex);
+      }
       try {
         populateTests();
       } catch (Exception ex) {
@@ -94,6 +106,15 @@ public class FXMLUserAccountController implements Initializable {
         window.setScene(compareScoresScene);
         window.show();
     }
+    
+    public void goToReviewTest(ActionEvent event) throws IOException{
+        Project.setTest(tests.get(testIndex));
+        Parent reviewPageParent = FXMLLoader.load(getClass().getResource("FXMLReviewTest.fxml"));      
+        Scene startPageScene = new Scene(reviewPageParent);
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        window.setScene(startPageScene);
+        window.show();      
+    }
 
     public void populateUserFields() {
         setName.setText(Project.getUsersName());
@@ -104,15 +125,17 @@ public class FXMLUserAccountController implements Initializable {
     public void populateTests() throws Exception{
     String userID = Project.getUserID();
     File testsFile = new File("src/datafiles/"+userID+"Tests.json");
-    ObservableList<Test> listItems = FXCollections.observableArrayList();
     
     if(testsFile.exists()){
       JSONReader jsonReader = new JSONReader();
       ArrayList<JSONUserTestObject> userTests = jsonReader.readJSONUserTestFile(testsFile);
+      int testCount = 1;
       for(int i = 0; i < userTests.size(); i++){
         Test test = new Test(userTests.get(i).getQuestions().size());
         test = test.retrievePastTest((JSONUserTestObject) userTests.get(i));
-        listItems.add(test);
+        tests.add(test);
+        listItems.add("Test " + testCount);
+        testCount++;
       }
       lvTestScores.setItems(listItems);
     }
@@ -120,16 +143,15 @@ public class FXMLUserAccountController implements Initializable {
       lvTestScores.getItems().add("No past attempts");
   }
     
-//  public void handlePastUserTest(ActionEvent event) throws IOException{
-//    lvTestScores.getSelectionModel().selectedItemProperty().addListener(
-//            new ChangeListener<String>() {
-//                public void changed(ObservableValue<? extends String> ov, 
-//                    String old_val, String new_val) {
-//                        int index = lvTestScores.getSelectionModel().getSelectedIndex();
-//                        System.out.println(new_val);
-//            }
-//        });
-//
-//    System.out.println(lvTestScores.getSelectionModel().getSelectedIndex());
-//  }
+  public void handlePastUserTest() throws IOException{
+    
+    lvTestScores.getSelectionModel().selectedItemProperty().addListener(
+            new ChangeListener<String>() {
+                public void changed(ObservableValue<? extends String> ov, 
+                    String old_val, String new_val) {
+                        testIndex = lvTestScores.getSelectionModel().getSelectedIndex();
+                        System.out.println("Test Index: " + testIndex);
+            }
+        });
+  }
 }

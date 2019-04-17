@@ -90,7 +90,7 @@
                         <ListView fx:id="lvTestScores" prefHeight="386.0" prefWidth="386.0" />
                      </content>
                   </ScrollPane>
-                  <Button fx:id="btReviewTest" mnemonicParsing="false" text="Review Test" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                  <Button fx:id="btReviewTest" mnemonicParsing="false" onAction="#handleReviewTestButton" text="Review Test" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
                </children>
             </GridPane>
          </children>
