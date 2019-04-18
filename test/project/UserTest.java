@@ -5,6 +5,7 @@
  */
 package project;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import org.junit.After;
 import org.junit.AfterClass;

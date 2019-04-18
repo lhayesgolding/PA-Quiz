@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  * @author lizri
  */
 public class QuestionTest {
-    String testQuest = "Why?";
+        String testQuest = "Why?";
         ArrayList<String> testChoices = new ArrayList<String>() {
                 {
                     add("Choice0");
@@ -34,7 +34,8 @@ public class QuestionTest {
                     add("Hint2");
                 }       
         };
-        Question testQuestion = new Question(testQuest, testChoices, testAnswer, testHints);
+        int QuestionID = 1;
+        Question testQuestion = new Question(testQuest, testChoices, testAnswer, testHints, QuestionID);
     
     public QuestionTest() {
     }

@@ -82,6 +82,9 @@ public class Project extends Application {
     public static void setUsername(String username){
         Username = username;
     }
+    public static void setUserMap(HashMap hash){
+        usermap = hash;
+    }
     
     public static String getCurrentUser(){
         return Username;

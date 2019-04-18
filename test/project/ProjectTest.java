@@ -41,22 +41,7 @@ public class ProjectTest {
     public void tearDown() {
     }
 
-    /**
-     * Test of start method, of class Project.
-     */
-    @Test
-    public void testStart() throws Exception {
-        // Is this testable??
-        /*
-        System.out.println("start");
-        Stage stage = null;
-        Project instance = new Project();
-        instance.start(stage);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-        */
-    }
-
+    
 
     /**
      * Test of getNumOfQuestions method, of class Project.
@@ -78,13 +63,7 @@ public class ProjectTest {
         assertNotNull(Project.getTest());
     }
 
-    /**
-     * Test of setTest method, of class Project.
-     */
-    @Test
-    public void testSetTest() {
-        //testable?
-    }
+   
 
     /**
      * Test of setUsername method, of class Project.
@@ -117,8 +96,14 @@ public class ProjectTest {
     @Test
     public void testInitializeUserMap() {
         System.out.println("initializeUserMap");
+        HashMap hash = new HashMap();
+        Project.setUserMap(hash);
+        String mapHash = Project.getusermap().toString();
         Project.initializeUserMap();
-        //how to test this??
+        String mapHash2 = Project.getusermap().toString();
+        HashMap map = Project.getusermap();
+        assertNotNull(map);
+        assertNotEquals(mapHash,mapHash2);
     }
 
     /**
@@ -128,10 +113,12 @@ public class ProjectTest {
     public void testValid() {
         System.out.println("valid");
         Project.initializeUserMap();
-        //this works specifically for the userstorage file at the time of coding
-        //is there a better way?
-        assertTrue(Project.valid("tom2", "password2"));
-        assertTrue(Project.valid("rick9", "poipoi"));
+        User user = (User)Project.getusermap().get("jcoady9281@westfield.ma.edu");
+        String username = user.getUserID();
+        String password = user.getPassword();
+        assertTrue(Project.valid(username, password));
+        password = "fakepassword";
+        assertFalse(Project.valid(username, password));
     }
 
     /**
@@ -150,7 +137,7 @@ public class ProjectTest {
     @Test
     public void testExistingUser() {
         Project.initializeUserMap();
-        assertTrue(Project.existingUser("rick9"));
+        assertTrue(Project.existingUser("jcoady9281@westfield.ma.edu"));
         assertFalse(Project.existingUser("poipoi"));
     }
 
@@ -160,8 +147,8 @@ public class ProjectTest {
     @Test
     public void testGetUsersName() {
         Project.initializeUserMap();
-        Project.setUsername("rick9");
-        assertEquals("Rick", Project.getUsersName());
+        Project.setUsername("jcoady9281@westfield.ma.edu");
+        assertEquals("john", Project.getUsersName());
     }
     
 }
