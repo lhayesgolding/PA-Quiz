@@ -129,6 +129,7 @@ public class FXMLLogInController implements Initializable {
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
+        window.setTitle("Start Test");
         window.show();
     }
     
@@ -137,6 +138,7 @@ public class FXMLLogInController implements Initializable {
         Scene createAccountScene = new Scene(createAccountParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(createAccountScene);
+        window.setTitle("Create New Account");
         window.show();
     }
 }

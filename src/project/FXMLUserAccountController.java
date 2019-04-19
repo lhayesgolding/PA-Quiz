@@ -76,6 +76,7 @@ public class FXMLUserAccountController implements Initializable {
         Scene logInScene = new Scene(logInParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(logInScene);
+        window.setTitle("Log In");
         window.show();
     }
     
@@ -84,6 +85,7 @@ public class FXMLUserAccountController implements Initializable {
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
+        window.setTitle("Start Test");
         window.show();
     }
     
@@ -92,6 +94,7 @@ public class FXMLUserAccountController implements Initializable {
         Scene compareScoresScene = new Scene(compareScoresParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(compareScoresScene);
+        window.setTitle("Compare Scores");
         window.show();
     }
 
