@@ -127,6 +127,7 @@ public class FXMLEndPageController implements Initializable {
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
+        window.setTitle("Start Test");
         window.show();
     }
 
@@ -135,6 +136,7 @@ public class FXMLEndPageController implements Initializable {
         Scene logInScene = new Scene(logInParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(logInScene);
+        window.setTitle("Log In");
         window.show();
     }
 
@@ -143,6 +145,7 @@ public class FXMLEndPageController implements Initializable {
         Scene userAccountScene = new Scene(testPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(userAccountScene);
+        window.setTitle("User Account");
         window.show();
     }
     

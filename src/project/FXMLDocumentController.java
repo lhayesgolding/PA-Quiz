@@ -330,6 +330,7 @@ public class FXMLDocumentController implements Initializable {
         Scene endPageScene = new Scene(endPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(endPageScene);
+        window.setTitle("Test Results");
         window.show();
     }
 }

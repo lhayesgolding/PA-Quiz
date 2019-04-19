@@ -70,6 +70,7 @@ public class FXMLStartPageController implements Initializable {
         Scene documentScene = new Scene(documentParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(documentScene);
+        window.setTitle("Take Test");
         window.show();
     }
     
@@ -78,6 +79,7 @@ public class FXMLStartPageController implements Initializable {
         Scene userAccountScene = new Scene(testPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(userAccountScene);
+        window.setTitle("User Account");
         window.show();
     }
 }

@@ -67,6 +67,7 @@ public class FXMLComparePageController implements Initializable {
         Scene userAccountScene = new Scene(testPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(userAccountScene);
+        window.setTitle("User Account");
         window.show();
     }
     
