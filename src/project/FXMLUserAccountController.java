@@ -143,8 +143,7 @@ public class FXMLUserAccountController implements Initializable {
       lvTestScores.getItems().add("No past attempts");
   }
     
-  public void handlePastUserTest() throws IOException{
-    
+  public void handlePastUserTest() throws IOException{  
     lvTestScores.getSelectionModel().selectedItemProperty().addListener(
             new ChangeListener<String>() {
                 public void changed(ObservableValue<? extends String> ov, 

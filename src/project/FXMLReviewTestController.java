@@ -26,7 +26,8 @@ import javafx.stage.Stage;
  */
 public class FXMLReviewTestController implements Initializable {
     @FXML
-    private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD, lbQuestionNum;
+    private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD, lbQuestionNum ,
+            lbExplanationA, lbExplanationB, lbExplanationC, lbExplanationD;
     private Integer questionNumber = 0; // track which question user is currently on
     private Test test;
 
@@ -68,9 +69,13 @@ public class FXMLReviewTestController implements Initializable {
     public void getInfoToShow() {
         lbQuestionText.setText(test.getQuestion(questionNumber).getQuest());
         lbChoiceA.setText((String) test.getQuestion(questionNumber).getChoices().get(0));
+        lbExplanationA.setText((String) test.getQuestion(questionNumber).getHints().get(0));
         lbChoiceB.setText((String) test.getQuestion(questionNumber).getChoices().get(1));
+        lbExplanationB.setText((String) test.getQuestion(questionNumber).getHints().get(1));
         lbChoiceC.setText((String) test.getQuestion(questionNumber).getChoices().get(2));
+        lbExplanationC.setText((String) test.getQuestion(questionNumber).getHints().get(2));
         lbChoiceD.setText((String) test.getQuestion(questionNumber).getChoices().get(3));
+        lbExplanationD.setText((String) test.getQuestion(questionNumber).getHints().get(3));
         lbQuestionNum.setText("Question " + (questionNumber + 1) + "/" + test.getNumberOfQuestions());
     }
     
@@ -87,31 +92,63 @@ public class FXMLReviewTestController implements Initializable {
     }
     
     public void displayUserAnswer(){
+        initializeQuestionChoices();
+        
+        if(test.getQuestion(questionNumber).getUserAnswer() == 0){
+          lbChoiceA.setTextFill(Color.ORANGE);
+          lbExplanationA.setTextFill(Color.ORANGE);
+        }
+        if(test.getQuestion(questionNumber).getUserAnswer() == 1){
+          lbChoiceB.setTextFill(Color.ORANGE);
+          lbExplanationB.setTextFill(Color.ORANGE);
+        }
+        if(test.getQuestion(questionNumber).getUserAnswer() == 2){
+          lbChoiceC.setTextFill(Color.ORANGE);
+          lbExplanationC.setTextFill(Color.ORANGE);
+        }
+        if(test.getQuestion(questionNumber).getUserAnswer() == 3){
+          lbChoiceD.setTextFill(Color.ORANGE);
+          lbExplanationD.setTextFill(Color.ORANGE);
+        }
+    }
+    
+    public void displayCorrectAnswer(){
+
+        if(test.getQuestion(questionNumber).getAnswer() == 0){
+          lbChoiceA.setTextFill(Color.GREEN);
+          lbChoiceA.setStyle("-fx-font-weight: bold");
+          lbExplanationA.setTextFill(Color.GREEN);
+        }
+        if(test.getQuestion(questionNumber).getAnswer() == 1){
+          lbChoiceB.setTextFill(Color.GREEN);
+          lbChoiceB.setStyle("-fx-font-weight: bold");
+          lbExplanationB.setTextFill(Color.GREEN);
+        }
+        if(test.getQuestion(questionNumber).getAnswer() == 2){
+          lbChoiceC.setTextFill(Color.GREEN);
+          lbChoiceC.setStyle("-fx-font-weight: bold");
+          lbExplanationC.setTextFill(Color.GREEN);
+        }
+        if(test.getQuestion(questionNumber).getAnswer() == 3){
+          lbChoiceD.setTextFill(Color.GREEN);
+          lbChoiceD.setStyle("-fx-font-weight: bold");
+          lbExplanationD.setTextFill(Color.GREEN);
+        }
+    }
+    
+    public void initializeQuestionChoices(){
         lbChoiceA.setTextFill(Color.BLACK);
         lbChoiceB.setTextFill(Color.BLACK);
         lbChoiceC.setTextFill(Color.BLACK);
         lbChoiceD.setTextFill(Color.BLACK);
-        
-        if(test.getQuestion(questionNumber).getUserAnswer() == 0)
-          lbChoiceA.setTextFill(Color.ORANGE);
-        if(test.getQuestion(questionNumber).getUserAnswer() == 1)
-          lbChoiceB.setTextFill(Color.ORANGE);
-        if(test.getQuestion(questionNumber).getUserAnswer() == 2)
-          lbChoiceC.setTextFill(Color.ORANGE);
-        if(test.getQuestion(questionNumber).getUserAnswer() == 3)
-          lbChoiceD.setTextFill(Color.ORANGE);                        
-    }
-    
-    public void displayCorrectAnswer(){
-        
-        if(test.getQuestion(questionNumber).getAnswer() == 0)
-          lbChoiceA.setTextFill(Color.GREEN);
-        if(test.getQuestion(questionNumber).getAnswer() == 1)
-          lbChoiceB.setTextFill(Color.GREEN);
-        if(test.getQuestion(questionNumber).getAnswer() == 2)
-          lbChoiceC.setTextFill(Color.GREEN);
-        if(test.getQuestion(questionNumber).getAnswer() == 3)
-          lbChoiceD.setTextFill(Color.GREEN);       
+        lbExplanationA.setTextFill(Color.BLACK);
+        lbExplanationB.setTextFill(Color.BLACK);
+        lbExplanationC.setTextFill(Color.BLACK);
+        lbExplanationD.setTextFill(Color.BLACK);
+        lbChoiceA.setStyle("-fx-font-weight: regular");
+        lbChoiceB.setStyle("-fx-font-weight: regular");
+        lbChoiceC.setStyle("-fx-font-weight: regular");
+        lbChoiceD.setStyle("-fx-font-weight: regular");       
     }
     
     public void goToQuestion(String direction) {

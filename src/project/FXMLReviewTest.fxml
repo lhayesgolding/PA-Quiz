@@ -2,44 +2,48 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLReviewTestController">
+<Pane id="Pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="675.0" prefWidth="750.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLReviewTestController">
    <children>
-      <Label fx:id="lbQuestionText" layoutX="39.0" layoutY="77.0" prefHeight="168.0" prefWidth="630.0" text="Question text" textFill="#2d13f0" wrapText="true">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label fx:id="lbChoiceA" layoutX="107.0" layoutY="249.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceA" wrapText="true" />
-      <Label fx:id="lbChoiceB" layoutX="107.0" layoutY="307.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceB" wrapText="true" />
-      <Label fx:id="lbChoiceC" layoutX="107.0" layoutY="361.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceC" wrapText="true" />
-      <Label fx:id="lbChoiceD" layoutX="107.0" layoutY="417.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceD" wrapText="true" />
-      <Button fx:id="btOptionA" disable="true" layoutX="66.0" layoutY="258.0" mnemonicParsing="false" text="A" />
-      <Button fx:id="btOptionB" disable="true" layoutX="66.0" layoutY="315.0" mnemonicParsing="false" text="B" />
-      <Button fx:id="btOptionC" disable="true" layoutX="66.0" layoutY="370.0" mnemonicParsing="false" text="C" />
-      <Button fx:id="btOptionD" disable="true" layoutX="65.0" layoutY="426.0" mnemonicParsing="false" text="D" />
-      <Button fx:id="btFinishTest" layoutX="25.0" layoutY="601.0" mnemonicParsing="false" onAction="#handleFinishReview" text="Finish Review" />
-      <Button fx:id="btNext" layoutX="126.0" layoutY="520.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
-      <Button fx:id="btPrevious" layoutX="25.0" layoutY="520.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
-      <Label fx:id="lbQuestionNum" layoutX="79.0" layoutY="495.0" text="Question # / #" textFill="#2d13f0" />
-      <Label fx:id="lbFinishTest" layoutX="161.0" layoutY="592.0" prefHeight="42.0" prefWidth="394.0" text="Return to your account page" wrapText="true" />
-      <Label fx:id="lbTitle" layoutX="190.0" layoutY="23.0" text="Test Review Mode" textFill="#df0d0d">
+      <Label fx:id="lbQuestionText" layoutX="37.0" layoutY="57.0" prefHeight="150.0" prefWidth="630.0" text="Question text" textFill="#2d13f0" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+      <Label fx:id="lbChoiceA" layoutX="106.0" layoutY="197.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceA" wrapText="true" />
+      <Label fx:id="lbChoiceB" layoutX="107.0" layoutY="281.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceB" wrapText="true" />
+      <Label fx:id="lbChoiceC" layoutX="107.0" layoutY="363.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceC" wrapText="true" />
+      <Label fx:id="lbChoiceD" layoutX="106.0" layoutY="444.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceD" wrapText="true" />
+      <Label fx:id="lbExplanationA" layoutX="117.0" layoutY="230.0" prefHeight="42.0" prefWidth="614.0" text="ExplanationA" wrapText="true" />
+      <Label fx:id="lbExplanationB" layoutX="125.0" layoutY="317.0" prefHeight="42.0" prefWidth="614.0" text="ExplanationB" wrapText="true" />
+      <Label fx:id="lbExplanationC" layoutX="125.0" layoutY="397.0" prefHeight="42.0" prefWidth="614.0" text="ExplanationC" wrapText="true" />
+      <Label fx:id="lbExplanationD" layoutX="125.0" layoutY="478.0" prefHeight="42.0" prefWidth="614.0" text="ExplanationD" wrapText="true" />
+      <Button fx:id="btOptionA" disable="true" layoutX="66.0" layoutY="205.0" mnemonicParsing="false" text="A" />
+      <Button fx:id="btOptionB" disable="true" layoutX="66.0" layoutY="289.0" mnemonicParsing="false" text="B" />
+      <Button fx:id="btOptionC" disable="true" layoutX="67.0" layoutY="372.0" mnemonicParsing="false" text="C" />
+      <Button fx:id="btOptionD" disable="true" layoutX="66.0" layoutY="453.0" mnemonicParsing="false" text="D" />
+      <Button fx:id="btFinishTest" layoutX="24.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleFinishReview" text="Finish Review" />
+      <Button fx:id="btNext" layoutX="125.0" layoutY="570.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
+      <Button fx:id="btPrevious" layoutX="24.0" layoutY="570.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
+      <Label fx:id="lbQuestionNum" layoutX="83.0" layoutY="535.0" text="Question # / #" textFill="#2d13f0" />
+      <Label fx:id="lbFinishTest" layoutX="159.0" layoutY="619.0" prefHeight="42.0" prefWidth="394.0" text="Return to your account page" wrapText="true" />
+      <Label fx:id="lbTitle" layoutX="207.0" layoutY="14.0" text="Test Review Mode" textFill="#df0d0d">
          <font>
             <Font size="36.0" />
          </font>
       </Label>
-      <Text layoutX="281.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: orange;" text="Your Answer">
+      <Text layoutX="280.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: orange;" text="Your Answer">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
-      <Text layoutX="385.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: green;" text="Correct Answer">
+      <Text layoutX="384.0" layoutY="589.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: green;" text="Correct Answer">
          <font>
             <Font size="16.0" />
          </font>
       </Text>
    </children>    
-</AnchorPane>
+</Pane>
