@@ -19,9 +19,11 @@ public class Test {
   private static String testType = "recorded";
 
   Test() {
-    numberOfQuestions = 50;
-    score = 0;
-    this.initializeQuestionList(file);
+//    numberOfQuestions = 50;
+//    score = 0;
+//    this.initializeQuestionList(file);
+    questionList = questionListUser;
+    numberOfQuestions = questionListUser.size();
   }
 
   Test(int numberOfQuestions) {
@@ -60,7 +62,7 @@ public class Test {
    * @param questions the number of questions
    */
   public void setNumberOfQuestions(int questions) {
-    numberOfQuestions = questions;
+      numberOfQuestions = questions;
   }
 
   /**
@@ -156,6 +158,9 @@ public class Test {
         if(questionID == questionListTemp.get(j).getQuestionID()){
           newTest.addQuestion(questionListTemp.get(j));
           newTest.getPastQuestion(i).setUserAnswer(userAnswer);
+          int numQuestions = newTest.getNumberOfQuestions();
+          numQuestions++;
+          newTest.setNumberOfQuestions(numQuestions);
           break;
         }
       }
