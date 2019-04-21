@@ -11,7 +11,7 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
+//import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
@@ -43,30 +43,35 @@ public class TestTest {
     
 
     /**
-     * Test of calculateScore method, of class Test.
+     * Test of setUserAnswer, getUserAnswer, getQuestion, getAnswer, 
+     * calculateScore, of class Test. initializequestionList is also called.
      */
-    @Test
-    public void testCalculateScore() {
-    
+    @org.junit.Test
+    public void testVarious() {
+        Test test = new Test(10);
+        for (int i = 0; i < 10; i++) {
+            test.getQuestion(i).setUserAnswer(0);
+        }
+        int numRight = 0;
+        for (int i = 0; i < 10; i++) {
+            if (test.getQuestion(i).getUserAnswer() == test.getQuestion(i).getAnswer())
+                numRight++;
+        }
+        test.calculateScore();
+        assertEquals(numRight, test.getScore());
     }
-
-    /**
-     * Test of initializequestionList method, of class Test.
-     */
-    @Test
-    public void testInitializequestionList() {
-    }
-
-    /**
-     * Test of setTestType method, of class Test.
-     */
     
 
     /**
-     * Test of resetTestType method, of class Test.
+     * Test of setTestType, getTestType, resetTestType method, of class Test.
      */
-    @Test
+    @org.junit.Test
     public void testResetTestType() {
+        Test test = new Test();
+        test.setTestType("recorded");
+        assertEquals("recorded", test.getTestType());
+        test.resetTestType();
+        assertNull(test.getTestType());
     }
     
 }
