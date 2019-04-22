@@ -157,9 +157,9 @@ public class FXMLComparePageController implements Initializable {
         }
         average = total / Double.valueOf(scores.size());
         if (user.equals("all"))
-            setAverageAll.setText(Double.toString(average) + "%");
+            setAverageAll.setText(String.format("%.2f", average) + "%");
         else {
-            setAverageUser.setText(Double.toString(average) + "%");
+            setAverageUser.setText(String.format("%.2f", average) + "%");
             txtUserScores.setText(user + "'s Scores");
         }
     }
