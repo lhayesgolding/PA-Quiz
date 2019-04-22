@@ -6,44 +6,49 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane id="Pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="700.0" prefWidth="750.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLReviewTestController">
+<Pane id="Pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="750.0" prefWidth="750.0" style="-fx-background-color: azure; -fx-border-color: blue;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLReviewTestController">
    <children>
-      <Label fx:id="lbQuestionText" layoutX="27.0" layoutY="55.0" prefHeight="138.0" prefWidth="683.0" text="Question text" textFill="#2d13f0" wrapText="true">
+      <Label fx:id="lbQuestionText" layoutX="27.0" layoutY="111.0" prefHeight="138.0" prefWidth="683.0" text="Question text" textFill="#2d13f0" wrapText="true">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-      <Label fx:id="lbChoiceA" layoutX="87.0" layoutY="185.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceA" wrapText="true" />
-      <Label fx:id="lbChoiceB" layoutX="89.0" layoutY="273.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceB" wrapText="true" />
-      <Label fx:id="lbChoiceC" layoutX="88.0" layoutY="367.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceC" wrapText="true" />
-      <Label fx:id="lbChoiceD" layoutX="88.0" layoutY="454.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceD" wrapText="true" />
-      <Label fx:id="lbExplanationA" alignment="TOP_LEFT" layoutX="98.0" layoutY="218.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationA" wrapText="true" />
-      <Label fx:id="lbExplanationB" alignment="TOP_LEFT" layoutX="96.0" layoutY="307.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationB" wrapText="true" />
-      <Label fx:id="lbExplanationC" alignment="TOP_LEFT" layoutX="98.0" layoutY="401.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationC" wrapText="true" />
-      <Label fx:id="lbExplanationD" alignment="TOP_LEFT" layoutX="99.0" layoutY="488.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationD" wrapText="true" />
-      <Button fx:id="btOptionA" disable="true" layoutX="47.0" layoutY="193.0" mnemonicParsing="false" text="A" />
-      <Button fx:id="btOptionB" disable="true" layoutX="48.0" layoutY="281.0" mnemonicParsing="false" text="B" />
-      <Button fx:id="btOptionC" disable="true" layoutX="48.0" layoutY="376.0" mnemonicParsing="false" text="C" />
-      <Button fx:id="btOptionD" disable="true" layoutX="48.0" layoutY="463.0" mnemonicParsing="false" text="D" />
-      <Button fx:id="btFinishTest" layoutX="27.0" layoutY="645.0" mnemonicParsing="false" onAction="#handleFinishReview" text="Finish Review" />
-      <Button fx:id="btNext" layoutX="128.0" layoutY="588.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
-      <Button fx:id="btPrevious" layoutX="27.0" layoutY="588.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
-      <Label fx:id="lbQuestionNum" layoutX="86.0" layoutY="553.0" text="Question # / #" textFill="#2d13f0" />
-      <Label fx:id="lbFinishTest" layoutX="162.0" layoutY="637.0" prefHeight="42.0" prefWidth="394.0" text="Return to your account page" wrapText="true" />
-      <Label fx:id="lbTitle" layoutX="239.0" layoutY="14.0" text="Test Review Mode" textFill="#df0d0d">
+      <Label fx:id="lbChoiceA" layoutX="87.0" layoutY="243.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceA" wrapText="true" />
+      <Label fx:id="lbChoiceB" layoutX="89.0" layoutY="331.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceB" wrapText="true" />
+      <Label fx:id="lbChoiceC" layoutX="88.0" layoutY="425.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceC" wrapText="true" />
+      <Label fx:id="lbChoiceD" layoutX="88.0" layoutY="512.0" prefHeight="42.0" prefWidth="503.0" text="ChoiceD" wrapText="true" />
+      <Label fx:id="lbExplanationA" alignment="TOP_LEFT" layoutX="98.0" layoutY="276.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationA" wrapText="true" />
+      <Label fx:id="lbExplanationB" alignment="TOP_LEFT" layoutX="96.0" layoutY="365.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationB" wrapText="true" />
+      <Label fx:id="lbExplanationC" alignment="TOP_LEFT" layoutX="98.0" layoutY="459.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationC" wrapText="true" />
+      <Label fx:id="lbExplanationD" alignment="TOP_LEFT" layoutX="99.0" layoutY="546.0" prefHeight="64.0" prefWidth="635.0" text="ExplanationD" wrapText="true" />
+      <Button fx:id="btOptionA" disable="true" layoutX="47.0" layoutY="251.0" mnemonicParsing="false" text="A" />
+      <Button fx:id="btOptionB" disable="true" layoutX="48.0" layoutY="339.0" mnemonicParsing="false" text="B" />
+      <Button fx:id="btOptionC" disable="true" layoutX="48.0" layoutY="434.0" mnemonicParsing="false" text="C" />
+      <Button fx:id="btOptionD" disable="true" layoutX="48.0" layoutY="521.0" mnemonicParsing="false" text="D" />
+      <Button fx:id="btFinishTest" layoutX="27.0" layoutY="695.0" mnemonicParsing="false" onAction="#handleFinishReview" text="Finish Review" />
+      <Button fx:id="btNext" layoutX="128.0" layoutY="646.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="27.0" prefWidth="98.0" text="Next -&gt;" />
+      <Button fx:id="btPrevious" layoutX="27.0" layoutY="646.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="27.0" prefWidth="98.0" text="&lt;- Previous" />
+      <Label fx:id="lbQuestionNum" layoutX="86.0" layoutY="611.0" text="Question # / #" textFill="#2d13f0" />
+      <Label fx:id="lbFinishTest" layoutX="162.0" layoutY="687.0" prefHeight="42.0" prefWidth="394.0" text="Return to your account page" wrapText="true" />
+      <Label fx:id="lbTitle" layoutX="256.0" layoutY="65.0" text="Test Review Mode">
                <font>
-            <Font size="36.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <Text layoutX="283.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: orange;" text="Your Answer">
+      <Text layoutX="283.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: orange;" text="Your Answer">
          <font>
                   <Font size="16.0" />
                </font>
             </Text>
-      <Text layoutX="387.0" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: green;" text="Correct Answer">
+      <Text layoutX="387.0" layoutY="665.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: green;" text="Correct Answer">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
+      <Label fx:id="lbTitle1" layoutX="88.0" layoutY="22.0" text="WSU PA Practice Certification Test" textFill="#df0d0d">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
          </children>
 </Pane>

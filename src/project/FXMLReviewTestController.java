@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -28,6 +29,8 @@ public class FXMLReviewTestController implements Initializable {
     @FXML
     private Label lbQuestionText, lbChoiceA, lbChoiceB, lbChoiceC, lbChoiceD, lbQuestionNum ,
             lbExplanationA, lbExplanationB, lbExplanationC, lbExplanationD;
+    @FXML
+    private Button btFinishTest, btNext, btPrevious;
     private Integer questionNumber = 0; // track which question user is currently on
     private Test test;
 
@@ -215,6 +218,7 @@ public class FXMLReviewTestController implements Initializable {
         Scene endPageScene = new Scene(endPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(endPageScene);
+        window.setTitle("User Account");
         window.show();
     }  
 }

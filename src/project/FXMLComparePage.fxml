@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLComparePageController">
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: azure;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.FXMLComparePageController">
    <children>
       <GridPane layoutX="16.0" layoutY="10.0" prefHeight="379.0" prefWidth="568.0" style="-fx-background-color: azure; -fx-border-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columnConstraints>
@@ -22,27 +22,33 @@
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="85.0" minWidth="10.0" prefWidth="85.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="300.80003051757814" minHeight="10.0" prefHeight="61.9999969482422" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.80003051757814" minHeight="10.0" prefHeight="78.59999694824218" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="300.80003051757814" minHeight="10.0" prefHeight="24.200003051757818" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="300.80003051757814" minHeight="10.0" prefHeight="61.9999969482422" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="300.80003051757814" minHeight="10.0" prefHeight="243.19999999999996" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="178.8000030517578" minHeight="0.0" prefHeight="67.19999999999999" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="178.8000030517578" minHeight="10.0" prefHeight="67.19999999999999" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ListView fx:id="lvUserScores" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ListView fx:id="lvPastScores" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="167.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="68.0" text="Back" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
-            <Text fx:id="txtUserScores" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Scores" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Label fx:id="lbTitle" text="WSU PA Practice Certification Test" textFill="#df0d0d" GridPane.columnSpan="5" GridPane.halignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lvUserScores" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ListView fx:id="lvPastScores" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="255.0" prefWidth="167.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="68.0" text="Back" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Text fx:id="txtUserScores" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Scores" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All Users' Scores" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="All Users' Scores" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2">
                <font>
                   <Font size="18.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Average: " GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Average: " GridPane.columnIndex="3" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
@@ -50,7 +56,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Text>
-            <Label fx:id="setAverageAll" text="(Average)" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+            <Label fx:id="setAverageAll" text="(Average)" GridPane.columnIndex="3" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
                </font>
@@ -58,7 +64,7 @@
                   <Insets right="20.0" />
                </GridPane.margin>
             </Label>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Average: " GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Average: " GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="18.0" />
                </font>
@@ -66,7 +72,7 @@
                   <Insets left="5.0" />
                </GridPane.margin>
             </Text>
-            <Label fx:id="setAverageUser" text="(Average)" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+            <Label fx:id="setAverageUser" text="(Average)" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
                </font>
@@ -74,7 +80,7 @@
                   <Insets right="20.0" />
                </GridPane.margin>
             </Label>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Only the 50 most recent scores are shown in each column" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Only the 50 most recent scores are shown in each column" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
          </children>
       </GridPane>
    </children>
