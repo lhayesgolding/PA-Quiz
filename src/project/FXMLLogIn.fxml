@@ -41,7 +41,7 @@
                <children>
                   <HBox prefHeight="117.0" prefWidth="398.0" GridPane.rowIndex="1">
                      <children>
-                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="87.0" text="User ID  " textAlignment="RIGHT">
+                        <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="87.0" text="Username  " textAlignment="RIGHT">
                            <font>
                               <Font size="15.0" />
                            </font>
