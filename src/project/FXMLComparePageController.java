@@ -43,12 +43,19 @@ public class FXMLComparePageController implements Initializable {
     @FXML
     private ListView lvPastScores;
     
+    /**
+     * Goes back to the previous screen
+     * @param event indicates that the user has pressed a button
+     * @throws IOException thrown when I/O error occurs
+     */
     public void handleBackButton(ActionEvent event) throws IOException {
         showUserAccountPage(event);
     }
     
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -62,6 +69,11 @@ public class FXMLComparePageController implements Initializable {
         }
     }    
     
+    /**
+     * Displays the user account page
+     * @param event indicates that the user has pressed a button
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showUserAccountPage(ActionEvent event) throws IOException {
         Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
         Scene userAccountScene = new Scene(testPageParent);
@@ -71,6 +83,12 @@ public class FXMLComparePageController implements Initializable {
         window.show();
     }
     
+    /**
+     * Gets the current user's past test scores and displays them, up to the last 
+     * 50 tests
+     * @throws FileNotFoundException thrown when the file is not found
+     * @throws IOException thrown when I/O error occurs
+     */
     public void populatePastTests() throws FileNotFoundException, IOException {
         String userID = Project.getUserID();
         File scoreFile = new File("src/datafiles/" + userID + ".txt");
@@ -87,6 +105,11 @@ public class FXMLComparePageController implements Initializable {
         }
     }
     
+    /**
+     * Gets the 50 most recent test scores and displays them
+     * @throws FileNotFoundException thrown when the file is not found
+     * @throws IOException thrown when I/O error occurs
+     */
     public void populateAllTests() throws FileNotFoundException, IOException {
         File file = new File("src/datafiles/AllScores.txt");
         if (file.exists()) {
@@ -102,6 +125,11 @@ public class FXMLComparePageController implements Initializable {
         }
     }
     
+    /**
+     * Shows the average of the user's last tests, as well as the past tests
+     * of every user
+     * @param user the currently logged in user
+     */
     public void populateAverage(String user) {
         Double average = 0.0;
         ArrayList<String> scores = new ArrayList<String>();

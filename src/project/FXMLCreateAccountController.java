@@ -61,6 +61,7 @@ public class FXMLCreateAccountController implements Initializable {
      *
      * @param event indicates that the Submit button has been pressed
      * @throws IOException thrown when I/O error occurs
+     * @throws java.security.NoSuchAlgorithmException
      */
     @FXML
     public void handleSubmit(ActionEvent event) throws IOException, NoSuchAlgorithmException {
@@ -107,6 +108,15 @@ public class FXMLCreateAccountController implements Initializable {
         // TODO
     }
 
+    /**
+     * Checks if the entered information is valid
+     * @param name the name of the user
+     * @param email the email of the user
+     * @param username the username of the user
+     * @param password the password of the user
+     * @param password2 confirms that the password was entered correctly
+     * @return true or false based on if information entered is valid
+     */
     public boolean errorCheck(String name, String email, String username, String password, String password2) {
         if (name.isEmpty() || email.isEmpty() || username.isEmpty() || password.isEmpty()
                 || password2.isEmpty()) {
@@ -145,6 +155,15 @@ public class FXMLCreateAccountController implements Initializable {
         return false;
     }
 
+    /**
+     *
+     * @param name the name of the user
+     * @param email the email of the user
+     * @param username the username of the user
+     * @param password the password of the user
+     * @throws NoSuchAlgorithmException thrown if the hashPassword function fails
+     * @throws FileNotFoundException thrown if there is now file found
+     */
     public void addNewUser(String name, String email, String username, String password) throws NoSuchAlgorithmException, FileNotFoundException {
         password = ph.hashPassword(password);
         newuser = new User(name, email, username, password);
@@ -152,6 +171,11 @@ public class FXMLCreateAccountController implements Initializable {
         Project.setUsername(username);
     }
     
+    /**
+     * Starts a new test for the newly entered user
+     * @param event indicates that the user has pressed a button
+     * @throws IOException thrown when I/O error occurs
+     */
     public void startNewTest(ActionEvent event) throws IOException {
         Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
@@ -161,6 +185,11 @@ public class FXMLCreateAccountController implements Initializable {
         window.show();
     }
     
+    /**
+     * Returns to the log in page
+     * @param event indicates that the user has pressed a button
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showLogInPage(ActionEvent event) throws IOException {
         Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);

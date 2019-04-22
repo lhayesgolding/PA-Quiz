@@ -62,6 +62,12 @@ public class FXMLStartPageController implements Initializable {
         helloMessage.setText("Hello, " + Project.getUsersName());
     }
     
+    /**
+     * Starts a new test
+     * @param event indicates that a button has been pressed
+     * @param testType determines if the test is recorded or practice
+     * @throws IOException thrown if I/O error occurs
+     */
     public void startNewTest(ActionEvent event, String testType) throws IOException {
         Test.setTestType(testType);
         Parent documentParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -72,6 +78,11 @@ public class FXMLStartPageController implements Initializable {
         window.show();
     }
     
+    /**
+     * Shows the user account screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void showUserAccountPage(ActionEvent event) throws IOException {
         Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
         Scene userAccountScene = new Scene(testPageParent);

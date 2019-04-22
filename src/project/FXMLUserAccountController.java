@@ -48,18 +48,38 @@ public class FXMLUserAccountController implements Initializable {
     private int testIndex;
     private ObservableList<String> listItems = FXCollections.observableArrayList();
 
+    /**
+     * Returns to the log in page and logs the user out
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void handleLogoutButton(ActionEvent event) throws IOException {
         showLogInPage(event);
     }
 
+    /**
+     * Starts a new test
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void handleTestButton(ActionEvent event) throws IOException {
         startNewTest(event);
     }
     
+    /**
+     * Shows the compare scores screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void handleCompareScoresButton(ActionEvent event) throws IOException {
         showCompareScoresPage(event);
     }
     
+    /**
+     * Shows the review test screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void handleReviewTestButton(ActionEvent event) throws IOException{
       goToReviewTest(event);
     }
@@ -67,6 +87,8 @@ public class FXMLUserAccountController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -83,6 +105,11 @@ public class FXMLUserAccountController implements Initializable {
       }
     }
 
+    /**
+     * Shows the log in screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void showLogInPage(ActionEvent event) throws IOException {
         Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);
@@ -92,6 +119,11 @@ public class FXMLUserAccountController implements Initializable {
         window.show();
     }
     
+    /**
+     * Starts a new test
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void startNewTest(ActionEvent event) throws IOException {
         Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
@@ -101,6 +133,11 @@ public class FXMLUserAccountController implements Initializable {
         window.show();
     }
     
+    /**
+     * Shows the compare scores screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void showCompareScoresPage(ActionEvent event) throws IOException {
         Parent compareScoresParent = FXMLLoader.load(getClass().getResource("FXMLComparePage.fxml"));
         Scene compareScoresScene = new Scene(compareScoresParent);
@@ -110,6 +147,11 @@ public class FXMLUserAccountController implements Initializable {
         window.show();
     }
     
+    /**
+     * Shows the review test screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown if I/O error occurs
+     */
     public void goToReviewTest(ActionEvent event) throws IOException{
         Project.setTest(tests.get(testIndex));
         Parent reviewPageParent = FXMLLoader.load(getClass().getResource("FXMLReviewTest.fxml"));      
@@ -119,12 +161,20 @@ public class FXMLUserAccountController implements Initializable {
         window.show();      
     }
 
+    /**
+     * Shows the username, user id, and email of the user
+     */
     public void populateUserFields() {
         setName.setText(Project.getUsersName());
         setUsername.setText(Project.getUserID());
         setEmail.setText(Project.getUserEmail());
     }
   
+    /**
+     * Shows the previous test scores that the user has received, up to
+     * the last 50 scores
+     * @throws Exception
+     */
     public void populateTests() throws Exception{
     String userID = Project.getUserID();
     File testsFile = new File("src/datafiles/"+userID+"Tests.json");
@@ -146,7 +196,11 @@ public class FXMLUserAccountController implements Initializable {
       lvTestScores.getItems().add("No past attempts");
   }
     
-  public void handlePastUserTest() throws IOException{  
+    /**
+     * Shows a past test the user has taken
+     * @throws IOException thrown if I/O error occurs
+     */
+    public void handlePastUserTest() throws IOException{  
     lvTestScores.getSelectionModel().selectedItemProperty().addListener(
             new ChangeListener<String>() {
                 public void changed(ObservableValue<? extends String> ov, 

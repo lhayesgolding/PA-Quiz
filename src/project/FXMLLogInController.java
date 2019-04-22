@@ -41,6 +41,7 @@ public class FXMLLogInController implements Initializable {
      * this information is incorrect, the user cannot log in
      * @param event indicates that the Log In button has been pressed
      * @throws IOException thrown when I/O error occurs
+     * @throws java.security.NoSuchAlgorithmException
      */
     @FXML
     public void handleLogIn(ActionEvent event) throws IOException, NoSuchAlgorithmException {
@@ -100,6 +101,13 @@ public class FXMLLogInController implements Initializable {
             Project.initializeUserMap();
         }    
     
+    /**
+     * Checks to ensure the entered username and password are valid
+     * @param event indicates that a button has been pressed
+     * @return true or false based on if the information entered is valid
+     * @throws IOException thrown when I/O error occurs
+     * @throws NoSuchAlgorithmException thrown if hasPassword fails
+     */
     public boolean checkCredentials(ActionEvent event) throws IOException, NoSuchAlgorithmException {
         String username = "";
         String password = "";
@@ -124,6 +132,11 @@ public class FXMLLogInController implements Initializable {
         return false;
     }
     
+    /**
+     * Starts a new test
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     public void startNewTest(ActionEvent event) throws IOException {
         Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
@@ -133,6 +146,11 @@ public class FXMLLogInController implements Initializable {
         window.show();
     }
     
+    /**
+     * Shows the create account screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showCreateAccountPage(ActionEvent event) throws IOException {
         Parent createAccountParent = FXMLLoader.load(getClass().getResource("FXMLCreateAccount.fxml"));
         Scene createAccountScene = new Scene(createAccountParent);
