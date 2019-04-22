@@ -38,13 +38,11 @@ public class FXMLStartPageController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     @FXML
-    public void handleStartButton(ActionEvent event) throws IOException {
-        
-        
+    public void handleStartButton(ActionEvent event) throws IOException {        
+        Project.setNumOfQuestions((int) cbNumQuestions.getValue());
         startNewTest(event, (String)cbTestType.getValue());
-        
-        
     }
+    
     public void handleAccountButton(ActionEvent event) throws IOException {
         showUserAccountPage(event);
     }
