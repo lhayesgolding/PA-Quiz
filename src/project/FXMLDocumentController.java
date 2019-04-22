@@ -172,6 +172,10 @@ public class FXMLDocumentController implements Initializable {
         displayTime();        
     }
     
+    /**
+     * Saves the answer that the user entered 
+     * @param target the button that the user selected
+     */
     public void recordAnswer(Button target) {
         lbChoiceA.setTextFill(Color.BLACK);
         lbChoiceB.setTextFill(Color.BLACK);
@@ -193,6 +197,11 @@ public class FXMLDocumentController implements Initializable {
         }
     }
     
+    /**
+     * Switches to a new question, either the next or the previous
+     * @param direction determines if the program should go to the next
+     * or previous question
+     */
     public void goToQuestion(String direction) {
         if (direction == "next") {
             if (questionNumber < test.getNumberOfQuestions() - 1) {
@@ -224,6 +233,10 @@ public class FXMLDocumentController implements Initializable {
         }
     }
 
+    /**
+     * Saves the score that the user received for this test
+     * @param user the username of the user
+     */
     public void saveScore(String user) {
         String scoreFileString;
         if (user.equals("all"))
@@ -270,6 +283,7 @@ public class FXMLDocumentController implements Initializable {
     /**
      * Writes the user's test to a file in json format
      * Saves the following fields: userAnswer, questionID
+     * @throws java.lang.Exception
      */    
     public void saveTest() throws Exception{
       File testsFile = new File("src/datafiles/"+Project.getUserID()+"Tests.json");
@@ -304,6 +318,9 @@ public class FXMLDocumentController implements Initializable {
       writer.close();
     }
     
+    /**
+     * Pauses the timer and hides the question and answers
+     */
     public void pauseTest() {
         lbQuestionText.setText("");
         lbChoiceA.setText("");
@@ -324,6 +341,11 @@ public class FXMLDocumentController implements Initializable {
         }
     }
     
+    /**
+     * Goes to the end screen after the test is completed
+     * @param event indicates that the user has pressed a button
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showEndScreen(ActionEvent event) throws IOException {
         Project.setTest(test);
         Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));

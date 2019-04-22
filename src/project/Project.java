@@ -78,17 +78,34 @@ public class Project extends Application {
         test = test0;
     }
     
+    /**
+     * Sets the username of the user
+     * @param username the username entered
+     */
     public static void setUsername(String username){
         Username = username;
     }
+
+    /**
+     * Sets the user map to the provided HashMap
+     * @param hash HashMap to be set
+     */
     public static void setUserMap(HashMap hash){
         usermap = hash;
     }
     
+    /**
+     * Returns the username of the current user
+     * @return the username of the current user
+     */
     public static String getCurrentUser(){
         return Username;
     }
     
+    /**
+     * Adds a new user
+     * @param newUser the User object of the new user
+     */
     public static void addNewUser(User newUser){
         try {
             try (FileWriter writer = new FileWriter(userfile,true)) {
@@ -113,6 +130,9 @@ public class Project extends Application {
         }
     }
     
+    /**
+     * Creates a user map
+     */
     public static void initializeUserMap(){
         try{
         Scanner scan = new Scanner(userfile);
@@ -143,25 +163,58 @@ public class Project extends Application {
         }
     }
     
+    /**
+     *
+     * @param username the username of the user
+     * @param password the password of the user
+     * @return true or false based on if the username and password are valid
+     */
     public static boolean valid(String username, String password){
         if (usermap.get(username).getPassword().equals(password)) return true;
         else return false;
     }
+
+    /**
+     * Returns the user map
+     * @return the user map
+     */
     public static HashMap getusermap(){
         return usermap;
     }
+
+    /**
+     * Checks if the user already exists
+     * @param possibleUser the username to be checked
+     * @return true or false based on if there is an existing user with the
+     * same username
+     */
     public static boolean existingUser(String possibleUser){
         boolean answer = (usermap.containsKey(possibleUser));
         return answer;
     }
+
+    /**
+     * Returns the user's name
+     * @return the user's name
+     */
     public static String getUsersName(){
         String name = usermap.get(Username).getName();
         return name;
     }
+
+    /**
+     * Returns the user's ID
+     * @return the user ID
+     */
     public static String getUserID(){
       String userID = usermap.get(Username).getUserID();
       return userID;
     }
+
+    /**
+     * Returns the user's email
+     * @return the user's email
+     */
     public static String getUserEmail(){
       String email = usermap.get(Username).getEmail();
       return email;

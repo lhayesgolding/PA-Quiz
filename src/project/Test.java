@@ -8,6 +8,10 @@ import jsonparser.JSONReader;
 import jsonparser.JSONUserQuestionObject;
 import jsonparser.JSONUserTestObject;
 
+/**
+ *
+ * @author jthre_000
+ */
 public class Test {
 
   private ArrayList<Question> questionList = new ArrayList<>();
@@ -147,7 +151,13 @@ public class Test {
     }
   }
   
-  public Test retrievePastTest(JSONUserTestObject test) throws Exception{
+    /**
+     * Gets a past test 
+     * @param test the test being retrieved 
+     * @return the new test
+     * @throws Exception thrown if there is an error during runtime
+     */
+    public Test retrievePastTest(JSONUserTestObject test) throws Exception{
     ArrayList<JSONUserQuestionObject> userQuestions = (ArrayList<JSONUserQuestionObject>) test.getQuestions();
     Test newTest = new Test();
     
@@ -167,13 +177,27 @@ public class Test {
     }
     return newTest;
   }
-  public static void setTestType(String type){
+
+    /**
+     * Sets the type of test to either practice or recorded
+     * @param type the type of test
+     */
+    public static void setTestType(String type){
       testType = type;
   }
-  public static String getTestType(){
+
+    /**
+     * Gets the type of test
+     * @return the test type
+     */
+    public static String getTestType(){
     return testType;
 }
-  public static void resetTestType(){
+
+    /**
+     * Sets the test type to null
+     */
+    public static void resetTestType(){
           testType = null;
 }
 }

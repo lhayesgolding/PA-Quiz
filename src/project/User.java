@@ -7,6 +7,10 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author jthre_000
+ */
 public class User {
 
     private String name;

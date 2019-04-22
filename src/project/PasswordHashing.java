@@ -14,6 +14,12 @@ import java.security.NoSuchAlgorithmException;
  */
 public class PasswordHashing {
   
+    /**
+     * Hashes the password entered by the user
+     * @param password the plain text password
+     * @return the hashed password
+     * @throws NoSuchAlgorithmException thrown if the hash fails
+     */
     public String hashPassword(String password) throws NoSuchAlgorithmException{
       String algorithm = "SHA";
 

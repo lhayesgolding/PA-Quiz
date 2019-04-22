@@ -81,6 +81,8 @@ public class FXMLReviewTestController implements Initializable {
     
     /**
     * Initializes the controller class.
+     * @param url
+     * @param rb
     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -91,6 +93,10 @@ public class FXMLReviewTestController implements Initializable {
         displayCorrectAnswer();
     }
     
+    /**
+     * Sets the selected answer to have orange text to indicate it was 
+     * selected by the user
+     */
     public void displayUserAnswer(){
         initializeQuestionChoices();
         
@@ -112,6 +118,10 @@ public class FXMLReviewTestController implements Initializable {
         }
     }
     
+    /**
+     * Shows the correct answer by changing its color to green and making the
+     * test bold
+     */
     public void displayCorrectAnswer(){
 
         if(test.getQuestion(questionNumber).getAnswer() == 0){
@@ -136,6 +146,9 @@ public class FXMLReviewTestController implements Initializable {
         }
     }
     
+    /**
+     * Sets all text to their default styles
+     */
     public void initializeQuestionChoices(){
         lbChoiceA.setTextFill(Color.BLACK);
         lbChoiceB.setTextFill(Color.BLACK);
@@ -151,6 +164,11 @@ public class FXMLReviewTestController implements Initializable {
         lbChoiceD.setStyle("-fx-font-weight: regular");       
     }
     
+    /**
+     * Goes to either the next or previous question
+     * @param direction indicates if the program should go to the next
+     * or previous question
+     */
     public void goToQuestion(String direction) {
         if (direction == "next") {
             if (questionNumber < test.getNumberOfQuestions() - 1) {
@@ -186,6 +204,11 @@ public class FXMLReviewTestController implements Initializable {
         }
     }
     
+    /**
+     * Shows the end screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showEndScreen(ActionEvent event) throws IOException {
         Project.setTest(test);
         Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));

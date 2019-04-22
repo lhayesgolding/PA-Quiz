@@ -2,13 +2,17 @@ package project;
 
 import java.util.ArrayList;
 
+/**
+ *
+ * @author jthre_000
+ */
 public class Question {
 
   private String quest;
-  private ArrayList<String> choices = new ArrayList<>(); // made this an ArrayList for convenience
+  private ArrayList<String> choices = new ArrayList<>();
   private Integer answer;
   private Integer userAnswer = -1;
-  private ArrayList<String> hints = new ArrayList<>(); // same with this one
+  private ArrayList<String> hints = new ArrayList<>();
   private Integer questionID;
   
   Question(Integer qID, Integer uAnsw){

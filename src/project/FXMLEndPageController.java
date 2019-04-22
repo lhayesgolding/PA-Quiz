@@ -71,6 +71,11 @@ public class FXMLEndPageController implements Initializable {
         showLogInPage(event);
     }
 
+    /**
+     * Shows the user's account page
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     @FXML
     public void handleUserAccount(ActionEvent event) throws IOException {
         showUserAccountPage(event);
@@ -92,6 +97,10 @@ public class FXMLEndPageController implements Initializable {
         lbPercentCorrect.setText(String.valueOf(percent) + "%");
     }
 
+    /**
+     * Creates a review of the test that the user took
+     * @return the review of the test
+     */
     public String createReviewText() {
         String reviewText = "";
         String questionString = "";
@@ -122,6 +131,11 @@ public class FXMLEndPageController implements Initializable {
         return reviewText;
     }
 
+    /**
+     * Starts a new test and displays the test screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     public void startNewTest(ActionEvent event) throws IOException {
         Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
@@ -131,6 +145,11 @@ public class FXMLEndPageController implements Initializable {
         window.show();
     }
 
+    /**
+     * Shows the log in screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showLogInPage(ActionEvent event) throws IOException {
         Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);
@@ -140,6 +159,11 @@ public class FXMLEndPageController implements Initializable {
         window.show();
     }
 
+    /**
+     * Shows the user account screen
+     * @param event indicates that a button has been pressed
+     * @throws IOException thrown when I/O error occurs
+     */
     public void showUserAccountPage(ActionEvent event) throws IOException {
         Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
         Scene userAccountScene = new Scene(testPageParent);
