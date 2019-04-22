@@ -158,6 +158,7 @@ public class FXMLUserAccountController implements Initializable {
         Scene startPageScene = new Scene(reviewPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
+        window.setTitle("User Account: Review Test");
         window.show();      
     }
 
