@@ -31,134 +31,131 @@ import project.Project;
  * @author lizri
  */
 public class FXMLLogInController implements Initializable {
-    
-    @FXML private Button btLogIn, btCreateAccount;
-    @FXML private PasswordField passwordfield;
-    @FXML private TextField userfield;
-    @FXML private Text invalidlogin;
-    final private File userfile = new File("src/datafiles/userstorage.txt");
-   
-    /**
-     * Lets the user log in with their username and password. If
-     * this information is incorrect, the user cannot log in
-     * @param event indicates that the Log In button has been pressed
-     * @throws IOException thrown when I/O error occurs
-     * @throws java.security.NoSuchAlgorithmException
-     */
-    @FXML
-    public void handleLogIn(ActionEvent event) throws IOException, NoSuchAlgorithmException {
-        /*boolean credentialsOK = checkCredentials(event);
-        System.out.println("checked");
-        System.out.println(credentialsOK);
-        if (credentialsOK) {
-            System.out.println("OK1");
-            //showCreateAccountPage(event);
-            System.out.println("OK2");
-        }*/
-        String username = "";
-        String password = "";
-        PasswordHashing ph = new PasswordHashing();
-        if (userfield.getText() != null) username = userfield.getText();
-        System.out.println("username: " + username);
-        if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
-        System.out.println("password: " + password);
-        if(username.equals("") || password.equals(""))
-            invalidlogin.setVisible(true);
-        if(!username.equals("") && !password.equals("")){
-            if (Project.getusermap().containsKey(username)) {
-                if (Project.valid(username, password)){
-                    Project.setUsername(username);
-                    Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
-                    Scene startPageScene = new Scene(startPageParent);
-                    Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-                    window.setScene(startPageScene);
-                    window.show();  
-                }
-                else
-                    invalidlogin.setVisible(true);
-            }
-            else
-                invalidlogin.setVisible(true);
-        }
 
-    }
-    
-    /**
-     * Opens the screen to create a new account
-     * @param event indicates that the Create Account button has been pressed
-     * @throws IOException thrown when I/O error occurs
-     */
-    @FXML
-    public void handleCreateAccount(ActionEvent event) throws IOException {
-        showCreateAccountPage(event);
-    }
+  @FXML private Button btLogIn, btCreateAccount;
+  @FXML private PasswordField passwordfield;
+  @FXML private TextField userfield;
+  @FXML private Text invalidlogin;
+  private final File userfile = new File("src/datafiles/userstorage.txt");
 
-    /**
-     * Initializes the controller class.
-     * @param url
-     * @param rb
-     */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-            Project.initializeUserMap();
-        }    
-    
-    /**
-     * Checks to ensure the entered username and password are valid
-     * @param event indicates that a button has been pressed
-     * @return true or false based on if the information entered is valid
-     * @throws IOException thrown when I/O error occurs
-     * @throws NoSuchAlgorithmException thrown if hasPassword fails
-     */
-    public boolean checkCredentials(ActionEvent event) throws IOException, NoSuchAlgorithmException {
-        String username = "";
-        String password = "";
-        PasswordHashing ph = new PasswordHashing();
-        if (userfield.getText() != null) username = userfield.getText();
-        System.out.println("username: " + username);
-        if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
-        System.out.println("password: " + password);
-        if(username.equals("") || password.equals(""))
-            invalidlogin.setVisible(true);
-        if(!username.equals("") && !password.equals("")){
-            if (Project.getusermap().containsKey(username)) {
-                if (Project.valid(username, password)){
-                    return true;
-                }
-                else
-                    invalidlogin.setVisible(true);
-            }
-            else
-                invalidlogin.setVisible(true);
-        }
-        return false;
+  /**
+   * Lets the user log in with their username and password. If this information is incorrect, the
+   * user cannot log in
+   *
+   * @param event indicates that the Log In button has been pressed
+   * @throws IOException thrown when I/O error occurs
+   * @throws java.security.NoSuchAlgorithmException
+   */
+  @FXML
+  public void handleLogIn(ActionEvent event) throws IOException, NoSuchAlgorithmException {
+    /*boolean credentialsOK = checkCredentials(event);
+    System.out.println("checked");
+    System.out.println(credentialsOK);
+    if (credentialsOK) {
+        System.out.println("OK1");
+        //showCreateAccountPage(event);
+        System.out.println("OK2");
+    }*/
+    String username = "";
+    String password = "";
+    PasswordHashing ph = new PasswordHashing();
+    if (userfield.getText() != null) username = userfield.getText();
+    System.out.println("username: " + username);
+    if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
+    System.out.println("password: " + password);
+    if (username.equals("") || password.equals("")) invalidlogin.setVisible(true);
+    if (!username.equals("") && !password.equals("")) {
+      if (Project.getusermap().containsKey(username)) {
+        if (Project.valid(username, password)) {
+          Project.setUsername(username);
+          Parent startPageParent =
+              FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
+          Scene startPageScene = new Scene(startPageParent);
+          Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+          window.setScene(startPageScene);
+          window.show();
+        } else invalidlogin.setVisible(true);
+      } else invalidlogin.setVisible(true);
     }
-    
-    /**
-     * Starts a new test
-     * @param event indicates that a button has been pressed
-     * @throws IOException thrown when I/O error occurs
-     */
-    public void startNewTest(ActionEvent event) throws IOException {
-        Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
-        Scene startPageScene = new Scene(startPageParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(startPageScene);
-        window.setTitle("Start Test");
-        window.show();
+  }
+
+  /**
+   * Opens the screen to create a new account
+   *
+   * @param event indicates that the Create Account button has been pressed
+   * @throws IOException thrown when I/O error occurs
+   */
+  @FXML
+  public void handleCreateAccount(ActionEvent event) throws IOException {
+    showCreateAccountPage(event);
+  }
+
+  /**
+   * Initializes the controller class.
+   *
+   * @param url
+   * @param rb
+   */
+  @Override
+  public void initialize(URL url, ResourceBundle rb) {
+    Project.initializeUserMap();
+  }
+
+  /**
+   * Checks to ensure the entered username and password are valid
+   *
+   * @param event indicates that a button has been pressed
+   * @return true or false based on if the information entered is valid
+   * @throws IOException thrown when I/O error occurs
+   * @throws NoSuchAlgorithmException thrown if hasPassword fails
+   */
+  public boolean checkCredentials(ActionEvent event) throws IOException, NoSuchAlgorithmException {
+    String username = "";
+    String password = "";
+    PasswordHashing ph = new PasswordHashing();
+    if (userfield.getText() != null) username = userfield.getText();
+    System.out.println("username: " + username);
+    if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
+    System.out.println("password: " + password);
+    if (username.equals("") || password.equals("")) invalidlogin.setVisible(true);
+    if (!username.equals("") && !password.equals("")) {
+      if (Project.getusermap().containsKey(username)) {
+        if (Project.valid(username, password)) {
+          return true;
+        } else invalidlogin.setVisible(true);
+      } else invalidlogin.setVisible(true);
     }
-    
-    /**
-     * Shows the create account screen
-     * @param event indicates that a button has been pressed
-     * @throws IOException thrown when I/O error occurs
-     */
-    public void showCreateAccountPage(ActionEvent event) throws IOException {
-        Parent createAccountParent = FXMLLoader.load(getClass().getResource("/project/FXMLCreateAccount.fxml"));
-        Scene createAccountScene = new Scene(createAccountParent);
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(createAccountScene);
-        window.setTitle("Create New Account");
-        window.show();
-    }
+    return false;
+  }
+
+  /**
+   * Starts a new test
+   *
+   * @param event indicates that a button has been pressed
+   * @throws IOException thrown when I/O error occurs
+   */
+  public void startNewTest(ActionEvent event) throws IOException {
+    Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
+    Scene startPageScene = new Scene(startPageParent);
+    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    window.setScene(startPageScene);
+    window.setTitle("Start Test");
+    window.show();
+  }
+
+  /**
+   * Shows the create account screen
+   *
+   * @param event indicates that a button has been pressed
+   * @throws IOException thrown when I/O error occurs
+   */
+  public void showCreateAccountPage(ActionEvent event) throws IOException {
+    Parent createAccountParent =
+        FXMLLoader.load(getClass().getResource("/project/FXMLCreateAccount.fxml"));
+    Scene createAccountScene = new Scene(createAccountParent);
+    Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    window.setScene(createAccountScene);
+    window.setTitle("Create New Account");
+    window.show();
+  }
 }
