@@ -8,41 +8,39 @@ package model;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- *
- * @author ConorLaptop
- */
+/** @author ConorLaptop */
 public class PasswordHashing {
-  
-    /**
-     * Hashes the password entered by the user
-     * @param password the plain text password
-     * @return the hashed password
-     * @throws NoSuchAlgorithmException thrown if the hash fails
-     */
-    public String hashPassword(String password) throws NoSuchAlgorithmException{
-      String algorithm = "SHA";
 
-      byte[] plainText = password.getBytes();
+  /**
+   * Hashes the password entered by the user
+   *
+   * @param password the plain text password
+   * @return the hashed password
+   * @throws NoSuchAlgorithmException thrown if the hash fails
+   */
+  public String hashPassword(String password) throws NoSuchAlgorithmException {
+    String algorithm = "SHA";
 
-          MessageDigest md = MessageDigest.getInstance(algorithm);
+    byte[] plainText = password.getBytes();
 
-          md.reset();
-          md.update(plainText);
-          byte[] encodedPassword = md.digest();
+    MessageDigest md = MessageDigest.getInstance(algorithm);
 
-          StringBuilder sb = new StringBuilder();
-          for (int i = 0; i < encodedPassword.length; i++) {
-              if ((encodedPassword[i] & 0xff) < 0x10) {
-                  sb.append("0");
-              }
+    md.reset();
+    md.update(plainText);
+    byte[] encodedPassword = md.digest();
 
-              sb.append(Long.toString(encodedPassword[i] & 0xff, 16));
-          }
+    StringBuilder sb = new StringBuilder();
+    for (int i = 0; i < encodedPassword.length; i++) {
+      if ((encodedPassword[i] & 0xff) < 0x10) {
+        sb.append("0");
+      }
 
-          System.out.println("Plain    : " + password);
-          System.out.println("Encrypted: " + sb.toString());
-          
-          return sb.toString();
-    }    
+      sb.append(Long.toString(encodedPassword[i] & 0xff, 16));
+    }
+
+    System.out.println("Plain    : " + password);
+    System.out.println("Encrypted: " + sb.toString());
+
+    return sb.toString();
+  }
 }

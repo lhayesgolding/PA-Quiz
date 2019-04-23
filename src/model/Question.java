@@ -2,10 +2,7 @@ package model;
 
 import java.util.ArrayList;
 
-/**
- *
- * @author jthre_000
- */
+/** @author jthre_000 */
 public class Question {
 
   private String quest;
@@ -14,8 +11,8 @@ public class Question {
   private Integer userAnswer = -1;
   private ArrayList<String> hints = new ArrayList<>();
   private Integer questionID;
-  
-  public Question(Integer qID, Integer uAnsw){
+
+  public Question(Integer qID, Integer uAnsw) {
     questionID = qID;
     userAnswer = uAnsw;
     quest = null;
@@ -23,7 +20,13 @@ public class Question {
     answer = null;
     hints = null;
   }
-  public Question(String quest0, ArrayList<String> choices0, Integer answer0, ArrayList<String> hints0, Integer questionID0) {
+
+  public Question(
+      String quest0,
+      ArrayList<String> choices0,
+      Integer answer0,
+      ArrayList<String> hints0,
+      Integer questionID0) {
     quest = quest0;
     choices = choices0;
     answer = answer0;
@@ -33,6 +36,7 @@ public class Question {
 
   /**
    * Returns quest
+   *
    * @return the question in the form of a String
    */
   public String getQuest() {
@@ -41,6 +45,7 @@ public class Question {
 
   /**
    * Returns choices
+   *
    * @return an ArrayList of answer choices
    */
   public ArrayList getChoices() {
@@ -49,6 +54,7 @@ public class Question {
 
   /**
    * Returns answer
+   *
    * @return an answer in the form of an Integer
    */
   public Integer getAnswer() {
@@ -57,6 +63,7 @@ public class Question {
 
   /**
    * Returns hints
+   *
    * @return an ArrayList of hints for each question
    */
   public ArrayList getHints() {
@@ -65,22 +72,25 @@ public class Question {
 
   /**
    * Returns userAnswer
+   *
    * @return the Integer of the answer the user selected
    */
   public Integer getUserAnswer() {
     return userAnswer;
   }
-  
+
   /**
    * Returns questionID
+   *
    * @return the Integer of the question's ID
-   */  
-  public Integer getQuestionID(){
+   */
+  public Integer getQuestionID() {
     return questionID;
   }
 
   /**
    * Sets userAnswer
+   *
    * @param selection the answer the user provided
    */
   public void setUserAnswer(int selection) {
@@ -89,6 +99,7 @@ public class Question {
 
   /**
    * Returns true if the user's answer is correct, or false otherwise
+   *
    * @return true if answer is equal to userAnswer, false otherwise
    */
   public boolean isCorrect() {
