@@ -7,11 +7,12 @@ package project;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
+//import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
@@ -49,17 +50,17 @@ public class UserTest {
     /**
      * Test of getName method, of class User.
      */
-    @Test
+    @org.junit.Test
     public void testGetNameAndSetName() {
-        assertEquals("testName", testUser.getEmail());
+        assertEquals("testName", testUser.getName());
         testUser.setName("testName1");
-        assertEquals("testName1", testUser.getEmail());
+        assertEquals("testName1", testUser.getName());
     }
 
     /**
      * Test of getEmail method, of class User.
      */
-    @Test
+    @org.junit.Test
     public void testGetEmailAndSetEmail() {
         assertEquals("testEmail", testUser.getEmail());
         testUser.setEmail("testEmail1");
@@ -70,7 +71,7 @@ public class UserTest {
     /**
      * Test of getUserID method, of class User.
      */
-    @Test
+    @org.junit.Test
     public void testGetUserIDAndSetUserID() {
         assertEquals("testUserID", testUser.getUserID());
         testUser.setUserID("testUserID1");
@@ -80,28 +81,22 @@ public class UserTest {
     /**
      * Test of getPassword method, of class User.
      */
-    @Test
+    @org.junit.Test
     public void testGetPasswordAndSetPassword() {
         assertEquals("testPassword", testUser.getPassword());
         testUser.setPassword("testPassword1");
         assertEquals("testPassword1", testUser.getPassword());
     }
 
-
     /**
-     * Test of addScore method, of class User.
+     * Test of addScore and saveScores methods, of class User.
      */
-    @Test
-    public void testAddScore() {
-        //How to test? Won't let me instantiate a Test object.
-    }
-
-    /**
-     * Test of saveScores method, of class User.
-     */
-    @Test
-    public void testSaveScores() throws Exception {
-        
+    @org.junit.Test
+    public void testAddScoreandSaveScores() throws IOException {
+        Test test = new Test();
+        testUser.addScore(test);
+        testUser.saveScores();
+        //having trouble figuring out how to test this
     }
     
 }

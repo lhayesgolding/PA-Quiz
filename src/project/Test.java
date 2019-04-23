@@ -23,9 +23,9 @@ public class Test {
   private static String testType = "recorded";
 
   Test() {
-//    numberOfQuestions = 50;
-//    score = 0;
-//    this.initializeQuestionList(file);
+    numberOfQuestions = 50;
+    score = 0;
+    this.initializeQuestionList(file);
     questionList = questionListUser;
     numberOfQuestions = questionListUser.size();
   }
