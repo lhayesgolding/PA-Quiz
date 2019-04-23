@@ -44,7 +44,7 @@ public class ProjectTest {
     
 
     /**
-     * Test of getNumOfQuestions method, of class Project.
+     * Test of getNumOfQuestions and setNumOfQuestions methods, of class Project.
      */
     @Test
     public void testSetAndGetNumOfQuestions() {
@@ -52,21 +52,10 @@ public class ProjectTest {
         Project.setNumOfQuestions(10);
         assertEquals(10, Project.getNumOfQuestions()); 
     }
-
-    /**
-     * Test of getTest method, of class Project.
-     */
-    @Test
-    public void testGetTest() {
-        System.out.println("getTest");
-        //better way to test this?
-        assertNotNull(Project.getTest());
-    }
-
    
 
     /**
-     * Test of setUsername method, of class Project.
+     * Test of setUsername and getCurrentUser methods, of class Project.
      */
     @Test
     public void testSetUsernameAndGetCurrentUser() {
@@ -113,7 +102,7 @@ public class ProjectTest {
     public void testValid() {
         System.out.println("valid");
         Project.initializeUserMap();
-        User user = (User)Project.getusermap().get("jcoady9281@westfield.ma.edu");
+        User user = (User)Project.getusermap().get("newUserID");
         String username = user.getUserID();
         String password = user.getPassword();
         assertTrue(Project.valid(username, password));
@@ -122,22 +111,12 @@ public class ProjectTest {
     }
 
     /**
-     * Test of getusermap method, of class Project.
-     */
-    @Test
-    public void testGetusermap() {
-        System.out.println("getusermap");
-        //better way to test this?
-        assertNotNull(Project.getusermap());
-    }
-
-    /**
      * Test of existingUser method, of class Project.
      */
     @Test
     public void testExistingUser() {
         Project.initializeUserMap();
-        assertTrue(Project.existingUser("jcoady9281@westfield.ma.edu"));
+        assertTrue(Project.existingUser("newUserID"));
         assertFalse(Project.existingUser("poipoi"));
     }
 
@@ -147,8 +126,8 @@ public class ProjectTest {
     @Test
     public void testGetUsersName() {
         Project.initializeUserMap();
-        Project.setUsername("jcoady9281@westfield.ma.edu");
-        assertEquals("john", Project.getUsersName());
+        Project.setUsername("newUserID");
+        assertEquals("newName", Project.getUsersName());
     }
     
 }
