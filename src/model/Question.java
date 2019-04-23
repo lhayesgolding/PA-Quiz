@@ -1,4 +1,4 @@
-package project;
+package model;
 
 import java.util.ArrayList;
 
@@ -15,7 +15,7 @@ public class Question {
   private ArrayList<String> hints = new ArrayList<>();
   private Integer questionID;
   
-  Question(Integer qID, Integer uAnsw){
+  public Question(Integer qID, Integer uAnsw){
     questionID = qID;
     userAnswer = uAnsw;
     quest = null;
@@ -23,7 +23,7 @@ public class Question {
     answer = null;
     hints = null;
   }
-  Question(String quest0, ArrayList<String> choices0, Integer answer0, ArrayList<String> hints0, Integer questionID0) {
+  public Question(String quest0, ArrayList<String> choices0, Integer answer0, ArrayList<String> hints0, Integer questionID0) {
     quest = quest0;
     choices = choices0;
     answer = answer0;

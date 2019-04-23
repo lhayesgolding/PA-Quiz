@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -22,6 +22,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.PasswordHashing;
+import project.Project;
+import model.User;
 
 /**
  * FXML Controller class
@@ -177,7 +180,7 @@ public class FXMLCreateAccountController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void startNewTest(ActionEvent event) throws IOException {
-        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
@@ -191,7 +194,7 @@ public class FXMLCreateAccountController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void showLogInPage(ActionEvent event) throws IOException {
-        Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
+        Parent logInParent = FXMLLoader.load(getClass().getResource("/project/FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(logInScene);

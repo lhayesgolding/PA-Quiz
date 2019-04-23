@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +19,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import project.Project;
+import model.Test;
 
 /**
  * FXML Controller class
@@ -227,7 +229,7 @@ public class FXMLReviewTestController implements Initializable {
      */
     public void showEndScreen(ActionEvent event) throws IOException {
         Project.setTest(test);
-        Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+        Parent endPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLUserAccountPage.fxml"));
         Scene endPageScene = new Scene(endPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(endPageScene);

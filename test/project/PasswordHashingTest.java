@@ -5,6 +5,7 @@
  */
 package project;
 
+import model.PasswordHashing;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

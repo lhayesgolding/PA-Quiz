@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +28,8 @@ import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import jsonparser.JSONReader;
 import jsonparser.JSONUserTestObject;
+import project.Project;
+import model.Test;
 
 /**
  * FXML Controller class
@@ -111,7 +113,7 @@ public class FXMLUserAccountController implements Initializable {
      * @throws IOException thrown if I/O error occurs
      */
     public void showLogInPage(ActionEvent event) throws IOException {
-        Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
+        Parent logInParent = FXMLLoader.load(getClass().getResource("/project/FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(logInScene);
@@ -125,7 +127,7 @@ public class FXMLUserAccountController implements Initializable {
      * @throws IOException thrown if I/O error occurs
      */
     public void startNewTest(ActionEvent event) throws IOException {
-        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
@@ -139,7 +141,7 @@ public class FXMLUserAccountController implements Initializable {
      * @throws IOException thrown if I/O error occurs
      */
     public void showCompareScoresPage(ActionEvent event) throws IOException {
-        Parent compareScoresParent = FXMLLoader.load(getClass().getResource("FXMLComparePage.fxml"));
+        Parent compareScoresParent = FXMLLoader.load(getClass().getResource("/project/FXMLComparePage.fxml"));
         Scene compareScoresScene = new Scene(compareScoresParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(compareScoresScene);
@@ -154,7 +156,7 @@ public class FXMLUserAccountController implements Initializable {
      */
     public void goToReviewTest(ActionEvent event) throws IOException{
         Project.setTest(tests.get(testIndex));
-        Parent reviewPageParent = FXMLLoader.load(getClass().getResource("FXMLReviewTest.fxml"));      
+        Parent reviewPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLReviewTest.fxml"));      
         Scene startPageScene = new Scene(reviewPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);

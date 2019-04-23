@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -19,6 +19,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+import project.Project;
+import model.Test;
 
 /**
  * FXML Controller class
@@ -137,7 +139,7 @@ public class FXMLEndPageController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void startNewTest(ActionEvent event) throws IOException {
-        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
@@ -151,7 +153,7 @@ public class FXMLEndPageController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void showLogInPage(ActionEvent event) throws IOException {
-        Parent logInParent = FXMLLoader.load(getClass().getResource("FXMLLogIn.fxml"));
+        Parent logInParent = FXMLLoader.load(getClass().getResource("/project/FXMLLogIn.fxml"));
         Scene logInScene = new Scene(logInParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(logInScene);
@@ -165,7 +167,7 @@ public class FXMLEndPageController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void showUserAccountPage(ActionEvent event) throws IOException {
-        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+        Parent testPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLUserAccountPage.fxml"));
         Scene userAccountScene = new Scene(testPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(userAccountScene);

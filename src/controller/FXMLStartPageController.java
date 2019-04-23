@@ -1,4 +1,4 @@
-package project;
+package controller;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,6 +14,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import project.Project;
+import model.Test;
 
 /**
  * FXML Controller class
@@ -70,7 +72,7 @@ public class FXMLStartPageController implements Initializable {
      */
     public void startNewTest(ActionEvent event, String testType) throws IOException {
         Test.setTestType(testType);
-        Parent documentParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent documentParent = FXMLLoader.load(getClass().getResource("/project/FXMLDocument.fxml"));
         Scene documentScene = new Scene(documentParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(documentScene);
@@ -84,7 +86,7 @@ public class FXMLStartPageController implements Initializable {
      * @throws IOException thrown if I/O error occurs
      */
     public void showUserAccountPage(ActionEvent event) throws IOException {
-        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+        Parent testPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLUserAccountPage.fxml"));
         Scene userAccountScene = new Scene(testPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(userAccountScene);

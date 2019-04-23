@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -26,6 +26,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import project.Project;
 
 /**
  * FXML Controller class
@@ -75,7 +76,7 @@ public class FXMLComparePageController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void showUserAccountPage(ActionEvent event) throws IOException {
-        Parent testPageParent = FXMLLoader.load(getClass().getResource("FXMLUserAccountPage.fxml"));
+        Parent testPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLUserAccountPage.fxml"));
         Scene userAccountScene = new Scene(testPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(userAccountScene);

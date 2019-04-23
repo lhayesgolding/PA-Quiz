@@ -1,5 +1,6 @@
-package project;
+package model;
 
+import model.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -19,14 +20,14 @@ public class User {
     private String password;
     private ArrayList<Double> scores = new ArrayList<>();
 
-    User() {
+    public User() {
         name = "Guest";
         email = "None";
         userID = "Guest";
         password = "None";
     }
 
-    User(String n, String e, String u, String p) throws FileNotFoundException {
+    public User(String n, String e, String u, String p) throws FileNotFoundException {
         name = n;
         email = e;
         userID = u;

@@ -1,5 +1,6 @@
-package project;
+package model;
 
+import model.Question;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,7 +23,7 @@ public class Test {
   File file = new File("Questions.json");
   private static String testType = "recorded";
 
-  Test() {
+  public Test() {
     numberOfQuestions = 50;
     score = 0;
     this.initializeQuestionList(file);
@@ -30,7 +31,7 @@ public class Test {
     numberOfQuestions = questionListUser.size();
   }
 
-  Test(int numberOfQuestions) {
+  public Test(int numberOfQuestions) {
     this.numberOfQuestions = numberOfQuestions;
     score = 0;
     this.initializeQuestionList(file);

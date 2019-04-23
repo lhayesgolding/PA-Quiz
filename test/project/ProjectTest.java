@@ -5,6 +5,7 @@
  */
 package project;
 
+import model.User;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;

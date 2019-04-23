@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +22,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import model.PasswordHashing;
+import project.Project;
 
 /**
  * FXML Controller class
@@ -66,7 +68,7 @@ public class FXMLLogInController implements Initializable {
             if (Project.getusermap().containsKey(username)) {
                 if (Project.valid(username, password)){
                     Project.setUsername(username);
-                    Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+                    Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
                     Scene startPageScene = new Scene(startPageParent);
                     Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
                     window.setScene(startPageScene);
@@ -138,7 +140,7 @@ public class FXMLLogInController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void startNewTest(ActionEvent event) throws IOException {
-        Parent startPageParent = FXMLLoader.load(getClass().getResource("FXMLStartPage.fxml"));
+        Parent startPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLStartPage.fxml"));
         Scene startPageScene = new Scene(startPageParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(startPageScene);
@@ -152,7 +154,7 @@ public class FXMLLogInController implements Initializable {
      * @throws IOException thrown when I/O error occurs
      */
     public void showCreateAccountPage(ActionEvent event) throws IOException {
-        Parent createAccountParent = FXMLLoader.load(getClass().getResource("FXMLCreateAccount.fxml"));
+        Parent createAccountParent = FXMLLoader.load(getClass().getResource("/project/FXMLCreateAccount.fxml"));
         Scene createAccountScene = new Scene(createAccountParent);
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(createAccountScene);

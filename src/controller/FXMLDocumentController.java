@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package controller;
 
 import com.google.gson.GsonBuilder;
 import java.io.BufferedReader;
@@ -38,6 +38,9 @@ import javafx.util.Duration;
 import jsonparser.JSONReader;
 import jsonparser.JSONUserQuestionObject;
 import jsonparser.JSONUserTestObject;
+import project.Project;
+import model.Test;
+import model.User;
 
 /**
  * @author jthre_000
@@ -348,7 +351,7 @@ public class FXMLDocumentController implements Initializable {
      */
     public void showEndScreen(ActionEvent event) throws IOException {
         Project.setTest(test);
-        Parent endPageParent = FXMLLoader.load(getClass().getResource("FXMLEndPage.fxml"));
+        Parent endPageParent = FXMLLoader.load(getClass().getResource("/project/FXMLEndPage.fxml"));
         Scene endPageScene = new Scene(endPageParent);
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(endPageScene);
