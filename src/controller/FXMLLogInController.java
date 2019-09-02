@@ -60,9 +60,9 @@ public class FXMLLogInController implements Initializable {
     String password = "";
     PasswordHashing ph = new PasswordHashing();
     if (userfield.getText() != null) username = userfield.getText();
-    System.out.println("username: " + username);
+    //System.out.println("username: " + username);
     if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
-    System.out.println("password: " + password);
+    //System.out.println("password: " + password);
     if (username.equals("") || password.equals("")) invalidlogin.setVisible(true);
     if (!username.equals("") && !password.equals("")) {
       if (Project.getusermap().containsKey(username)) {
@@ -114,9 +114,9 @@ public class FXMLLogInController implements Initializable {
     String password = "";
     PasswordHashing ph = new PasswordHashing();
     if (userfield.getText() != null) username = userfield.getText();
-    System.out.println("username: " + username);
+    //System.out.println("username: " + username);
     if (passwordfield.getText() != null) password = ph.hashPassword(passwordfield.getText());
-    System.out.println("password: " + password);
+    //System.out.println("password: " + password);
     if (username.equals("") || password.equals("")) invalidlogin.setVisible(true);
     if (!username.equals("") && !password.equals("")) {
       if (Project.getusermap().containsKey(username)) {

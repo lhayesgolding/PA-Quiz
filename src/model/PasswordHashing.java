@@ -38,8 +38,8 @@ public class PasswordHashing {
       sb.append(Long.toString(encodedPassword[i] & 0xff, 16));
     }
 
-    System.out.println("Plain    : " + password);
-    System.out.println("Encrypted: " + sb.toString());
+    //System.out.println("Plain    : " + password);
+    //System.out.println("Encrypted: " + sb.toString());
 
     return sb.toString();
   }

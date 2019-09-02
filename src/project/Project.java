@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Authors: Liz Hayes-Golding, Joe Thresher, John Coady, Conor Petzold
+ * Westfield State University 2019
  */
 package project;
 
@@ -145,13 +144,13 @@ public class Project extends Application {
             
             while (scan.hasNext()){
                 name = scan.nextLine();
-                System.out.println("name: " + name);
+                //System.out.println("name: " + name);
                 email = scan.nextLine();
-                System.out.println("email: " + email);
+                //System.out.println("email: " + email);
                 userID = scan.nextLine();
-                System.out.println("userID: " + userID);
+                //System.out.println("userID: " + userID);
                 password = scan.nextLine();
-                System.out.println("password: " + password);
+                //System.out.println("password: " + password);
                 
                 User usertemp = new User(name,email,userID,password);
                 usermap.put(userID, usertemp);
